@@ -1,0 +1,331 @@
+.calendarPage {
+    background-color: #F1F6F9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.events button{
+    background-color: #2B2E6B;
+    border-style: none;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+.calendarContent {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #F1F6F9;
+    min-height: 100vh;
+    top: 0px;
+}
+
+.noUserWarning {
+    display: flex;
+    flex-direction: column;
+}
+
+.noUserWarning>p {
+    margin: 340px auto 0 auto;
+    width: 300px;
+    text-align: center;
+    color: #2B2E6B;
+}
+
+.toLogin {
+    width: 120px;
+    height: 30px;
+    background-color: #DC6099;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 5px;
+    margin: 30px auto 0 auto;
+}
+
+.AppointmentContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 130px auto 0 auto;
+}
+
+.calendarContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.toCurrentDate {
+    color: #2B2E6B;
+    font-size: 22px;
+    margin: auto;
+    margin-left: 15px;
+}
+
+.datePicker {
+    display: flex;
+    margin-top: 110px;
+    background-color: white;
+    height: 45px;
+    width: 100%;
+}
+
+.currentWeek,
+.openCalendar {
+    width: 160px;
+    height: 45px;
+    border: none;
+    outline: none;
+    background-color: white;
+    color: #2B2E6B;
+    font-weight: bold;
+}
+
+.currentWeekActive,
+.openCalendarActive {
+    width: 160px;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #2B2E6B;
+    background-color: white;
+    color: #2B2E6B;
+    font-weight: bold;
+}
+
+.containerContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar {
+    width: 100% !important;
+    border: none !important;
+    position: relative !important;
+}
+
+.makeAppointment {
+    width: 80%;
+    height: 44px;
+    border-radius: 50px;
+    background-color: white;
+    color: #2B2E6B;
+    box-shadow: 3px 3px 4px darkgray;
+    margin: 20px auto 30px auto;
+}
+
+.calendarPicker {
+    position: absolute;
+    top: 155px;
+    background-color: white;
+}
+
+.events {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    background-color: #F1F6F9;
+}
+
+.Modal {
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #F1F6F9;
+    display: flex;
+    flex-direction: column;
+}
+
+.goBack {
+    position: absolute;
+    top: 16px;
+    left: 10px;
+    font-size: 20px;
+}
+
+.appointment {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.appointmentCheck {
+    margin: 300px 0 0 0;
+}
+
+::placeholder {
+    margin: auto;
+    --placeholder-color: #2B2E6B;
+    --placeholder-opacity: 1;
+    text-align: center;
+}
+
+.item {
+    --background: none;
+    opacity: 1;
+}
+
+.flexitem {
+    --background: none;
+    opacity: 1;
+    display: flex;
+}
+
+.selectConsulent {
+    width: 297px;
+    height: 50px;
+    background-color: white;
+    margin: 10px auto 0 auto;
+    border-radius: 10px;
+    display: flex;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #2B2E6B;
+    box-sizing: border-box;
+    --placeholder-color: #2B2E6B;
+    --placeholder-opacity: 1;
+}
+
+.selectDate {
+    width: 105px;
+    text-align: center;
+    height: 20px;
+    color: #2B2E6B;
+    border: 2px solid #2B2E6B;
+    text-align: center;
+    display: block;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    margin: 30px auto 0 auto;
+    outline: none;
+    --placeholder-color: #2B2E6B;
+    --placeholder-opacity: 1;
+}
+
+.inputIon {
+    max-width: 300px;
+    height: 40px;
+    color: #2B2E6B;
+    border: 2px solid #2B2E6B;
+    box-sizing: border-box;
+    display: block;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: white;
+    margin: 30px auto 0 auto;
+    outline: none;
+    text-align: center;
+}
+
+.comment {
+    max-width: 300px;
+    min-height: 80px;
+    color: #2B2E6B;
+    border: 2px solid #2B2E6B;
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: white;
+    margin: 30px auto 0 auto;
+}
+
+.submit {
+    width: 150px;
+    height: 40px;
+    background-color: #2B2E6B;
+    font-family: "Roboto Slab";
+    border-radius: 30px;
+    margin: 40px auto 0 auto;
+}
+
+.modalContent {
+    display: flex !important;
+    flex-direction: column !important;
+    background-color: #F1F6F9;
+    min-height: 100vh;
+}
+
+.modalContent>p {
+    margin: 20px auto 0 auto;
+    color: #2B2E6B;
+    text-align: left;
+    width: 300px;
+    border: 2px solid #2B2E6B;
+    display: block;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.modalContent>h2,
+.appointment>h2 {
+    font-family: nos;
+    color: #DC6099;
+    margin: 80px 0 20px 38px;
+}
+
+.appointmentContainer {
+    position: relative;
+    top: 0px;
+    margin: 20px 0 0 0;
+}
+
+
+/*  See appointment */
+
+.AppointmentCard {
+    max-width: 90%;
+    min-height: 80px;
+    padding: 0;
+    margin: 0 auto 0 auto;
+    position: relative;
+}
+
+.AppointmentCardContent {
+    display: flex;
+    padding: 0;
+    max-width: 90%;
+}
+
+.appointmentInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.appointmentText {
+    color: #2B2E6B;
+    margin: 5px 0 5px 15px;
+    font-size: 14px;
+}
+
+.appointmentText:nth-child(1) {
+    margin-top: 12px;
+}
+
+.AppointmentCalendarIcon {
+    color: white;
+    font-size: 50px;
+    padding: 0;
+    margin: auto 0 auto 0;
+    position: relative;
+}
+
+.BlueBorderAppointment {
+    min-height: 80px;
+    background-color: #2B2E6B;
+    width: 80px;
+    display: flex;
+}
+
+.AppointmentChevronIcon {
+    font-size: 28px;
+    margin: auto 0 auto 0;
+    position: absolute;
+    top: 35%;
+    transform: translate(-50%);
+    left: 315px;
+    color: #2B2E6B;
+}

@@ -1,0 +1,258 @@
+.accountPageContent {
+    position: relative;
+    top: 110px;
+    display: flex;
+    flex-direction: column;
+    background-color: #F1F6F9;
+    min-height: 100vh;
+}
+
+.Avatar {
+    font-size: 40px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    border: 2px solid #DC6099;
+    margin: 5px auto 0 auto;
+    text-align: center;
+    display: flex;
+    background-color: white;
+}
+
+.settingsBtn {
+    width: 36px;
+    height: 36px;
+    border-radius: 5px;
+    color: white;
+    background-color: #2B2E6B;
+    font-size: 24px;
+    display: flex;
+    border: none;
+    outline: none;
+    margin: 10px 0 0 330px;
+}
+
+.avatarIcon {
+    color: lightgray;
+    margin: auto;
+}
+
+.accountPageContent>p:nth-child(3) {
+    color: #DC6099;
+    font-size: 24px;
+    margin: 25px auto 0 auto;
+    font-family: nos;
+}
+
+.accountPageContent>p:nth-child(4) {
+    color: #2B2E6B;
+    margin: 10px auto 0 auto;
+}
+
+.accountPageContent>hr {
+    margin: 15px auto 0 auto;
+    width: 300px;
+}
+
+.statContainer {
+    display: flex;
+    min-width: 100vw;
+}
+
+.heightContainer,
+.weightContainer {
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    margin: 20px auto 0 auto;
+    border-radius: 10px;
+    display: flex;
+}
+
+.heightContainer>p,
+.weightContainer>p {
+    margin: auto;
+}
+
+.blueborder {
+    height: 50px;
+    width: 50px;
+    background-color: #2B2E6B;
+    color: white;
+    font-size: 32px;
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.consulentContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.consulentContainer>h3,
+h3 {
+    margin: 40px 0 0 20px;
+    color: #DC6099;
+    font-family: nos;
+    font-size: 24px;
+}
+
+.noConsulentWarning {
+    width: 336px;
+    height: 210px;
+    margin: 20px auto 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+}
+
+.blueWarning {
+    height: 210px;
+    min-width: 80px;
+    width: 80px;
+    background-color: #2B2E6B;
+    border-radius: 10px 0 0 10px;
+    color: white;
+    font-size: 52px;
+    display: flex;
+    text-align: center;
+}
+
+.iconProfile {
+    margin: auto;
+}
+
+.noConsulentWarningContent {
+    display: flex;
+    flex-direction: column;
+    width: 256px;
+}
+
+.noConsulentWarningContent>p {
+    width: 220px;
+    margin: 20px auto 0 auto;
+    color: #2B2E6B;
+}
+
+.searchConsulent {
+    width: 130px;
+    height: 30px;
+    background-color: #DC6099;
+    border-radius: 5px;
+    color: white;
+    margin: 15px auto 0 auto;
+    border: none;
+    outline: none;
+}
+
+.consulentShrtct {
+    width: 90%;
+    height: 80px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px auto 0 auto;
+    display: flex;
+}
+
+.consulentAvatar {
+    height: 80px;
+    width: 110px;
+    background-color: #2B2E6B;
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    position: relative;
+}
+
+.consulentProfileImg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 66px;
+    height: 66px;
+}
+
+.iconConsulent {
+    font-size: 24px;
+    margin: auto 0 auto 10px;
+}
+
+.consulentContent {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.consulentContent>P:nth-child(1) {
+    margin: 16px 0 0 10px;
+    font-size: 14px;
+}
+
+.consulentContent>p:nth-child(2) {
+    margin: 5px 0 auto 10px;
+    font-size: 14px;
+    max-width: 208px;
+    word-break: break-all;
+}
+
+
+/* Statcontainer */
+
+.IonCardStats {
+    display: flex;
+    flex-direction: column;
+}
+
+.userStatContainer {
+    width: 90%;
+    height: 40%;
+    background-color: white;
+    margin: 20px auto 40px auto;
+}
+
+.userStatContainerContent {
+    padding: 0px;
+}
+
+.weightMomentCircle {
+    width: 46px;
+    height: 46px;
+    border: 4px solid #2B2E6B;
+    margin: -42px 10px 15px 240px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 48px;
+    border-radius: 30px;
+    padding: 3px;
+    position: relative;
+    font-weight: bold;
+}
+
+.toProgress {
+    min-width: 140px;
+    width: 50%;
+    height: 30px;
+    border-radius: 70px !important;
+    margin: 0px auto 15px auto;
+    --background: #2B2E6B;
+    color: white;
+    outline: none;
+    border: none;
+    display: flex;
+    box-sizing: content-box;
+    padding: 5px;
+}
+
+.statTitle {
+    color: #2B2E6B;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+    font-size: 16px;
+}
+
+.statDate {
+    margin: 5px 0 0 0;
+    display: flex;
+}

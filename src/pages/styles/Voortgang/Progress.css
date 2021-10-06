@@ -1,0 +1,246 @@
+.Container {
+    position: relative;
+    top: 110px;
+    background-color: #F1F6F9;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.TitleContainer {
+    width: 100vw;
+    height: 50px;
+
+}
+
+.Title {
+    color: #DC6099;
+    margin: 30px 0 0 22px;
+    font-weight: bolder;
+    font-family: nos;
+    font-size: 24px;
+    position: relative;
+    top: 0px;
+}
+
+.InfoContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.DateContainer {
+    min-height: 50px;
+    height: 60px;
+    width: 90%;
+    margin-top: 15px;
+    display: flex;
+    background-color: white;
+    border-radius: 5px;
+    margin: 40px auto 0 auto;
+    position: relative;
+}
+
+.DateContainerContent {
+    padding: 0;
+    display: flex;
+}
+
+.BlueBorder {
+    width: 60px;
+    min-height: 100%;
+    background-color: #2B2E6B;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: flex;
+    padding: 0;
+}
+
+.calendarIcon {
+    color: white;
+    font-size: 32px;
+    position: relative;
+    padding: 0;
+    margin: auto;
+}
+
+.oppointmentDate {
+    margin: auto 0 auto 15px;
+    color: #2B2E6B;
+}
+
+.SubTitle {
+    color: #DC6099;
+    font-size: 24px;
+    margin: 30px 0 0 22px;
+    font-family: nos;
+    display: flex;
+}
+
+.sliderIcon {
+    color: #DC6099;
+    font-size: 24px;
+    margin: 30px 0 0 150px;
+}
+
+.SubtitleContainer {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.goalStatContainer {
+    margin: 15px auto 0px auto;
+    width: 90%;
+    height: 40%;
+    background-color: white;
+}
+
+.goalStatContainerContent {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.graphGoal {
+    margin: 25px 0 0 0;
+    font-size: 14px;
+    color: #707070;
+}
+
+.weightProgress {
+    margin: 15px auto 0 auto;
+    --background: #707070;
+    --progress-background: #B45081;
+}
+
+.statTitle:nth-child(4) {
+    margin-top: 30px;
+}
+
+.currentStep {
+    margin: 15px 0 10px 0;
+    font-family: nos;
+    color: #DC6099;
+    font-size: 18px;
+}
+
+.weightMomentContainer {
+    width: 90%;
+    max-height: 90px;
+    margin: 20px auto 0 auto;
+}
+
+.weightMomentInfo {
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    position: relative;
+}
+
+.weightMomentSmallCircle {
+    width: 44px;
+    height: 44px;
+    border: 5px solid #B45081;
+    margin: auto 0 auto 0;
+    position: absolute;
+    left: 270px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 44px;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #2B2E6B;
+}
+
+.weightTitle {
+    font-weight: bold;
+    color: #2B2E6B;
+}
+
+.weightDate {
+    margin-top: 5px;
+}
+
+.weightTextContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.sliderHeader {
+    display: flex;
+}
+
+.productsContainer {
+    display: flex;
+    overflow-x: auto;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.productCard {
+    margin: 20px 20px 30px 0;
+    min-width: 35%;
+    min-height: 125px;
+}
+
+.productCardContent {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.productImage {
+    width: 80px;
+    max-height: 70px;
+    border-radius: 5px;
+    min-width: 80%;
+    height: 100%;
+    object-fit: cover;
+    margin: 10px auto 0 auto;
+}
+
+.producTitle {
+    margin: 10px auto 5px auto;
+    font-size: 14px;
+    color: #2B2E6B;
+}
+
+
+/* Indicator */
+
+.progressContainer {
+    display: flex;
+}
+
+.indicatorContainer {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.indicatorLine {
+    width: 75px;
+    height: 2px;
+    background-color: lightgray;
+    margin: 15px 0 0 0;
+    position: relative;
+}
+
+.indicatorCircle {
+    width: 16px;
+    height: 16px;
+    background-color: lightgray;
+    border-radius: 30px;
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.indicatorMoment {
+    font-size: 12px;
+    color: #707070;
+    margin: 65px auto 0 auto;
+}

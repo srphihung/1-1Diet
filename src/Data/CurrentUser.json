@@ -1,0 +1,76 @@
+[{
+    "user_id": 1,
+    "user_firstname": "Steve",
+    "user_lastname": "de Waal",
+    "user_currentweight": 89,
+    "user_height": 177,
+    "user_step": 2,
+    "user_appointments": [{
+            "title": "Intake",
+            "date": "26/02/2021",
+            "weight": 89,
+            "type": "Intake"
+        },
+        {
+            "title": "Weegmoment 1",
+            "date": "28/03/2021",
+            "weight": 86,
+            "type": "Wegen"
+        },
+        {
+            "title": "Weegmoment 2",
+            "date": "12/06/2021",
+            "weight": 82,
+            "type": "Wegen"
+        },
+        {
+            "title": "Intake2",
+            "date": "26/02/2021",
+            "weight": 89,
+            "type": "Intake"
+        },
+        {
+            "title": "Weegmoment 3",
+            "date": "28/03/2021",
+            "weight": 86,
+            "type": "Wegen"
+        },
+        {
+            "title": "Weegmoment 4",
+            "date": "12/06/2021",
+            "weight": 82,
+            "type": "Wegen"
+        },
+        {
+            "title": "Weegmoment 5",
+            "date": "12/06/2021",
+            "weight": 82,
+            "type": "Wegen 5"
+        }
+    ],
+    "user_startweight": 96,
+    "user_goal": 78,
+    "user_products": [{
+            "product_title": "Havermoutpap",
+            "product_image": "https://www.1op1dieet.nl/uploads/havermoutpap-stroop.jpg?500x500&fallbackType=story-square"
+        },
+        {
+            "product_title": "Goulashsoep",
+            "product_image": "https://www.1op1dieet.nl/uploads/goulashsoep.jpg?1100"
+        },
+        {
+            "product_title": "Pap",
+            "product_image": "https://www.1op1dieet.nl/uploads/havermoutpap-stroop.jpg?500x500&fallbackType=story-square"
+        },
+        {
+            "product_title": "Soep",
+            "product_image": "https://www.1op1dieet.nl/uploads/goulashsoep.jpg?1100"
+        }
+    ],
+    "consulent": [{
+        "consulent_name": "Mike de boer",
+        "consulent_adres": "Nopenslaan 45, 1234 JT Huizen",
+        "consulent_image": "https://www.1op1dieet.nl/uploads/franky-wamelink/afvallen-in-schiedam-en-rotterdam.jpg?500x500"
+    }],
+    "user_next_oppointment": "12/06/2021"
+}]

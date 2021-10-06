@@ -1,0 +1,55 @@
+.aboutAppPage {
+    height: 100%;
+    background-color: #F1F6F9;
+    display: flex;
+    overflow-y: auto;
+    flex-direction: column;
+}
+
+.aboutAppContentContainer {
+    position: relative;
+    top: 110px;
+}
+
+.aboutAppContent {
+    display: flex;
+    width: 340px;
+    height: 150px;
+    border-radius: 15px;
+    background-color: white;
+    margin: 20px auto 0 auto;
+}
+
+.blueBorder {
+    height: 150px;
+    min-width: 70px;
+    width: 70px;
+    background-color: #2B2E6B;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    display: flex;
+}
+
+.infoIcon {
+    font-size: 44px;
+    color: white;
+    margin: auto;
+}
+
+.aboutAppInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutAppInfo>h3 {
+    color: #2B2E6B;
+    font-size: 18px;
+    margin: 20px 0 0 20px;
+}
+
+.aboutAppInfo>p {
+    color: black;
+    font-size: 14px;
+    margin: 10px 0 0 20px;
+    width: 230px;
+}

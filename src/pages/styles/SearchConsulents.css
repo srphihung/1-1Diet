@@ -1,0 +1,139 @@
+.consulentPage {
+    min-height: 100vh;
+    background-color: #F1F6F9;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+}
+
+.consulentContent {
+    display: flex;
+    flex-direction: column;
+    background-color: #F1F6F9;
+    min-height: 100%;
+}
+
+.map {
+    width: 100%;
+    height: 300px;
+    margin-top: 110px;
+}
+
+.consulentContent {
+    position: relative;
+    width: 100%;
+    background-color: #F1F6F9;
+}
+
+.consulentFilters {
+    display: flex;
+    flex-direction: column;
+}
+
+.consulentFilters>h1 {
+    color: #DC6099;
+    margin: 30px auto 0 auto;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.consulentInput {
+    width: 340px;
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 20px auto 0 auto;
+    border-radius: 5px;
+    background-color: white;
+}
+
+::placeholder {
+    color: black;
+    text-align: center;
+}
+
+.consulentRange {
+    display: flex;
+    width: 340px;
+    margin: 30px auto 0 auto;
+}
+
+.consulentRange>h3,
+.consulentContent>h3 {
+    color: #2B2E6B;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.consulentContent>h3 {
+    margin: 30px 0 0 15px;
+}
+
+.genderFilterBtn {
+    width: 100px;
+    height: 26px;
+    background-color: white;
+    color: black;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    margin: 15px 0 0 15px;
+    border: 1.5px solid #2B2E6B;
+}
+
+.genderFilterBtnActive {
+    width: 100px;
+    height: 26px;
+    background-color: #DC6099;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    margin: 15px 0 0 15px;
+}
+
+.consulentRange>p {
+    margin-left: 210px;
+    margin-top: 30px;
+    color: #B45081;
+}
+
+.rangeSlider {
+    width: 330px;
+    margin: 10px auto 0 auto;
+}
+
+.consulentContent>a {
+    width: 190px;
+    height: 30px;
+    background-color: white;
+    border-radius: 5px;
+    margin: 15px 0 0 15px;
+    color: black;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.consulentContent>a>input {
+    margin: auto 10px auto 5px;
+}
+
+.consulentContent>hr {
+    width: 340px;
+    margin: 30px auto 0 auto;
+}
+
+.consulentContent>button {
+    width: 100px;
+    height: 35px;
+    border-radius: 50px;
+    background-color: #2B2E6B;
+    color: white;
+    transition: all 0.2s ease;
+    outline: none;
+    outline: none;
+    margin: 20px auto 30px auto;
+    border: none;
+}

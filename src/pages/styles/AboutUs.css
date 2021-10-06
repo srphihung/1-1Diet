@@ -1,0 +1,51 @@
+.aboutUsPage {
+    height: 100%;
+    background-color: #F1F6F9;
+    display: flex;
+    overflow-y: auto;
+    flex-direction: column;
+    overflow-x: unset;
+}
+
+.aboutUsContent {
+    position: relative;
+    top: 110px;
+    overflow-y: hidden;
+}
+
+.aboutUsHeader>h1,
+.aboutUsInfo>h1 {
+    color: #DC6099;
+    margin: 30px 0 0 20px;
+    font-weight: bold;
+    font-size: 20px;
+    width: 300px;
+}
+
+.aboutUsHeader>img {
+    position: absolute;
+    left: 270px;
+}
+
+.aboutUsHeader>p {
+    width: 240px;
+    margin: 20px 0 0 20px;
+}
+
+.aboutUsHeader>p:nth-child(4) {
+    width: 340px;
+}
+
+.aboutUsInfo {
+    position: relative;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    height: 380px;
+}
+
+.aboutUsInfo>p {
+    margin: 20px 0 0 20px;
+    width: 340px;
+}

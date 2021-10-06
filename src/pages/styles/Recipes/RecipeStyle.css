@@ -1,0 +1,122 @@
+.recipeCard {
+    width: 310px;
+    height: 180px;
+    margin: 30px auto 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px darkgray;
+}
+
+.recipeFilter {
+    padding: 0;
+    width: 50% !important;
+    height: fit-content;
+    margin: 0 20px 0 0;
+}
+
+.recipeCardInfo {
+    width: 310px;
+    height: 80px;
+    background-color: #2B2E6B;
+    border-radius: 0 0 10px 10px;
+    position: relative;
+    color: white;
+    font-family: robo;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+.recipeCardInfo>p {
+    margin: 10px 0 0 20px;
+    width: 280px;
+}
+
+.bannerImg {
+    max-height: 100px;
+    height: 80%;
+    border-radius: 10px 10px 0 0 !important;
+    object-fit: cover;
+    width: 100%;
+}
+
+.buttonContainer {
+    overflow-x: auto;
+    margin: 20px 0 0 20px;
+    height: 30px;
+    display: flex;
+}
+
+
+/* Recipe detail page */
+
+.recipeCardInfo>p:nth-child(2) {
+    margin: 6px 0 0 20px;
+}
+
+.recipeDetailContent {
+    min-height: 100vw;
+    height: fit-content;
+    width: 100vw;
+    background-color: #F1F6F9;
+    display: flex;
+    flex-direction: column;
+}
+
+.recipeDetails {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.recipeImg {
+    min-width: 100vw;
+    min-height: 250px;
+    margin: 50px auto 0 auto;
+}
+
+.recipeDetails>h2 {
+    margin: 26px auto 0 auto;
+    color: #DC6099;
+    font-family: nos;
+    font-size: 24px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.stepCircle {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 70px;
+    border-radius: 50px;
+    left: 325px;
+    background-color: white;
+    font-weight: bold;
+    color: #2B2E6B;
+    font-size: 22px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;
+}
+
+.ingredientList {
+    background-color: #F1F6F9;
+    opacity: 1;
+    margin: 0 auto 50px auto;
+    width: 100vw;
+    height: fit-content;
+}
+
+.ingredientList>h3 {
+    color: #2B2E6B;
+    font-size: 18px;
+    margin: 30px 0 10px 20px;
+}
+
+.recipeItems {
+    margin: 0 0 50px 2px;
+    width: 100%;
+    max-width: 340px;
+}

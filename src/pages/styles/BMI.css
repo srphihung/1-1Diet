@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* BMI calculator */
+
+.bmiTab {
+    height: fit-content;
+    background-color: #F1F6F9;
+    display: flex;
+    overflow-y: auto;
+    flex-direction: column;
+}
+
+.bmiTab>h1 {
+    color: #DC6099;
+    margin: 130px auto 0 auto;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: nos;
+}
+
+.advies>h1 {
+    color: #DC6099;
+    margin: 30px auto 0 auto;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: nos;
+}
+
+.bmiTab>p {
+    color: #2B2E6B;
+    margin: 10px auto 20px auto;
+    font-weight: normal;
+}
+
+.bmiTab>h1 {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.bmiTab>p {
+    font-size: 14px;
+}
+
+.sliderContainer {
+    width: 320px;
+    background-color: white;
+    margin: 0 auto 0 auto;
+    border-radius: 15px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07), 0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+}
+
+.heightInput,
+.weightInput {
+    display: flex;
+}
+
+.heightInput>p:nth-child(1) {
+    margin: 15px 60px 20px 0;
+    color: #2B2E6B;
+}
+
+.weightInput>p:nth-child(1) {
+    color: #2B2E6B;
+    margin: 15px 66px 20px 0;
+}
+
+.heightInput>p:nth-child(2),
+.weightInput>p:nth-child(2) {
+    color: #B45081;
+    font-size: 20px;
+    position: relative;
+    top: 8px;
+}
+
+.sliderContainer>p {
+    margin: 10px 0 0;
+    color: #2B2E6B;
+}
+
+.resultContainer {
+    width: 320px;
+    background-color: #F09923;
+    margin: 30px auto 0 auto;
+    border-radius: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 240px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07), 0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+}
+
+.resultContainer>p,
+.resultContainer>h1 {
+    color: white;
+    text-align: center;
+}
+
+.resultContainer>h1 {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 10px 0 10px 0;
+}
+
+.resultContainer>p:nth-child(2) {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.resultContainer>hr {
+    background-color: white;
+    margin-bottom: 26px;
+}
+
+.resultContainer>p:nth-child(3) {
+    margin-top: 20px;
+    max-width: 270px;
+}
+
+.consulentInput {
+    width: 320px;
+    height: 40px;
+    margin: 10px auto 0 auto;
+    background-color: white;
+    border: 1px solid #f1f1f1;
+}
+
+::placeholder {
+    color: #2B2E6B;
+}
+
+.resultContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.consulentSearch>h1 {
+    color: #DC6099;
+    margin: 30px auto 10px auto;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: nos;
+}
+
+.consulentSearch {
+    display: flex;
+    flex-direction: column;
+}
+
+.consulentSearchBtn {
+    width: 100px;
+    height: 35px;
+    border-radius: 50px;
+    background-color: #2B2E6B;
+    color: white;
+    transition: all 0.2s ease;
+    outline: none;
+    outline: none;
+    margin: 20px auto 30px auto;
+    border: none;
+}
+
+.advies {
+    display: flex;
+    flex-direction: column;
+}
+
+.advies>input,
+.consulentSearch>input {
+    width: 320px;
+    margin: 15px auto 0 auto;
+    padding: 8px;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
