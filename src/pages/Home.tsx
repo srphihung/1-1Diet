@@ -23,14 +23,14 @@ const Home: React.FC = () => {
                     <h2>Informatie</h2>
                     <div className="infoBtns">
                         <Link to="/news"><div className="infoBtn">
-                            <button color="none" className="iconBckgrnd"><IonIcon icon={newspaperOutline} className="bigIcon"></IonIcon></button>
+                            <IonButton color="none" className="iconBckgrnd"><IonIcon icon={newspaperOutline} className="bigIcon"></IonIcon></IonButton>
                             <div className="textBckGrnd">
                                 <h3>Nieuws</h3>
                                 <p>Blijf up to date over de laatste nieuwtjes</p>
                             </div>
                         </div></Link>
                         <Link to="/dietinfo"><div className="infoBtn">
-                            <button color="none" className="iconBckgrnd"><IonIcon icon={nutritionOutline} className="bigIcon"></IonIcon></button>
+                            <IonButton color="none" className="iconBckgrnd"><IonIcon icon={nutritionOutline} className="bigIcon"></IonIcon></IonButton>
                             <div className="textBckGrnd">
                                 <h3>Het dieet</h3>
                                 <p>Waar ons dieet voor staat</p>
