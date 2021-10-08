@@ -26,7 +26,7 @@ const config: CapacitorConfig = {
     // Server object contains port and url configurations
     server: {
   // You can make the app to load an external url (i.e. to live reload)
-  url: 'http://31.14.96.253:8100',
+  url: 'http://localhost:8080',
       // You can configure the local hostname, but it's recommended to keep localhost
       // as it allows to run web APIs that require a secure context such as
       // navigator.geolocation and MediaDevices.getUserMedia.
