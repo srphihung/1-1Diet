@@ -7,7 +7,7 @@
 
 .AppointmentDetailTitle {
     color: #DC6099;
-    margin: 70px auto 0 auto;
+    margin: 80px auto 0 auto;
     max-height: fit-content;
     max-height: 24px;
     font-family: nos;
@@ -42,7 +42,7 @@
 .commentCard {
     width: 90%;
     min-height: 140px;
-    margin: 20px auto 0 auto;
+    margin: 15px auto 0 auto;
     position: relative;
 }
 
@@ -77,13 +77,17 @@
     font-size: 24px;
     max-height: 25px;
     position: relative;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .consulentAppointmentText {
     color: #2B2E6B;
-    margin: 10px 0 5px 15px;
+    margin: 0px 0 5px 15px;
     font-size: 14px;
+}
+
+.consulentAppointmentText:last-child {
+    margin-bottom: 0;
 }
 
 .addComment {

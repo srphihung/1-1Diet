@@ -29,7 +29,7 @@
     position: fixed;
     top: 55px;
     z-index: 98;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid #E5E4E4;
 }
 
 .navIcon {

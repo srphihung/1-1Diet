@@ -70,9 +70,9 @@ function Appointments() {
                         </div>
                         <div className="events">
                             <button className="makeAppointment" onClick={() => setModalController(current => !current)}>Afspraak inplannen</button>
-                            <IonTitle className="Title">Mijn afspraken</IonTitle>
                         </div>
                         <div className="appointmentContainer">
+                        <IonTitle className="Title">Mijn afspraken</IonTitle>
                             {appointment.map((appointment) => {
                                 return <SeeAppointment key={appointment.consulent} consulent={appointment.consulent} date={appointment.datum_tijd} time={appointment.time} name={appointment.name} email={appointment.email} number={appointment.number} comment={appointment.comment} />
                             })}

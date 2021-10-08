@@ -39,7 +39,7 @@ function AppointmentInfo() {
                                     <IonText className="consulentAppointmentText"><strong>Consulent: </strong>{appointment.consulent}</IonText>
                                     <IonText className="consulentAppointmentText"><strong>Datum: </strong>{appointment.datum_tijd}</IonText>
                                 </div> 
-                                <IonIcon icon={chevronForwardOutline} className="iconConsulent"></IonIcon>
+                                {/* <IonIcon icon={chevronForwardOutline} className="AppointmentChevronIcon"></IonIcon> */}
                             </IonCardContent>
                         </IonCard>
                         <IonTitle className="appointmentDetailSubtitle" onClick={() => console.log(appointments)}>Opmerkingen</IonTitle>

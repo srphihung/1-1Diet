@@ -157,12 +157,16 @@ h3 {
 }
 
 .consulentAvatar {
-    height: 80px;
+    /* height: 80px;
     width: 110px;
     background-color: #2B2E6B;
     border-radius: 10px 0 0 10px;
     display: flex;
-    position: relative;
+    position: relative; */
+    border-radius: 10px 0 0 10px;
+    min-height: 80px;
+    background-color: #2B2E6B;
+    min-width: 80px;
 }
 
 .consulentProfileImg {
@@ -183,6 +187,7 @@ h3 {
     display: flex;
     flex-direction: column;
     background-color: white;
+    justify-content: center;
 }
 
 .consulentContent>P:nth-child(1) {

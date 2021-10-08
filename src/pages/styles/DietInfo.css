@@ -23,12 +23,11 @@
     width: 330px;
     height: 550px;
     background-color: white;
-    margin: 30px auto 0 auto;
+    margin: 20px auto 0 auto;
     border-radius: 15px;
 }
 
 .aboutContent>p {
-    margin-top: 30px;
     max-width: 80%;
 }
 
@@ -61,14 +60,14 @@
     font-weight: bold;
     font-size: 22px;
     color: #2B2E6B;
-    margin: 50px auto 0 auto;
+    margin: 30px auto 0 auto;
 }
 
 .aboutContent>p {
     font-weight: normal;
     font-size: 16px;
     color: black;
-    margin: 30px auto 0 auto;
+    margin: 20px auto 0 auto;
 }
 
 .aboutContent>button {

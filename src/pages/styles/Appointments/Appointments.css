@@ -7,8 +7,7 @@
 .events button{
     background-color: #2B2E6B;
     border-style: none;
-    font-weight: bold;
-    color: #f1f1f1;
+    color: white;
 }
 .calendarContent {
     display: flex;
@@ -89,6 +88,7 @@
     background-color: white;
     color: #2B2E6B;
     font-weight: bold;
+    padding-top: 2px;
 }
 
 .containerContent {
@@ -103,13 +103,17 @@
 }
 
 .makeAppointment {
-    width: 80%;
-    height: 44px;
+    height: 40px;
+    padding: 0 40px;
     border-radius: 50px;
     background-color: white;
     color: #2B2E6B;
     box-shadow: 3px 3px 4px darkgray;
-    margin: 20px auto 30px auto;
+    margin: 20px auto 20px auto;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    font-family: 'nos';
 }
 
 .calendarPicker {
@@ -270,44 +274,46 @@
 .appointmentContainer {
     position: relative;
     top: 0px;
-    margin: 20px 0 0 0;
 }
 
 
 /*  See appointment */
 
 .AppointmentCard {
-    max-width: 90%;
     min-height: 80px;
     padding: 0;
-    margin: 0 auto 0 auto;
+    margin: 15px 15px 0 15px;
     position: relative;
+}
+
+.AppointmentCard:last-child {
+    margin-bottom: 15px;
 }
 
 .AppointmentCardContent {
     display: flex;
     padding: 0;
-    max-width: 90%;
 }
 
 .appointmentInfo {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .appointmentText {
     color: #2B2E6B;
-    margin: 5px 0 5px 15px;
+    margin: 0px 0px 5px 15px;
     font-size: 14px;
 }
 
-.appointmentText:nth-child(1) {
-    margin-top: 12px;
+.appointmentText:last-child {
+    margin-bottom: 0;
 }
 
 .AppointmentCalendarIcon {
     color: white;
-    font-size: 50px;
+    font-size: 40px;
     padding: 0;
     margin: auto 0 auto 0;
     position: relative;
@@ -326,6 +332,6 @@
     position: absolute;
     top: 35%;
     transform: translate(-50%);
-    left: 315px;
+    right: 0;
     color: #2B2E6B;
 }
