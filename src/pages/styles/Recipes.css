@@ -1,7 +1,7 @@
-.recipes{
+.recipes {
+    overflow-y: auto;
     background-color: #F1F6F9;
     min-height: 100vh;
-
 }
 
 .recipeContent {
@@ -54,15 +54,12 @@
 }
 
 .buttonContainer{
-    width: 90%;
+    width: 100%;
     padding: 10px;
-
 }
 .recipeFilter {
-    font-size: 14px;
+    font-size: 10px;
     font-weight: bold;
     border-style: none;
-    box-shadow: rgb(0 0 0 / 12%) 0px 4px 8px;
-    margin: 5px;
-    color: #8c8c8c;
+    background-color: blue;
 }

@@ -45,9 +45,11 @@ const Home: React.FC = () => {
                         </div></Link>
                         <Link to="/aboutus"><div className="infoBtn">
                             <IonButton color="none" className="iconBckgrnd"><IonIcon icon={informationOutline} className="bigIcon"></IonIcon></IonButton>
-                                <div className="textBckGrnd">
-                                <h3>Over ons</h3>
-                                <p>Een gezonde levensstijl als missie</p>
+                            <div className="textContent">
+                                 <div className="textBckGrnd">
+                                    <h3>Over ons</h3>
+                                    <p>Een gezonde levensstijl als missie</p>
+                                </div>
                             </div>
                         </div></Link>
                     </div>

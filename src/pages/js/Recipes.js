@@ -28,7 +28,7 @@ function Recipes() {
                     <IonInput placeholder="Zoeken..." className="recipeSearch" onIonChange={(e) => setSearchFilter(e.target.value)}></IonInput>
                     <div className="buttonSlider">
                         <div color="none" className="buttonContainer">
-                            <IonButton className="recipeFilter">Alles</IonButton>
+                            <IonButton className="recipeFilter">Alle recepten</IonButton>
                             <IonButton className="recipeFilter">Stap 1</IonButton>
                             <IonButton className="recipeFilter">Stap 2</IonButton>
                             <IonButton className="recipeFilter">Stap 3</IonButton>
