@@ -1,0 +1,6 @@
+{
+	"appId": "com.dieet.app",
+	"appName": "1-1Diet",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}
