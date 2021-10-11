@@ -104,10 +104,14 @@
 
 .infoBtn {
     height: 60px;
-    width: 335px;
+    width: 100%;
     display: flex;
     box-shadow: rgb(0 0 0 / 12%) 0px 4px 16px;
     border-radius: 10px;
+}
+
+button.button-native {
+    border-radius: 10px 0 0 10px;
 }
 
 .iconBckgrnd {
@@ -126,7 +130,7 @@
 
 .textBckGrnd {
     margin: 0 auto;
-    width: 275px;
+    width: 100%;
     height: 60px;
     background-color: white;
     border-top-right-radius: 10px;
