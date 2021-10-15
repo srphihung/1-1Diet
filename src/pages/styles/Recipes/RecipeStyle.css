@@ -1,14 +1,10 @@
 .recipeCard {
-    /* width: 310px; */
+    width: 310px;
     height: 180px;
-    margin: 20px 15px 0 15px;
+    margin: 30px auto 0 auto;
     background-color: white;
     border-radius: 10px;
     box-shadow: 3px 3px 6px darkgray;
-}
-
-.recipeCard:last-child {
-    margin-bottom: 20px;
 }
 
 .recipeFilter {
@@ -19,7 +15,7 @@
 }
 
 .recipeCardInfo {
-    /* width: 310px; */
+    width: 310px;
     height: 80px;
     background-color: #2B2E6B;
     border-radius: 0 0 10px 10px;
@@ -46,7 +42,7 @@
 
 .buttonContainer {
     overflow-x: auto;
-    margin: 20px 0 0 0;
+    margin: 20px 0 0 20px;
     height: 30px;
     display: flex;
     max-width: 85%;
