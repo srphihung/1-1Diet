@@ -55,11 +55,10 @@
 
 .buttonContainer{
     width: 100%;
-    padding: 10px;
+    padding: 10px 15px;
 }
 .recipeFilter {
     font-size: 10px;
     font-weight: bold;
     border-style: none;
-    background-color: blue;
 }
