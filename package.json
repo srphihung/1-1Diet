@@ -104,9 +104,5 @@
     "@capacitor/cli": "3.2.4",
     "react-scripts": "4.0.2"
   },
-<<<<<<< Updated upstream
-  "homepage": "http://10.31.0.170:5000/home"
-=======
   "homepage": "http://192.168.24.158:5000/home"
->>>>>>> Stashed changes
 }
