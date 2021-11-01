@@ -94,7 +94,7 @@
 }
 
 .infoBtns {
-    margin: 15px 15px 0 15px;
+    margin: 15px 20px 0 20px;
     display: flex;
     flex-direction: column;
 }
