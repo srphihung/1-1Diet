@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "@capacitor/action-sheet": "^1.0.5",
     "@capacitor/android": "^3.2.5",
     "@capacitor/app": "^1.0.5",
@@ -56,6 +57,24 @@
     "@capacitor/keyboard": "1.1.0",
     "@capacitor/local-notifications": "^1.0.6",
     "@capacitor/motion": "^1.0.2",
+=======
+    "@capacitor/action-sheet": "^1.0.3",
+    "@capacitor/android": "^3.2.4",
+    "@capacitor/app": "^1.0.3",
+    "@capacitor/app-launcher": "^1.0.4",
+    "@capacitor/browser": "^1.0.3",
+    "@capacitor/camera": "^1.1.0",
+    "@capacitor/clipboard": "^1.0.3",
+    "@capacitor/core": "3.2.4",
+    "@capacitor/device": "^1.0.3",
+    "@capacitor/dialog": "^1.0.3",
+    "@capacitor/filesystem": "^1.0.3",
+    "@capacitor/geolocation": "^1.1.0",
+    "@capacitor/haptics": "1.1.0",
+    "@capacitor/keyboard": "1.1.0",
+    "@capacitor/local-notifications": "^1.0.6",
+    "@capacitor/motion": "^1.0.2",
+>>>>>>> parent of 54a2dc8 (Merge branch 'dev' of https://github.com/srphihung/1-1Diet into dev)
     "@capacitor/network": "^1.0.3",
     "@capacitor/push-notifications": "^1.0.4",
     "@capacitor/screen-reader": "^1.0.3",
@@ -65,6 +84,9 @@
     "@capacitor/storage": "^1.2.0",
     "@capacitor/text-zoom": "^1.0.3",
     "@capacitor/toast": "^1.0.3",
+<<<<<<< HEAD
+>>>>>>> parent of 54a2dc8 (Merge branch 'dev' of https://github.com/srphihung/1-1Diet into dev)
+=======
 >>>>>>> parent of 54a2dc8 (Merge branch 'dev' of https://github.com/srphihung/1-1Diet into dev)
     "@ionic-native/splash-screen": "^5.36.0",
     "@ionic-native/web-intent": "^5.36.0",
@@ -146,6 +168,7 @@
   "description": "An Ionic project",
   "devDependencies": {
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     "@capacitor/cli": "^3.2.4",
     "react-scripts": "4.0.2"
@@ -157,6 +180,12 @@
   },
   "homepage": "http://192.168.178.52:8100/home"
 >>>>>>> Stashed changes
+=======
+    "@capacitor/cli": "3.2.4",
+    "react-scripts": "4.0.2"
+  },
+  "homepage": "http://10.31.0.170:5000/home"
+>>>>>>> parent of 54a2dc8 (Merge branch 'dev' of https://github.com/srphihung/1-1Diet into dev)
 =======
     "@capacitor/cli": "3.2.4",
     "react-scripts": "4.0.2"
