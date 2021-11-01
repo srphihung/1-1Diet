@@ -21,10 +21,7 @@ dependencies {
     implementation project(':capacitor-geolocation')
     implementation project(':capacitor-haptics')
     implementation project(':capacitor-keyboard')
-<<<<<<< Updated upstream
     implementation project(':capacitor-local-notifications')
-=======
->>>>>>> Stashed changes
     implementation project(':capacitor-network')
     implementation project(':capacitor-push-notifications')
     implementation project(':capacitor-screen-reader')
@@ -34,11 +31,7 @@ dependencies {
     implementation project(':capacitor-storage')
     implementation project(':capacitor-text-zoom')
     implementation project(':capacitor-toast')
-<<<<<<< Updated upstream
     implementation "androidx.core:core:1.1.0"
-=======
-
->>>>>>> Stashed changes
 }
 
 

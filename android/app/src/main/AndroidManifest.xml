@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-<<<<<<< Updated upstream
     package="com.dieet.app">
-=======
-    package="com.diet.app">
->>>>>>> Stashed changes
 
     <application
         android:allowBackup="true"
@@ -17,11 +13,7 @@
 
         <activity
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode"
-<<<<<<< Updated upstream
             android:name="com.dieet.app.MainActivity"
-=======
-            android:name="com.diet.app.MainActivity"
->>>>>>> Stashed changes
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBarLaunch"
             android:launchMode="singleTask">

@@ -3,11 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
-<<<<<<< Updated upstream
         applicationId "com.dieet.app"
-=======
-        applicationId "com.diet.app"
->>>>>>> Stashed changes
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
