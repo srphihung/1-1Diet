@@ -112,6 +112,7 @@
 
 button.button-native {
     border-radius: 10px 0 0 10px;
+    box-shadow: none;
 }
 
 .iconBckgrnd {
