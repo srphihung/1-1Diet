@@ -2,20 +2,22 @@ import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
-import Recipes from './pages/js/Recipes'
-import BMI from './pages/js/BMI'
-import Experience from './pages//js/Experience'
-import DietInfo from './pages/js/DietInfo'
-import AboutUs from './pages/js/AboutUs'
-import SearchConsulent from './pages/js/SearchConsulent'
-import Appointments from './pages/js/Appointments/Appointments'
-import Account from './pages/js/Account/Account'
-import News from './pages/js/News/News'
+import Recipes from './pages/js/Recipes';
+import BMI from './pages/js/BMI';
+import Experience from './pages//js/Experience';
+import DietInfo from './pages/js/DietInfo';
+import AboutUs from './pages/js/AboutUs';
+import SearchConsulent from './pages/js/SearchConsulent';
+import Appointments from './pages/js/Appointments/Appointments';
+import Account from './pages/js/Account/Account';
+import News from './pages/js/News/News';
 import ClientStory from './pages/js/Stories/ClientStory';
-import AboutApp from './pages/js/AboutApp'
-import RecipeInfo from './pages/js/Recipes/RecipeInfo'
-import Progress from './pages/js/Voortgang/Progress'
-import AppointmentInfo from './pages/js/Appointments/AppointmentInfo'
+import AboutApp from './pages/js/AboutApp';
+import RecipeInfo from './pages/js/Recipes/RecipeInfo';
+import Progress from './pages/js/Voortgang/Progress';
+import AppointmentInfo from './pages/js/Appointments/AppointmentInfo';
+import Login from "./pages/js/Login/Login";
+
 
 const App: React.FC = () => (
   <IonApp>
@@ -27,6 +29,7 @@ const App: React.FC = () => (
         <Route path="/calendar" component={Appointments} />
         <Route path="/recipes" component={Recipes} />
         <Route path="/account" component={Account} />
+        <Route path="/login" component={Login} />
 
         {/* Secondary nav routes */}
         <Route path="/bmi" component={BMI} />

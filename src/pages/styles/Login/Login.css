@@ -1,0 +1,46 @@
+.loginContainer {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 40%;
+    text-align: center;
+}
+
+.loginContainer>h2 {
+    color: #DC6099;
+    font-size: 34px;
+    margin: 20px 0 0 20px;
+    font-family: nos;
+}
+
+.loginUsername {
+    position: absolute;
+    left: 7.5%;
+    top: 25%;
+    text-align: center;
+    border-radius: 15px;
+    border: solid;
+    border-color: #DC6099;
+}
+
+.loginPassword{
+    position: absolute;
+    left: 7.5%;
+    top: 50%;
+    text-align: center;
+    border-radius: 15px;
+    border: solid;
+    border-color: #DC6099;
+}
+
+.loginSubmit{
+    position: absolute;
+    right: 10%;
+    bottom: 15%;
+    width: 30%;
+    height: 15%;
+    text-align: center;
+    border-radius: 15px;
+    background-color: #2b2e6b;
+}

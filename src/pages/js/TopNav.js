@@ -9,14 +9,14 @@ function TopNav() {
     return (
         <div className="topNavigation">
             <div className="navigationInfo">
-                <img className="logo" src={Logo}></img>
+                <img className="logo" src={Logo} />
             </div>
             <div className="iconBtn">
                 <NavLink to="/home" className="navIcon" activeClassName="navIconActive"><IonIcon icon={homeOutline} /></NavLink>
                 <NavLink to="/news" className="navIcon" activeClassName="navIconActive" ><IonIcon icon={newspaperOutline} /></NavLink>
-                <NavLink to="/calendar" className="navIcon" activeClassName="navIconActive" ><IonIcon icon={calendarOutline} ></IonIcon></NavLink>
-                <NavLink to="/recipes" className="navIcon" activeClassName="navIconActive"><IonIcon icon={restaurantOutline}  ></IonIcon></NavLink>
-                <NavLink to="/account" className="navIcon" activeClassName="navIconActive" ><IonIcon icon={personOutline}></IonIcon></NavLink>
+                <NavLink to="/calendar" className="navIcon" activeClassName="navIconActive" ><IonIcon icon={calendarOutline} /></NavLink>
+                <NavLink to="/recipes" className="navIcon" activeClassName="navIconActive"><IonIcon icon={restaurantOutline}  /></NavLink>
+                <NavLink to="/account" className="navIcon" activeClassName="navIconActive" ><IonIcon icon={personOutline} /></NavLink>
             </div>
         </div> 
     )
