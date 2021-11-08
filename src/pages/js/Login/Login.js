@@ -103,11 +103,9 @@ function Login() {
                         </IonItem>
                     </div>
                     <div className="loginSubmit">
-                        <Link to="./home">
                             <IonButton type="submit" color="none">
                                 Login
                             </IonButton>
-                        </Link>
                     </div>
                 </div>
                 </form>
