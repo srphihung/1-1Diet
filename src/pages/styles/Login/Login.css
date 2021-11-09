@@ -1,60 +1,43 @@
 .loginContainer {
-    position: absolute;
-    top: 25%;
-    left: 10%;
-    width: 80%;
-    height: 40%;
     text-align: center;
     display: flex;
+    border-color: #DC6099;
+    display: inline-block;
+    margin: 50% auto;
+    padding-left: 10%;
+    width: 80%;
 }
 
-.loginContainer>h2 {
+#loginUsername, #loginPassword{
+    text-align: center;
+    border-radius: 25px;
+    border: solid;
+    border-color: #DC6099;
+    margin-top: 15px;
+    outline: hidden;
+}
+
+.loginContainer>h2{
     color: #DC6099;
     font-size: 34px;
-    margin: 20px 0 0 20px;
     font-family: nos;
-    position: relative;
-    left: 40%;
-    display: inline-flex;
 }
 
-.loginUsername {
-    position: absolute;
-    left: 7.5%;
-    top: 25%;
-    text-align: center;
-    border-radius: 15px;
-    border: solid;
-    border-color: #DC6099;
-    margin: 5px;
-    display: inline-block;
-    outline: none;
-}
-
-.loginPassword{
-    position: absolute;
-    left: 7.5%;
-    top: 40%;
-    text-align: center;
-    border-radius: 15px;
-    border: solid;
-    border-color: #DC6099;
-    margin: 5px;
-    display: inline-block;
-    outline: none;
-}
-
-.loginSubmit{
-    position: absolute;
-    right: 10%;
-    bottom: 25%;
-    width: 30%;
-    height: 10%;
+#loginSubmit{
     text-align: center;
     border-radius: 15px;
     background-color: #2b2e6b;
-    margin: 5px;
-    padding: 5px 5px;
-    display: inline-flex;
+    margin: 15px auto;
     box-shadow: none;
+    width: 50%;
+    color: #DC6099;
+    font-family: nos;
+    overflow: hidden;
+    font-size: 34px;
+    max-height: 50px;
+}
+
+ion-item {
+    --border-width: 0;
+    --inner-border-width: 0;
 }
