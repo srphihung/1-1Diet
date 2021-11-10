@@ -68,18 +68,23 @@
 .statContainer {
     display: flex;
     min-width: 100vw;
+    flex-wrap: wrap;
 }
 
+.locationContainer,
 .heightContainer,
 .weightContainer {
     width: 150px;
     height: 50px;
     background-color: white;
     margin: 20px auto 0 auto;
+    padding: 5px;
     border-radius: 10px;
     display: flex;
+    overflow: auto;
 }
 
+.locationContainer>p,
 .heightContainer>p,
 .weightContainer>p {
     margin: auto;

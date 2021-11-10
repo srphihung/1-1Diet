@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import TopNav from '../TopNav'
 import '../../styles/Account/Account.css'
-import { scaleOutline, resizeOutline, alertCircleOutline, settingsOutline, chevronForwardOutline, person } from 'ionicons/icons'
+import { scaleOutline, resizeOutline, alertCircleOutline, settingsOutline, chevronForwardOutline, person, locationOutline } from 'ionicons/icons'
 import {
     IonAvatar,
     IonButton,
@@ -45,6 +45,7 @@ function Account() {
                     <div className="statContainer">
                         <div className="heightContainer"><div className="blueborder"><IonIcon icon={resizeOutline} className="iconProfile"></IonIcon></div><p>{DF.lengthInCm} Cm</p></div>
                         <div className="weightContainer"><div className="blueborder"><IonIcon icon={scaleOutline} className="iconProfile"></IonIcon></div><p>{DF.startWeight} Kg</p></div>
+                        <div className="locationContainer"><div className="blueborder"><IonIcon icon={locationOutline} className="iconProfile"></IonIcon></div><p>{DF.location.city}</p></div>
                     </div>
                     <div className="consulentContainer">
                         <h3>Aangesloten bij</h3>
