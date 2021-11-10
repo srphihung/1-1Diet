@@ -19,6 +19,17 @@
     background-color: white;
 }
 
+.profileImg{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: 2px solid #DC6099;
+    margin: 5px auto 0 auto;
+    text-align: center;
+    display: flex;
+    background-color: white;
+}
+
 .settingsBtn {
     width: 36px;
     height: 36px;
