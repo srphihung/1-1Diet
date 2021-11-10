@@ -17,14 +17,14 @@ function Login() {
                     <div className="loginContainer">
                         <h2>Login</h2>
                         <div className="userInput" id="loginUsername">
-                            <IonItem>
+                            <IonItem no-lines>
                                 <IonInput name={"username"} value={username} placeholder="Gebruikersnaam"
                                           required={"true"}/>
                             </IonItem>
                         </div>
 
                         <div className="userInput" id="loginPassword">
-                            <IonItem>
+                            <IonItem no-lines>
                                 <IonInput name={"password"} type="password" value={password} minlength="8"
                                           placeholder="Wachtwoord" required={"true"}/>
                             </IonItem>
