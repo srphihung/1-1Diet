@@ -23,7 +23,6 @@ function ClientStory() {
                     <h3>Consulent</h3>
                     <p>“Na veel twijfels ben ik met dit dieet begonnen. Ik was sceptisch, maar wist ook dat er drastisch iets moest veranderen. De volgende dag zat ik bij mijn consulent. Ik hield mezelf voor dat als het niets zou zijn, ik gewoon weer zou stoppen.”</p>
                 </div>
-                <a className="borderBottom"></a>
             </div>
         </IonContent>
     )

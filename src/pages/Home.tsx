@@ -52,7 +52,6 @@ const Home: React.FC = () => {
                         </div></Link>
                     </div>
                 </div>
-                <a className="borderBottom"></a>
             </div>
         </IonContent>
     )

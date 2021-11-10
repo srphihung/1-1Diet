@@ -140,7 +140,6 @@ function Appointments() {
                 null
             )
             }
-            <a className="borderBottom"></a>
         </IonContent >
     )
 }
