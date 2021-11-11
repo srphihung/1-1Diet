@@ -80,14 +80,67 @@
     margin: 20px auto 0 auto;
     border-radius: 10px;
     display: flex;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .locationContainer>p,
 .heightContainer>p,
 .weightContainer>p {
-    margin: auto;
+    margin: 5px;
     padding: 5px;
+    text-align: center;
+}
+
+h2 {
+    color: #DC6099;
+    position: absolute;
+    top: 10%;
+    transform: translateX(100%);
+    text-align: center;
+}
+
+.weightDetails {
+    border: solid #DC6099;
+    border-radius: 15px;
+    color: black;
+    margin: 5px;
+    padding: 5px;
+    text-align: left;
+    position: absolute;
+    top: 15%;
+    transform: translateX(5%);
+    width: 330px;
+}
+
+.weightDetails>p {
+    border-bottom: 1px solid #d4d4d4;
+    padding: 5px;
+}
+
+.weightDetails>p:last-child {
+    border-bottom: none;
+}
+
+.WeightModalCloseButton {
+    transform: translateX(100%);
+    position: absolute;
+    bottom: 10%;
+    color: #2b2e6b;
+    background-color: #DC6099;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: none;
+}
+
+.WeightModalButton {
+    border: none;
+    height: 100%;
+    width: 100%;
+    color: black;
+    border-radius: 10px;
+    box-shadow: none;
+    overflow: hidden;
+    text-align: center;
 }
 
 .blueborder {
