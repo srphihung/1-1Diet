@@ -30,6 +30,26 @@ function Account(props) {
 
     today = dd + '/' + mm + '/' + yyyy;
 
+    const axios = require("axios")
+    axios({
+        method: 'POST',
+        url: 'https://test-api-cwp.vp-company.nl/connect/token',
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: {
+            username: "rcwtest1@1op1dieet.nl",
+            password: "Onzin&21&",
+            grant_type: "password",
+            
+        }
+
+    }).then(function(response) {
+        console.log(response.config.headers);
+    }).catch(function(err) {
+        console.error(err);
+    })
+
     return (
         <IonContent>
                 <TopNav/>
