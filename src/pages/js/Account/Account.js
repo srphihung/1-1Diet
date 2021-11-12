@@ -17,6 +17,7 @@ import {
 import DF from '../../../Data/DF.json'
 import { Link } from 'react-router-dom'
 import Logo from "../../../images/logodiet.svg";
+import * as QueryString from "querystring";
 
 function Account(props) {
     const [currentUser, setCurrentUer] = useState(DF[0])
@@ -31,24 +32,17 @@ function Account(props) {
     today = dd + '/' + mm + '/' + yyyy;
 
     const axios = require("axios")
-    axios({
-        method: 'POST',
-        url: 'https://test-api-cwp.vp-company.nl/connect/token',
+    axios.post('https://test-api-cwp.vp-company.nl/connect/token', QueryString.stringify({
+        username: "rcwtest1@1op1dieet.nl",
+        password: "Onzin&21&",
+        grant_type: "password",
+    }), {
         headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
-        },
-        body: {
-            username: "rcwtest1@1op1dieet.nl",
-            password: "Onzin&21&",
-            grant_type: "password",
-            
+            "Content-Type": "application/x-www-form-urlencoded",
         }
-
-    }).then(function(response) {
-        console.log(response.config.headers);
-    }).catch(function(err) {
-        console.error(err);
-    })
+    }).then(response => {
+        console.log(response.data)
+    }).catch(err => console.log("api Erorr: ", err.response))
 
     return (
         <IonContent>
