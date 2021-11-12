@@ -24,7 +24,7 @@
     height: 100px;
     border-radius: 50px;
     border: 2px solid #DC6099;
-    margin: 5px auto 0 auto;
+    margin: 20px auto 0 auto;
     text-align: center;
     display: flex;
     background-color: white;
@@ -33,14 +33,16 @@
 .settingsBtn {
     width: 36px;
     height: 36px;
-    border-radius: 5px;
+    border-radius: 10px;
     color: white;
-    background-color: #2B2E6B;
+    background-color: #a7a7a7;
     font-size: 24px;
     display: flex;
     border: none;
     outline: none;
-    margin: 10px 0 0 330px;
+    top: 20px;
+    right: 15px;
+    position: absolute;
 }
 
 .avatarIcon {
@@ -51,7 +53,7 @@
 .accountPageContent>p:nth-child(3) {
     color: #DC6099;
     font-size: 24px;
-    margin: 25px auto 0 auto;
+    margin: 20px auto 0 auto;
     font-family: nos;
 }
 
@@ -90,7 +92,7 @@
     text-align: center;
 }
 
-h2 {
+h2.modalTitle {
     color: #DC6099;
     position: absolute;
     top: 10%;
@@ -155,11 +157,10 @@ h2 {
 
 .blueborder {
     height: auto;
-    width: 50px;
     background-color: #2B2E6B;
     color: white;
-    padding: 5px;
-    font-size: 32px;
+    padding: 10px;
+    font-size: 24px;
     border-radius: 10px 0 0 10px;
     display: flex;
     justify-content: center;
@@ -228,12 +229,13 @@ h3 {
 }
 
 .consulentShrtct {
-    width: 90%;
+    max-width: 350px;
     height: 80px;
     background-color: white;
     border-radius: 10px;
-    margin: 20px auto 0 auto;
+    margin: 20px 15px 0 15px;
     display: flex;
+    padding: 0 0 0 15px;
 }
 
 .consulentAvatar {
@@ -266,7 +268,7 @@ h3 {
 }
 
 .consulentContent>P:nth-child(1) {
-    margin: 16px 0 0 10px;
+    /* margin: 16px 0 0 10px; */
     font-size: 14px;
 }
 
