@@ -44,7 +44,6 @@ function Recipes() {
                         })}
                     </div>
                 </div>
-                <a className="borderBottom"></a>
             </div>
         </IonContent>
     )

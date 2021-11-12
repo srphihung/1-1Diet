@@ -1,14 +1,27 @@
-import React, { useEffect, useState } from 'react'
+import React, {Component, useEffect, useState} from 'react'
 import TopNav from '../TopNav'
 import '../../styles/Account/Account.css'
-import { scaleOutline, resizeOutline, alertCircleOutline, settingsOutline, chevronForwardOutline, person } from 'ionicons/icons'
-import { IonAvatar, IonButton, IonCard, IonCardContent, IonContent, IonIcon, IonText } from '@ionic/react'
-import CurrentUser from '../../../Data/CurrentUser.json'
+import { scaleOutline, resizeOutline, alertCircleOutline, settingsOutline, chevronForwardOutline, person, locationOutline } from 'ionicons/icons'
+import {
+    IonAvatar,
+    IonButton,
+    IonCard,
+    IonCardContent, IonCol,
+    IonContent,
+    IonIcon,
+    IonImg,
+    IonItem, IonModal,
+    IonText,
+    useIonModal
+} from '@ionic/react'
+import DF from '../../../Data/DF.json'
 import { Link } from 'react-router-dom'
+import Logo from "../../../images/logodiet.svg";
 
 function Account() {
-    const [currentUser, setCurrentUer] = useState(CurrentUser[0])
+    const [currentUser, setCurrentUer] = useState(DF[0])
     const [loading, setLoading] = useState(true)
+    const [showModal, setShowModal] = useState(false)
 
     var today = new Date();
     var dd = String(today.getDate()).padStart(2, '0');
@@ -22,29 +35,70 @@ function Account() {
             <div>
                 <TopNav />
                 <div className="accountPageContent">
-                    <button className="settingsBtn"><IonIcon icon={settingsOutline} className="iconProfile"></IonIcon></button>
-                    <IonAvatar className="Avatar"><IonIcon icon={person} className="avatarIcon"></IonIcon></IonAvatar>
-                    <p>Welkom {currentUser.user_firstname} {currentUser.user_lastname} </p>
+                    <button className="settingsBtn">
+                        <IonIcon icon={settingsOutline} className="iconProfile">
+                        </IonIcon>
+                    </button>
+                    <IonAvatar className="profileImg">
+                        <IonImg src={DF.urlClientPhoto}/>
+                    </IonAvatar>
+                    <p>Welkom {DF.firstName} {DF.lastName} </p>
                     <p>{today}</p>
                     <hr />
                     <div className="statContainer">
-                        <div className="heightContainer"><div className="blueborder"><IonIcon icon={resizeOutline} className="iconProfile"></IonIcon></div><p>{currentUser.user_height} Cm</p></div>
-                        <div className="weightContainer"><div className="blueborder"><IonIcon icon={scaleOutline} className="iconProfile"></IonIcon></div><p>{currentUser.user_currentweight} Kg</p></div>
+                            <div className="heightContainer">
+                                <div className="blueborder">
+                                    <IonIcon icon={resizeOutline} className="iconProfile"></IonIcon>
+                                </div><p>{DF.lengthInCm} Cm</p>
+                            </div>
+                        <div className="weightContainer">
+                            <div className="blueborder">
+                                <IonIcon icon={scaleOutline} className="iconProfile"></IonIcon>
+                            </div>
+                            <IonModal isOpen={showModal} className='WeightModal'>
+                                <div className="navigationInfo">
+                                    <img className="logo" src={Logo} alt={'1:1 Diet logo'}/>
+                                </div>
+                                <h2>Gewichten:</h2>
+                                <IonCol className="weightDetails">
+                                    <p><strong>Start Gewicht:</strong> {DF.startWeight}</p>
+                                    <p><strong>Start BMI:</strong> {DF.startBMI}</p>
+                                    <p><strong>Start Middel:</strong> {DF.startWaistSize}</p>
+                                    <p><strong>Doel Gewicht:</strong> {DF.targetWeight}</p>
+                                    <p><strong>Doel BMI:</strong> {DF.targetBMI}</p>
+                                    <p><strong>Doel Middel:</strong> {DF.targetWaistSize}</p>
+                                    <p><strong>Laat Vet Zien:</strong> {DF.clientWeightDetails.showFat}</p>
+                                    <p><strong>Laat Middel Zien:</strong> {DF.clientWeightDetails.showWaist}</p>
+                                    <p><strong>Laat Visceraal Vet Zien:</strong> {DF.clientWeightDetails.showVisceralFat}</p>
+                                    <p><strong>Laat Vet Vrij Massa Zien:</strong> {DF.clientWeightDetails.showFatFreeMass}</p>
+                                    <p><strong>Laat Gespierde Massa Zien:</strong> {DF.clientWeightDetails.showMuscularMass}</p>
+                                    <p><strong>Laat Bot Massa Zien:</strong> {DF.clientWeightDetails.showBoneMass}</p>
+                                    <p><strong>Laat BmrKc zien:</strong> {DF.clientWeightDetails.showBmrKc}</p>
+                                    <p><strong>Laat BmrKj zien:</strong> {DF.clientWeightDetails.showBmrKj}</p>
+                                    <p><strong>Laat Metabloische Leeftijd Zien:</strong> {DF.clientWeightDetails.showMetabolicAge}</p>
+                                    <p><strong>Laat Gezond Gewicht Zien:</strong> {DF.clientWeightDetails.showHealthyWeight}</p>
+                                </IonCol>
+                                <IonButton className="WeightModalCloseButton" color="none" onClick={() => setShowModal(false)}>Close Modal</IonButton>
+                            </IonModal>
+                            <p>
+                                <IonButton className="WeightModalButton" onClick={() => setShowModal(true)} color="none">Gewicht</IonButton>
+                            </p>
+                        </div>
+                        <div className="locationContainer">
+                            <div className="blueborder">
+                                <IonIcon icon={locationOutline} className="iconProfile"></IonIcon>
+                            </div>
+                            <p>{DF.location.city}, {DF.location.street} {DF.location.houseNumber}</p>
+                        </div>
                     </div>
                     <div className="consulentContainer">
                         <h3>Aangesloten bij</h3>
-                        {currentUser.consulent.length === 1 ? (
                             <div className="consulentShrtct">
-                                <IonAvatar className="consulentAvatar">
-                                    <img src={currentUser.consulent[0].consulent_image} className="consulentProfileImg"></img>
-                                </IonAvatar>
                                 <div className="consulentContent">
-                                    <p>{currentUser.consulent[0].consulent_name}</p>
-                                    <p>{currentUser.consulent[0].consulent_adres}</p>
+                                    <p>{DF.consultantFullName}</p>
                                 </div>
                                 <IonIcon icon={chevronForwardOutline} className="iconConsulent"></IonIcon>
                             </div>
-                        ) : (
                             <div className="noConsulentWarning">
                                 <div className="blueWarning">
                                     <IonIcon icon={alertCircleOutline} className="iconProfile"></IonIcon>
@@ -54,32 +108,20 @@ function Account() {
                                     <button className="searchConsulent">Consulent zoeken</button>
                                 </div>
                             </div>
-                        )}
                     </div>
                     {/* {currentUser.user_id === Number  ? ( */}
                     <h3>Laatste stats</h3>
                     <div className="IonCardStats">
                         <IonCard className="userStatContainer">
                             <IonCardContent className="userStatContainerContent">
-                                {currentUser.user_appointments.slice(0,2).map((appointment) => {
-                                    return <IonCardContent key={appointment.title}>
-                                        <IonText className="statTitle">{appointment.title}</IonText><br />
-                                        <IonText className="statDate">{appointment.date}</IonText>
-                                        <div className="weightMomentCircle">{appointment.weight} Kg</div>
-                                        <hr />
-                                    </IonCardContent>
-                                })}
                                 <Link to="/voortgang"><IonButton className="toProgress" shape="round">Volledig rapport</IonButton></Link>
                             </IonCardContent>
                         </IonCard>
                     </div>
                     {/* ) : ( null )} */}
                 </div>
-                <a className="borderBottom"></a>
             </div>
         </IonContent>
-
     )
 }
-
 export default Account
