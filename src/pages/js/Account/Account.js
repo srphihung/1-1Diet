@@ -32,23 +32,30 @@ function Account(props) {
 
     return (
         <IonContent>
-                <TopNav />
+                <TopNav/>
                 <div className="accountPageContent">
+
                     <button className="settingsBtn">
                         <IonIcon icon={settingsOutline} className="iconProfile">
                         </IonIcon>
                     </button>
+
                     <IonAvatar className="profileImg">
                         <IonImg src={DF.urlClientPhoto}/>
                     </IonAvatar>
+
                     <p>Welkom {DF.firstName} {DF.lastName} </p>
-                    <hr />
+
                     <div className="statContainer">
-                            <div className="heightContainer">
-                                <div className="blueborder">
-                                    <IonIcon icon={resizeOutline} className="iconProfile"></IonIcon>
-                                </div><p>{DF.lengthInCm} Cm</p>
-                            </div>
+
+
+                        <div className="heightContainer">
+                            <div className="blueborder">
+                                <IonIcon icon={resizeOutline} className="iconProfile"></IonIcon>
+                            </div><p>{DF.lengthInCm} Cm</p>
+                        </div>
+
+
                         <div className="weightContainer">
                             <div className="blueborder">
                                 <IonIcon icon={scaleOutline} className="iconProfile"></IonIcon>
@@ -79,26 +86,34 @@ function Account(props) {
                                     </IonCol>
                                     <IonButton className="WeightModalCloseButton" color="none" onClick={() => setShowModal(false)}>Close Modal</IonButton>
                                 </div>
+
                             </IonModal>
                             <p>
                                 <IonButton className="WeightModalButton" onClick={() => setShowModal(true)} color="none">Gewicht</IonButton>
                             </p>
                         </div>
-                        <div className="locationContainer">
+
+
+                        {/* <div className="locationContainer">
                             <div className="blueborder">
                                 <IonIcon icon={locationOutline} className="iconProfile"></IonIcon>
                             </div>
                             <p>{DF.location.city}, {DF.location.street} {DF.location.houseNumber}</p>
-                        </div>
+                        </div> */}
                     </div>
+
                     <div className="consulentContainer">
                         <h3>Aangesloten bij</h3>
+                        
+                        {(DF.consultantFullName) ?   
                             <div className="consulentShrtct">
                                 <div className="consulentContent">
                                     <p>{DF.consultantFullName}</p>
                                 </div>
                                 <IonIcon icon={chevronForwardOutline} className="iconConsulent"></IonIcon>
                             </div>
+                            // console.log('true')
+                        :
                             <div className="noConsulentWarning">
                                 <div className="blueWarning">
                                     <IonIcon icon={alertCircleOutline} className="iconProfile"></IonIcon>
@@ -108,16 +123,23 @@ function Account(props) {
                                     <button className="searchConsulent">Consulent zoeken</button>
                                 </div>
                             </div>
+                            // console.log('false')
+                        }
+                        
+
+                        
                     </div>
                     {/* {currentUser.user_id === Number  ? ( */}
-                    <h3>Laatste stats</h3>
+
+                    
+                    {/* <h3>Laatste stats</h3>
                     <div className="IonCardStats">
                         <IonCard className="userStatContainer">
                             <IonCardContent className="userStatContainerContent">
                                 <Link to="/voortgang"><IonButton className="toProgress" shape="round">Volledig rapport</IonButton></Link>
                             </IonCardContent>
                         </IonCard>
-                    </div>
+                    </div> */}
                     {/* ) : ( null )} */}
                 </div>
         </IonContent>
