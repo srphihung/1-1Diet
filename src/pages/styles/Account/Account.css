@@ -80,7 +80,6 @@
     margin: 20px auto 0 auto;
     border-radius: 10px;
     display: flex;
-    overflow: hidden;
 }
 
 .locationContainer>p,
@@ -115,16 +114,27 @@ h2 {
 .weightDetails>p {
     border-bottom: 1px solid #d4d4d4;
     padding: 5px;
+    margin: 5px;
 }
 
 .weightDetails>p:last-child {
     border-bottom: none;
 }
 
+.WeightModal .modal-wrapper {
+    max-height: 100%;
+    overflow-y: auto;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
 .WeightModalCloseButton {
     transform: translateX(100%);
     position: absolute;
-    bottom: 10%;
+    bottom: 2%;
+    margin: 10px;
     color: #2b2e6b;
     background-color: #DC6099;
     border-radius: 15px;
