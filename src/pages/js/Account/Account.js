@@ -18,7 +18,7 @@ import DF from '../../../Data/DF.json'
 import { Link } from 'react-router-dom'
 import Logo from "../../../images/logodiet.svg";
 
-function Account() {
+function Account(props) {
     const [currentUser, setCurrentUer] = useState(DF[0])
     const [loading, setLoading] = useState(true)
     const [showModal, setShowModal] = useState(false)
@@ -55,30 +55,32 @@ function Account() {
                             <div className="blueborder">
                                 <IonIcon icon={scaleOutline} className="iconProfile"></IonIcon>
                             </div>
-                            <IonModal isOpen={showModal} className='WeightModal'>
-                                <div className="navigationInfo">
-                                    <img className="logo" src={Logo} alt={'1:1 Diet logo'}/>
+                            <IonModal isOpen={showModal} tabindex="-1" aria-hidden="true" role="dialog" className='WeightModal'>
+                                <div className="modal-dialog modal-dialog-scrollable" role="document">
+                                    <div className="navigationInfo">
+                                        <img className="logo" src={Logo} alt={'1:1 Diet logo'}/>
+                                    </div>
+                                    <h2>Gewichten:</h2>
+                                    <IonCol className="weightDetails">
+                                        <p><strong>Start Gewicht:</strong> {DF.startWeight}</p>
+                                        <p><strong>Start BMI:</strong> {DF.startBMI}</p>
+                                        <p><strong>Start Middel:</strong> {DF.startWaistSize}</p>
+                                        <p><strong>Doel Gewicht:</strong> {DF.targetWeight}</p>
+                                        <p><strong>Doel BMI:</strong> {DF.targetBMI}</p>
+                                        <p><strong>Doel Middel:</strong> {DF.targetWaistSize}</p>
+                                        <p><strong>Laat Vet Zien:</strong> {(DF.clientWeightDetails.showFat === 'true') ? <p> Onwaar </p> : <p> Waar </p>}</p>
+                                        <p><strong>Laat Middel Zien:</strong> {(DF.clientWeightDetails.showWaist === 'true') ? <p> Onwaar </p> : <p> Waar </p>}</p>
+                                        <p><strong>Laat Visceraal Vet Zien:</strong> {(DF.clientWeightDetails.showVisceralFat === 'true') ? <p> Onwaar </p> : <p> Waar </p>}</p>
+                                        <p><strong>Laat Vet Vrij Massa Zien:</strong> {(DF.clientWeightDetails.showFatFreeMass === 'true') ? <p> Onwaar </p> : <p> Waar </p>}</p>
+                                        <p><strong>Laat Gespierde Massa Zien:</strong> {(DF.clientWeightDetails.showMuscularMass === 'true') ? <p> Onwaar </p> : <p> Waar </p>}</p>
+                                        <p><strong>Laat Bot Massa Zien:</strong> {(DF.clientWeightDetails.showBoneMass === 'true') ? <p> Onwaar </p> : <p> Waar </p>}</p>
+                                        <p><strong>Laat BmrKc zien:</strong> {(DF.clientWeightDetails.showBmrKc === 'true') ? <p> Onwaar </p> : <p> Waar </p>}</p>
+                                        <p><strong>Laat BmrKj zien:</strong> {(DF.clientWeightDetails.showBmrKj === 'true') ? <p> Onwaar </p> : <p> Waar </p>}</p>
+                                        <p><strong>Laat Metabloische Leeftijd Zien:</strong> {(DF.clientWeightDetails.showMetabolicAge === 'true') ? <p> Onwaar </p> : <p> Waar </p>}</p>
+                                        <p><strong>Laat Gezond Gewicht Zien:</strong> {(DF.clientWeightDetails.showHealthyWeight === 'true') ? <p> Onwaar </p> : <p> Waar </p>}</p>
+                                    </IonCol>
+                                    <IonButton className="WeightModalCloseButton" color="none" onClick={() => setShowModal(false)}>Close Modal</IonButton>
                                 </div>
-                                <h2>Gewichten:</h2>
-                                <IonCol className="weightDetails">
-                                    <p><strong>Start Gewicht:</strong> {DF.startWeight}</p>
-                                    <p><strong>Start BMI:</strong> {DF.startBMI}</p>
-                                    <p><strong>Start Middel:</strong> {DF.startWaistSize}</p>
-                                    <p><strong>Doel Gewicht:</strong> {DF.targetWeight}</p>
-                                    <p><strong>Doel BMI:</strong> {DF.targetBMI}</p>
-                                    <p><strong>Doel Middel:</strong> {DF.targetWaistSize}</p>
-                                    <p><strong>Laat Vet Zien:</strong> {DF.clientWeightDetails.showFat}</p>
-                                    <p><strong>Laat Middel Zien:</strong> {DF.clientWeightDetails.showWaist}</p>
-                                    <p><strong>Laat Visceraal Vet Zien:</strong> {DF.clientWeightDetails.showVisceralFat}</p>
-                                    <p><strong>Laat Vet Vrij Massa Zien:</strong> {DF.clientWeightDetails.showFatFreeMass}</p>
-                                    <p><strong>Laat Gespierde Massa Zien:</strong> {DF.clientWeightDetails.showMuscularMass}</p>
-                                    <p><strong>Laat Bot Massa Zien:</strong> {DF.clientWeightDetails.showBoneMass}</p>
-                                    <p><strong>Laat BmrKc zien:</strong> {DF.clientWeightDetails.showBmrKc}</p>
-                                    <p><strong>Laat BmrKj zien:</strong> {DF.clientWeightDetails.showBmrKj}</p>
-                                    <p><strong>Laat Metabloische Leeftijd Zien:</strong> {DF.clientWeightDetails.showMetabolicAge}</p>
-                                    <p><strong>Laat Gezond Gewicht Zien:</strong> {DF.clientWeightDetails.showHealthyWeight}</p>
-                                </IonCol>
-                                <IonButton className="WeightModalCloseButton" color="none" onClick={() => setShowModal(false)}>Close Modal</IonButton>
                             </IonModal>
                             <p>
                                 <IonButton className="WeightModalButton" onClick={() => setShowModal(true)} color="none">Gewicht</IonButton>
