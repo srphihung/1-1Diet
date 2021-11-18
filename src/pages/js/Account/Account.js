@@ -86,12 +86,10 @@ function Account(props) {
                             <div className="blueborder">
                                 <IonIcon icon={scaleOutline} className="iconProfile"></IonIcon>
                             </div>
+                            
                             <IonModal isOpen={showModal} onDidDismiss={() => setShowModal(false)} swipe-to-close="true" className='WeightModal'>
                                 <div className="modal-dialog modal-dialog-scrollable">
-                                    <div className="navigationInfo">
-                                        <img className="logo" src={Logo} alt={'1:1 Diet logo'}/>
-                                    </div>
-                                    <h2>Gewichten:</h2>
+                                    <h2>Gewichten</h2>
                                     <IonCol className="weightDetails">
                                         <p><strong>Start Gewicht:</strong> {DF.startWeight}</p>
                                         <p><strong>Start BMI:</strong> {DF.startBMI}</p>
@@ -99,21 +97,22 @@ function Account(props) {
                                         <p><strong>Doel Gewicht:</strong> {DF.targetWeight}</p>
                                         <p><strong>Doel BMI:</strong> {DF.targetBMI}</p>
                                         <p><strong>Doel Middel:</strong> {DF.targetWaistSize}</p>
-                                        <p><strong>Laat Vet Zien:</strong> {(DF.clientWeightDetails.showFat === 'true') ? "Onwaar" :  "Waar" }</p>
-                                        <p><strong>Laat Middel Zien:</strong> {(DF.clientWeightDetails.showWaist === 'true') ? "Onwaar" :  "Waar" }</p>
-                                        <p><strong>Laat Visceraal Vet Zien:</strong> {(DF.clientWeightDetails.showVisceralFat === 'true') ? "Onwaar" :  "Waar" }</p>
-                                        <p><strong>Laat Vet Vrij Massa Zien:</strong> {(DF.clientWeightDetails.showFatFreeMass === 'true') ? "Onwaar" :  "Waar" }</p>
-                                        <p><strong>Laat Gespierde Massa Zien:</strong> {(DF.clientWeightDetails.showMuscularMass === 'true') ? "Onwaar" :  "Waar" }</p>
-                                        <p><strong>Laat Bot Massa Zien:</strong> {(DF.clientWeightDetails.showBoneMass === 'true') ? "Onwaar" :  "Waar" }</p>
-                                        <p><strong>Laat BmrKc zien:</strong> {(DF.clientWeightDetails.showBmrKc === 'true') ? "Onwaar" :  "Waar" }</p>
-                                        <p><strong>Laat BmrKj zien:</strong> {(DF.clientWeightDetails.showBmrKj === 'true') ? "Onwaar" :  "Waar" }</p>
-                                        <p><strong>Laat Metabloische Leeftijd Zien:</strong> {(DF.clientWeightDetails.showMetabolicAge === 'true') ? "Onwaar" :  "Waar" }</p>
-                                        <p><strong>Laat Gezond Gewicht Zien:</strong> {(DF.clientWeightDetails.showHealthyWeight === 'true') ? "Onwaar" :  "Waar" }</p>
+                                        <p><strong>Vet:</strong> {(DF.clientWeightDetails.showFat === 'true') ? "Onwaar" :  "Waar" }</p>
+                                        <p><strong>Middel:</strong> {(DF.clientWeightDetails.showWaist === 'true') ? "Onwaar" :  "Waar" }</p>
+                                        <p><strong>Visceraal Vet:</strong> {(DF.clientWeightDetails.showVisceralFat === 'true') ? "Onwaar" :  "Waar" }</p>
+                                        <p><strong>Vet Vrij Massa:</strong> {(DF.clientWeightDetails.showFatFreeMass === 'true') ? "Onwaar" :  "Waar" }</p>
+                                        <p><strong>Gespierde Massa:</strong> {(DF.clientWeightDetails.showMuscularMass === 'true') ? "Onwaar" :  "Waar" }</p>
+                                        <p><strong>Bot Mass:</strong> {(DF.clientWeightDetails.showBoneMass === 'true') ? "Onwaar" :  "Waar" }</p>
+                                        <p><strong>BmrKc:</strong> {(DF.clientWeightDetails.showBmrKc === 'true') ? "Onwaar" :  "Waar" }</p>
+                                        <p><strong>BmrKj:</strong> {(DF.clientWeightDetails.showBmrKj === 'true') ? "Onwaar" :  "Waar" }</p>
+                                        <p><strong>Metabloische Leeftijd:</strong> {(DF.clientWeightDetails.showMetabolicAge === 'true') ? "Onwaar" :  "Waar" }</p>
+                                        <p><strong>Gezond Gewicht:</strong> {(DF.clientWeightDetails.showHealthyWeight === 'true') ? "Onwaar" :  "Waar" }</p>
                                     </IonCol>
-                                    <IonButton className="WeightModalCloseButton" color="none" onClick={() => setShowModal(false)}>Close Modal</IonButton>
+                                    
                                 </div>
-
+                                <IonButton className="WeightModalCloseButton" color="none" onClick={() => setShowModal(false)}>Close Modal</IonButton>
                             </IonModal>
+
                             <p>
                                 <IonButton className="WeightModalButton" onClick={() => setShowModal(true)} color="none">Gewicht</IonButton>
                             </p>
