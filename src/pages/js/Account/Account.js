@@ -1,5 +1,4 @@
 import React, {Component, useEffect, useState} from 'react'
-
 import TopNav from '../TopNav'
 import '../../styles/Account/Account.css'
 import { scaleOutline, resizeOutline, alertCircleOutline, settingsOutline, chevronForwardOutline, person, locationOutline } from 'ionicons/icons'
@@ -21,128 +20,47 @@ import Logo from "../../../images/logodiet.svg";
 import * as QueryString from "querystring";
 import axios from "axios";
 
+export default Account
 function Account(props) {
+    useEffect(() => {authenticationPost()}, []);
     useEffect(() => {authenticationGet()}, []);
     const [currentUser, setCurrentUer] = useState(DF[0])
     const [loading, setLoading] = useState(true)
     const [showModal, setShowModal] = useState(false);
     const axios = require("axios")
+    let TOKEN
 
-    const authenticationGet = ( ) => {
-        axios.post('https://test-api-cwp.vp-company.nl/connect/token', QueryString.stringify({
-            username: "rcwtest1@1op1dieet.nl",
-            password: "Onzin&21&",
-            grant_type: "password",
-        }), {
+    let authenticationGet = () => {
+        axios.get('https://test-api-cwp.vp-company.nl/api/client/accountinformation', QueryString.stringify({
             headers: {
-                "Content-Type": "application/x-www-form-urlencoded",
+                Authorization: "bearer" + TOKEN
             }
         }).then(response => {
             console.log(response.data)
+            console.log('endresponse: ' +response.data.TOKEN);
         }).catch(err => console.log(err.response))
-    }
+        )}
+}
 
 
+    let authenticationPost = ( ) => {
+        axios.post('https://test-api-cwp.vp-company.nl/connect/token', QueryString.stringify({
+            username: "rcwtest1@1op1dieet.nl",
+            password: "Onzin&21&",
+            grant_type: "password"
+        }), {
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+                "accept": "application/x-www-form-urlencoded",
+                "Authorization": "Bearer" + "TOKEN"
+            }
 
-
-    // const axiosInstance = axios.create({
-    //     baseURL: 'https://test-api-cwp.vp-company.nl/api/',
-    //     method: 'GET',
-    //     timeout: 1000,
-    //     headers: {
-    //         'Authorization': localStorage.getItem('access_token') ? "JWT " + localStorage.getItem('access_token') : null,
-    //         'Content-Type': 'application/x-www-form-urlencoded',
-    //         'accept': 'application/x-www-form-urlencoded'
-    //     }
-    // });
-    // axiosInstance.interceptors.response.use(
-    //     response => response,
-    //     error => {
-    //         const originalRequest = error.config;
-    //
-    //         // Prevent infinite loops
-    //         if (error.response.status === 401 && originalRequest.url === 'https://test-api-cwp.vp-company.nl/api/'+'token/refresh/') {
-    //             window.location.href = '/account/';
-    //             return Promise.reject(error);
-    //         }
-    //
-    //         if (error.response.data.code === "token_not_valid" &&
-    //             error.response.status === 401 &&
-    //             error.response.statusText === "Unauthorized")
-    //         {
-    //             const refreshToken = localStorage.getItem('refresh_token');
-    //
-    //             if (refreshToken){
-    //                 const tokenParts = JSON.parse(atob(refreshToken.split('.')[1]));
-    //
-    //                 // exp date in token is expressed in seconds, while now() returns milliseconds:
-    //                 const now = Math.ceil(Date.now() / 1000);
-    //                 console.log(tokenParts.exp);
-    //
-    //                 if (tokenParts.exp > now) {
-    //                     return axiosInstance
-    //                         .post('/token/refresh/', {refresh: refreshToken})
-    //                         .then((response) => {
-    //
-    //                             localStorage.setItem('access_token', response.data.access);
-    //                             localStorage.setItem('refresh_token', response.data.refresh);
-    //
-    //                             axiosInstance.defaults.headers['Authorization'] = "JWT " + response.data.access;
-    //                             originalRequest.headers['Authorization'] = "JWT " + response.data.access;
-    //
-    //                             return axiosInstance(originalRequest);
-    //                         })
-    //                         .catch(err => {
-    //                             console.log(err)
-    //                         });
-    //                 }else{
-    //                     console.log("Refresh token is expired", tokenParts.exp, now);
-    //                     window.location.href = '/client/';
-    //                 }
-    //             }else{
-    //                 console.log("Refresh token not available.")
-    //                 window.location.href = '/client/';
-    //             }
-    //         }
-    //
-    //
-    //         // specific error handling done elsewhere
-    //         return Promise.reject(error);
-    //     }
-    // );
-    //
-    // (async () => {
-    //     axios.interceptors.request.use(
-    //         function (req) {
-    //             req.time = { startTime: new Date() };
-    //             return req;
-    //         },
-    //         (err) => {
-    //             return Promise.reject(err);
-    //         }
-    //     );
-    //
-    //     axios.interceptors.response.use(
-    //         function (res) {
-    //             res.config.time.endTime = new Date();
-    //             res.duration =
-    //                 res.config.time.endTime - res.config.time.startTime;
-    //             return res;
-    //         },
-    //         (err) => {
-    //             return Promise.reject(err);
-    //         }
-    //     );
-
-    // axios
-    //     .get("http://localhost:8100/account")
-    //     .then((res) => {
-    //         console.log(res.duration)
-    //     })
-    //     .catch((err) => {
-    //         console.log(err);
-    //     });
-    // })();
+        }).then(response => {
+            console.log(response.data)
+            console.log('endresponse: ' +response.data.TOKEN);
+        }).catch(err => console.log(err.response))
+    )}
+}
     return (
         <IonContent>
             <TopNav/>
@@ -258,4 +176,3 @@ function Account(props) {
         </IonContent>
     )
 }
-export default Account
