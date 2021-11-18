@@ -30,37 +30,30 @@ function Account(props) {
     const axios = require("axios")
     let TOKEN
 
-    let authenticationGet = () => {
-        axios.get('https://test-api-cwp.vp-company.nl/api/client/accountinformation', QueryString.stringify({
-            headers: {
-                Authorization: "bearer" + TOKEN
-            }
-        }).then(response => {
-            console.log(response.data)
-            console.log('endresponse: ' +response.data.TOKEN);
-        }).catch(err => console.log(err.response))
-        )}
-}
-
 
     let authenticationPost = ( ) => {
         axios.post('https://test-api-cwp.vp-company.nl/connect/token', QueryString.stringify({
             username: "rcwtest1@1op1dieet.nl",
             password: "Onzin&21&",
-            grant_type: "password"
+            grant_type: "password",
         }), {
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded",
                 "accept": "application/x-www-form-urlencoded",
                 "Authorization": "Bearer" + "TOKEN"
             }
-
         }).then(response => {
             console.log(response.data)
-            console.log('endresponse: ' +response.data.TOKEN);
+            console.log('userresponse: ' + response.data.access_token);
         }).catch(err => console.log(err.response))
-    )}
-}
+    }
+
+    let authenticationGet = () => {
+        axios.get('https://test-api-cwp.vp-company.nl/api/client/accountinformation').then(response =>{
+            console.log(response);
+        })
+    }
+
     return (
         <IonContent>
             <TopNav/>
