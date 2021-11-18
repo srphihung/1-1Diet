@@ -22,13 +22,13 @@ import * as QueryString from "querystring";
 import axios from "axios";
 
 function Account(props) {
-    useEffect(() => {getAuthentication()}, []);
+    useEffect(() => {authenticationGet()}, []);
     const [currentUser, setCurrentUer] = useState(DF[0])
     const [loading, setLoading] = useState(true)
     const [showModal, setShowModal] = useState(false);
     const axios = require("axios")
 
-    const getAuthentication = ( ) => {
+    const authenticationGet = ( ) => {
         axios.post('https://test-api-cwp.vp-company.nl/connect/token', QueryString.stringify({
             username: "rcwtest1@1op1dieet.nl",
             password: "Onzin&21&",
