@@ -41,7 +41,7 @@ function Account(props) {
             console.log(response.data)
         }).catch(err => console.log(err.response))
     }
-    
+
 
 
 
@@ -134,118 +134,118 @@ function Account(props) {
     //         }
     //     );
 
-        // axios
-        //     .get("http://localhost:8100/account")
-        //     .then((res) => {
-        //         console.log(res.duration)
-        //     })
-        //     .catch((err) => {
-        //         console.log(err);
-        //     });
+    // axios
+    //     .get("http://localhost:8100/account")
+    //     .then((res) => {
+    //         console.log(res.duration)
+    //     })
+    //     .catch((err) => {
+    //         console.log(err);
+    //     });
     // })();
     return (
         <IonContent>
-                <TopNav/>
-                <div className="accountPageContent">
+            <TopNav/>
+            <div className="accountPageContent">
 
-                    <button className="settingsBtn">
-                        <IonIcon icon={settingsOutline} className="iconProfile">
-                        </IonIcon>
-                    </button>
+                <button className="settingsBtn">
+                    <IonIcon icon={settingsOutline} className="iconProfile">
+                    </IonIcon>
+                </button>
 
-                    <IonAvatar className="profileImg">
-                        <IonImg src={DF.urlClientPhoto}/>
-                    </IonAvatar>
+                <IonAvatar className="profileImg">
+                    <IonImg src={DF.urlClientPhoto}/>
+                </IonAvatar>
 
-                        <p>Welkom {DF.firstName} {DF.lastName} </p>
+                <p>Welkom {DF.firstName} {DF.lastName} </p>
 
-                    <div className="statContainer">
+                <div className="statContainer">
 
 
-                        <div className="heightContainer">
-                            <div className="blueborder">
-                                <IonIcon icon={resizeOutline} className="iconProfile"></IonIcon>
-                            </div><p>{DF.lengthInCm} Cm</p>
+                    <div className="heightContainer">
+                        <div className="blueborder">
+                            <IonIcon icon={resizeOutline} className="iconProfile"></IonIcon>
+                        </div><p>{DF.lengthInCm} Cm</p>
+                    </div>
+
+
+                    <div className="weightContainer">
+                        <div className="blueborder">
+                            <IonIcon icon={scaleOutline} className="iconProfile"></IonIcon>
                         </div>
-
-
-                        <div className="weightContainer">
-                            <div className="blueborder">
-                                <IonIcon icon={scaleOutline} className="iconProfile"></IonIcon>
-                            </div>
-                            <IonModal isOpen={showModal} onDidDismiss={() => setShowModal(false)} swipe-to-close="true" className='WeightModal'>
-                                <div className="modal-dialog modal-dialog-scrollable">
-                                    <div className="navigationInfo">
-                                        <img className="logo" src={Logo} alt={'1:1 Diet logo'}/>
-                                    </div>
-                                    <h2>Gewichten:</h2>
-                                    <IonCol className="weightDetails">
-                                        <p><strong>Start Gewicht:</strong> {DF.startWeight}</p>
-                                        <p><strong>Start BMI:</strong> {DF.startBMI}</p>
-                                        <p><strong>Start Middel:</strong> {DF.startWaistSize}</p>
-                                        <p><strong>Doel Gewicht:</strong> {DF.targetWeight}</p>
-                                        <p><strong>Doel BMI:</strong> {DF.targetBMI}</p>
-                                        <p><strong>Doel Middel:</strong> {DF.targetWaistSize}</p>
-                                        <p><strong>Laat Vet Zien:</strong> {(DF.clientWeightDetails.showFat === 'true') ? "Onwaar" :  "Waar" }</p>
-                                        <p><strong>Laat Middel Zien:</strong> {(DF.clientWeightDetails.showWaist === 'true') ? "Onwaar" :  "Waar" }</p>
-                                        <p><strong>Laat Visceraal Vet Zien:</strong> {(DF.clientWeightDetails.showVisceralFat === 'true') ? "Onwaar" :  "Waar" }</p>
-                                        <p><strong>Laat Vet Vrij Massa Zien:</strong> {(DF.clientWeightDetails.showFatFreeMass === 'true') ? "Onwaar" :  "Waar" }</p>
-                                        <p><strong>Laat Gespierde Massa Zien:</strong> {(DF.clientWeightDetails.showMuscularMass === 'true') ? "Onwaar" :  "Waar" }</p>
-                                        <p><strong>Laat Bot Massa Zien:</strong> {(DF.clientWeightDetails.showBoneMass === 'true') ? "Onwaar" :  "Waar" }</p>
-                                        <p><strong>Laat BmrKc zien:</strong> {(DF.clientWeightDetails.showBmrKc === 'true') ? "Onwaar" :  "Waar" }</p>
-                                        <p><strong>Laat BmrKj zien:</strong> {(DF.clientWeightDetails.showBmrKj === 'true') ? "Onwaar" :  "Waar" }</p>
-                                        <p><strong>Laat Metabloische Leeftijd Zien:</strong> {(DF.clientWeightDetails.showMetabolicAge === 'true') ? "Onwaar" :  "Waar" }</p>
-                                        <p><strong>Laat Gezond Gewicht Zien:</strong> {(DF.clientWeightDetails.showHealthyWeight === 'true') ? "Onwaar" :  "Waar" }</p>
-                                    </IonCol>
-                                    <IonButton className="WeightModalCloseButton" color="none" onClick={() => setShowModal(false)}>Close Modal</IonButton>
+                        <IonModal isOpen={showModal} onDidDismiss={() => setShowModal(false)} swipe-to-close="true" className='WeightModal'>
+                            <div className="modal-dialog modal-dialog-scrollable">
+                                <div className="navigationInfo">
+                                    <img className="logo" src={Logo} alt={'1:1 Diet logo'}/>
                                 </div>
+                                <h2>Gewichten:</h2>
+                                <IonCol className="weightDetails">
+                                    <p><strong>Start Gewicht:</strong> {DF.startWeight}</p>
+                                    <p><strong>Start BMI:</strong> {DF.startBMI}</p>
+                                    <p><strong>Start Middel:</strong> {DF.startWaistSize}</p>
+                                    <p><strong>Doel Gewicht:</strong> {DF.targetWeight}</p>
+                                    <p><strong>Doel BMI:</strong> {DF.targetBMI}</p>
+                                    <p><strong>Doel Middel:</strong> {DF.targetWaistSize}</p>
+                                    <p><strong>Laat Vet Zien:</strong> {(DF.clientWeightDetails.showFat === 'true') ? "Onwaar" :  "Waar" }</p>
+                                    <p><strong>Laat Middel Zien:</strong> {(DF.clientWeightDetails.showWaist === 'true') ? "Onwaar" :  "Waar" }</p>
+                                    <p><strong>Laat Visceraal Vet Zien:</strong> {(DF.clientWeightDetails.showVisceralFat === 'true') ? "Onwaar" :  "Waar" }</p>
+                                    <p><strong>Laat Vet Vrij Massa Zien:</strong> {(DF.clientWeightDetails.showFatFreeMass === 'true') ? "Onwaar" :  "Waar" }</p>
+                                    <p><strong>Laat Gespierde Massa Zien:</strong> {(DF.clientWeightDetails.showMuscularMass === 'true') ? "Onwaar" :  "Waar" }</p>
+                                    <p><strong>Laat Bot Massa Zien:</strong> {(DF.clientWeightDetails.showBoneMass === 'true') ? "Onwaar" :  "Waar" }</p>
+                                    <p><strong>Laat BmrKc zien:</strong> {(DF.clientWeightDetails.showBmrKc === 'true') ? "Onwaar" :  "Waar" }</p>
+                                    <p><strong>Laat BmrKj zien:</strong> {(DF.clientWeightDetails.showBmrKj === 'true') ? "Onwaar" :  "Waar" }</p>
+                                    <p><strong>Laat Metabloische Leeftijd Zien:</strong> {(DF.clientWeightDetails.showMetabolicAge === 'true') ? "Onwaar" :  "Waar" }</p>
+                                    <p><strong>Laat Gezond Gewicht Zien:</strong> {(DF.clientWeightDetails.showHealthyWeight === 'true') ? "Onwaar" :  "Waar" }</p>
+                                </IonCol>
+                                <IonButton className="WeightModalCloseButton" color="none" onClick={() => setShowModal(false)}>Close Modal</IonButton>
+                            </div>
 
-                            </IonModal>
-                            <p>
-                                <IonButton className="WeightModalButton" onClick={() => setShowModal(true)} color="none">Gewicht</IonButton>
-                            </p>
-                        </div>
+                        </IonModal>
+                        <p>
+                            <IonButton className="WeightModalButton" onClick={() => setShowModal(true)} color="none">Gewicht</IonButton>
+                        </p>
+                    </div>
 
 
-                        {/* <div className="locationContainer">
+                    {/* <div className="locationContainer">
                             <div className="blueborder">
                                 <IonIcon icon={locationOutline} className="iconProfile"></IonIcon>
                             </div>
                             <p>{DF.location.city}, {DF.location.street} {DF.location.houseNumber}</p>
                         </div> */}
-                    </div>
+                </div>
 
-                    <div className="consulentContainer">
-                        <h3>Aangesloten bij</h3>
-                        
-                        {(DF.consultantFullName) ?   
-                            <div className="consulentShrtct">
-                                <div className="consulentContent">
-                                    <p>{DF.consultantFullName}</p>
-                                </div>
-                                <IonIcon icon={chevronForwardOutline} className="iconConsulent"></IonIcon>
+                <div className="consulentContainer">
+                    <h3>Aangesloten bij</h3>
+
+                    {(DF.consultantFullName) ?
+                        <div className="consulentShrtct">
+                            <div className="consulentContent">
+                                <p>{DF.consultantFullName}</p>
                             </div>
-                            // console.log('true')
+                            <IonIcon icon={chevronForwardOutline} className="iconConsulent"></IonIcon>
+                        </div>
+                        // console.log('true')
                         :
-                            <div className="noConsulentWarning">
-                                <div className="blueWarning">
-                                    <IonIcon icon={alertCircleOutline} className="iconProfile"></IonIcon>
-                                </div>
-                                <div className="noConsulentWarningContent">
-                                    <p>Het lijkt er op dat u nog niet bent aangesloten bij een van onze consulenten. Een 1:1 diet consulent kan je helpen bij het behouden van een gezond dieet</p>
-                                    <button className="searchConsulent">Consulent zoeken</button>
-                                </div>
+                        <div className="noConsulentWarning">
+                            <div className="blueWarning">
+                                <IonIcon icon={alertCircleOutline} className="iconProfile"></IonIcon>
                             </div>
-                            // console.log('false')
-                        }
-                        
+                            <div className="noConsulentWarningContent">
+                                <p>Het lijkt er op dat u nog niet bent aangesloten bij een van onze consulenten. Een 1:1 diet consulent kan je helpen bij het behouden van een gezond dieet</p>
+                                <button className="searchConsulent">Consulent zoeken</button>
+                            </div>
+                        </div>
+                        // console.log('false')
+                    }
 
-                        
-                    </div>
-                    {/* {currentUser.user_id === Number  ? ( */}
 
-                    
-                    {/* <h3>Laatste stats</h3>
+
+                </div>
+                {/* {currentUser.user_id === Number  ? ( */}
+
+
+                {/* <h3>Laatste stats</h3>
                     <div className="IonCardStats">
                         <IonCard className="userStatContainer">
                             <IonCardContent className="userStatContainerContent">
@@ -253,8 +253,8 @@ function Account(props) {
                             </IonCardContent>
                         </IonCard>
                     </div> */}
-                    {/* ) : ( null )} */}
-                </div>
+                {/* ) : ( null )} */}
+            </div>
         </IonContent>
     )
 }
