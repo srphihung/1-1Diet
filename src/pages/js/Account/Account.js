@@ -24,13 +24,13 @@ class AccountPostData extends React.Component {
 
 =======
 function Account(props) {
-    useEffect(() => {authenticationGet()}, []);
+    useEffect(() => {getAuthentication()}, []);
     const [currentUser, setCurrentUer] = useState(DF[0])
     const [loading, setLoading] = useState(true)
     const [showModal, setShowModal] = useState(false);
     const axios = require("axios")
 
-    const authenticationGet = ( ) => {
+    const getAuthentication = ( ) => {
         axios.post('https://test-api-cwp.vp-company.nl/connect/token', QueryString.stringify({
             username: "rcwtest1@1op1dieet.nl",
             password: "Onzin&21&",
