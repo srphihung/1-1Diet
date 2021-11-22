@@ -16,7 +16,7 @@ import AboutApp from './pages/js/AboutApp';
 import RecipeInfo from './pages/js/Recipes/RecipeInfo';
 import Progress from './pages/js/Voortgang/Progress';
 import AppointmentInfo from './pages/js/Appointments/AppointmentInfo';
-import Login from "./pages/js/Login/Login";
+import Login from "./Components/Login/Login";
 
 
 const App: React.FC = () => (

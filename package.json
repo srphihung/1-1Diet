@@ -52,6 +52,7 @@
     "google-map-react": "^2.1.9",
     "ionicons": "^5.5.1",
     "leaflet": "^1.7.1",
+    "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-calendar": "^3.4.0",
     "react-chartjs-2": "^3.0.3",
