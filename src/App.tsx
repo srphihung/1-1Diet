@@ -9,7 +9,7 @@ import DietInfo from './pages/js/DietInfo';
 import AboutUs from './pages/js/AboutUs';
 import SearchConsulent from './pages/js/SearchConsulent';
 import Appointments from './pages/js/Appointments/Appointments';
-import Account from './pages/js/Account/Account';
+import Account from './pages/js/Account/Components/Account';
 import News from './pages/js/News/News';
 import ClientStory from './pages/js/Stories/ClientStory';
 import AboutApp from './pages/js/AboutApp';
