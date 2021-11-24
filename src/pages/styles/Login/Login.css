@@ -37,11 +37,6 @@
     max-height: 50px;
 }
 
-ion-item {
-    --border-width: 0;
-    --inner-border-width: 0;
-}
-
 .form-control {
     background-color: transparent;
     position: absolute;
@@ -49,7 +44,7 @@ ion-item {
     border-color: transparent;
     text-align: center;
     opacity: 40%;
-    font-family: "nos";
+    font-family: nos;
     font-size: 18px;
     color: #2b2e6b;
 }

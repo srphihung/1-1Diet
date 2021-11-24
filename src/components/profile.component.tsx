@@ -10,6 +10,7 @@ type State = {
     userReady: boolean,
     currentUser: IUser & { accessToken: string }
 }
+
 export default class Profile extends Component<Props, State> {
     constructor(props: Props) {
         super(props);
@@ -30,7 +31,7 @@ export default class Profile extends Component<Props, State> {
 
     render() {
         if (this.state.redirect) {
-            // return <Redirect to={this.state.redirect}/>
+            return <Redirect to={this.state.redirect}/>
         }
 
         const {currentUser} = this.state;

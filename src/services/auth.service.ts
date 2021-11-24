@@ -1,12 +1,12 @@
 import axios from "axios";
 import QueryString from "querystring";
 
-const API_URL = "https://test-api-cwp.vp-company.nl/connect/token";
+const API_URL = "https://test-api-cwp.vp-company.nl/connect";
 
 class AuthService {
     login(username: string, password: string) {
         return axios
-            .post(API_URL , QueryString.stringify({
+            .post(API_URL + "/token" , QueryString.stringify({
                 username,
                 password,
                 grant_type: "password",
