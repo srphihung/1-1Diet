@@ -101,7 +101,7 @@ export default class Login extends Component<Props, State> {
                                 </div>
 
                                 <div className="form-group userInput" id="loginPassword">
-                                    <IonItem no-lines>
+                                    <IonItem no-lines id="itemInput">
                                         <Field name="password" type="password" className="form-control" placeholder="password"/>
                                         <ErrorMessage name="password" component="div" className="alert alert-danger"/>
                                     </IonItem>

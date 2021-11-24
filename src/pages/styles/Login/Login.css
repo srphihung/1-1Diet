@@ -46,5 +46,11 @@ Field {
     text-align: center;
     color: black;
     background-color: white;
+}
 
+.form-control {
+    background-color: transparent;
+    border-color: transparent;
+    font-family: "Roboto Slab";
+    color: #2b2e6b;
 }
