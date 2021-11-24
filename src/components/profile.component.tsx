@@ -30,7 +30,7 @@ export default class Profile extends Component<Props, State> {
 
     render() {
         if (this.state.redirect) {
-            return <Redirect to={this.state.redirect}/>
+            // return <Redirect to={this.state.redirect}/>
         }
 
         const {currentUser} = this.state;

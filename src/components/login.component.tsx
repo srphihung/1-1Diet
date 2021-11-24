@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import { RouteComponentProps } from "react-router-dom";
 import { Formik, Field, Form, ErrorMessage } from "formik";
-import {IonButton, IonContent, IonInput, IonItem} from '@ionic/react';
+import {IonButton, IonContent, IonItem} from '@ionic/react';
 import * as Yup from "yup";
 import '../pages/styles/Login/Login.css'
 import AuthService from "../services/auth.service";
