@@ -1,17 +1,62 @@
-import { IonButton, IonCard, IonContent, IonIcon, IonLabel } from '@ionic/react';
-import './Home.css';
-import { newspaperOutline, peopleOutline, scaleOutline, appsOutline, informationOutline, bookOutline, nutritionOutline, trophyOutline } from 'ionicons/icons'
-import React from 'react'
-import TopNav from './js/TopNav'
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
+import UserService from "../services/user.service";
+import TopNav from "../pages/js/TopNav";
+import {IonButton, IonCard, IonContent, IonIcon, IonLabel} from "@ionic/react";
+import {Link} from "react-router-dom";
+import '../pages/Home.css';
+import {
+    appsOutline,
+    bookOutline, informationOutline,
+    newspaperOutline,
+    nutritionOutline,
+    peopleOutline,
+    scaleOutline,
+    trophyOutline
+} from "ionicons/icons";
 
-const Home: React.FC = () => {
-    return (
-        <IonContent >
+type Props = {};
+
+type State = {
+    content: string;
+}
+
+export default class Home extends Component<Props, State> {
+    constructor(props: Props) {
+        super(props);
+
+        this.state = {
+            content: ""
+        };
+    }
+
+    componentDidMount() {
+        UserService.getPublicContent().then(
+            response => {
+                this.setState({
+                    content: response.data
+                });
+            },
+            error => {
+                this.setState({
+                    content:
+                        (error.response && error.response.data) ||
+                        error.message ||
+                        error.toString()
+                });
+            }
+        );
+    }
+
+    render() {
+        return (
+        <IonContent>
             <TopNav />
             <div className="Home">
                 <div className="homeContent">
-                <div className="sliderHeader">
+                    <div className="sliderHeader">
+                        <header className="jumbotron">
+                            <h3>{this.state.content}</h3>
+                        </header>
                         <IonLabel className="HomeHeader">Acties</IonLabel>
                     </div>
                     <div className="actionBtns">
@@ -54,7 +99,6 @@ const Home: React.FC = () => {
                 </div>
             </div>
         </IonContent>
-    )
+        );
+    }
 }
-
-export default Home;

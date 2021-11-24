@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+
+import './pages/Home.css';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(

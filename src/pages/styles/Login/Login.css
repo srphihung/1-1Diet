@@ -8,7 +8,7 @@
     width: 80%;
 }
 
-#loginUsername, #loginPassword{
+#loginUsername, #loginPassword {
     text-align: center;
     border-radius: 25px;
     border: solid;
@@ -40,4 +40,11 @@
 ion-item {
     --border-width: 0;
     --inner-border-width: 0;
+}
+
+Field {
+    text-align: center;
+    color: black;
+    background-color: white;
+
 }
