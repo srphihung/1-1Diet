@@ -1,9 +1,8 @@
-
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import axios from "axios";
 import QueryString from "querystring";
-import App from '../App/App'
+import App from '../../../components/App/App'
 
 async function loginUser(credentials) {
     return axios.post('https://test-api-cwp.vp-company.nl/connect/token', QueryString.stringify({
@@ -19,8 +18,6 @@ async function loginUser(credentials) {
         console.log(response.data)
     }).catch(err => console.log(err.response))
 }
-
-
 
 export default function Login({setToken}) {
     const [username, setUserName] = useState();
