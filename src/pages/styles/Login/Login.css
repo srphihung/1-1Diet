@@ -42,15 +42,14 @@ ion-item {
     --inner-border-width: 0;
 }
 
-Field {
-    text-align: center;
-    color: black;
-    background-color: white;
-}
-
 .form-control {
     background-color: transparent;
+    position: absolute;
+    left: 15%;
     border-color: transparent;
-    font-family: "Roboto Slab";
+    text-align: center;
+    opacity: 40%;
+    font-family: "nos";
+    font-size: 18px;
     color: #2b2e6b;
 }
