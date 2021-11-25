@@ -37,14 +37,20 @@
     max-height: 50px;
 }
 
+ion-item {
+    --border-width: 0;
+    --inner-border-width: 0;
+}
+
+Field {
+    text-align: center;
+    color: black;
+    background-color: white;
+}
+
 .form-control {
     background-color: transparent;
-    position: absolute;
-    left: 15%;
     border-color: transparent;
-    text-align: center;
-    opacity: 40%;
-    font-family: nos;
-    font-size: 18px;
+    font-family: "Roboto Slab";
     color: #2b2e6b;
 }
