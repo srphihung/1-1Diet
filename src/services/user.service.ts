@@ -5,7 +5,7 @@ const API_URL = 'https://test-api-cwp.vp-company.nl/api/client/accountinformatio
 
 class UserService {
     getPublicContent() {
-        return axios.get(API_URL);
+        return axios.get(API_URL, { headers: authHeader() });
     }
 
     getUserBoard() {
