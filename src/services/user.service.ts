@@ -3,6 +3,8 @@ import authHeader from './auth-header';
 
 const API_URL = 'https://test-api-cwp.vp-company.nl/api/client/accountinformation';
 
+
+
 class UserService {
     getPublicContent() {
         return axios.get(API_URL, { headers: authHeader() });

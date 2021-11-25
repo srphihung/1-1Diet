@@ -2,13 +2,14 @@ import { Component, Key, ReactChild, ReactFragment, ReactPortal} from "react";
 import {Redirect} from "react-router-dom";
 import AuthService from "../services/auth.service";
 import IUser from "../types/user.type";
+import UserService from "../services/user.service"
 
 type Props = {};
 
 type State = {
     redirect: string | null,
     userReady: boolean,
-    currentUser: IUser & { accessToken: string }
+    currentUser: IUser & { access_token: string }
 }
 export default class Profile extends Component<Props, State> {
     constructor(props: Props) {
@@ -17,16 +18,19 @@ export default class Profile extends Component<Props, State> {
         this.state = {
             redirect: null,
             userReady: false,
-            currentUser: {accessToken: ""}
+            currentUser: {access_token: ""}
         };
     }
 
     componentDidMount() {
         const currentUser = AuthService.getCurrentUser();
-
+        const userContent = UserService.getPublicContent();
+        console.log(userContent)
+        console.log(currentUser)
         if (!currentUser) this.setState({redirect: "/home"});
         this.setState({currentUser: currentUser, userReady: true})
     }
+
 
     render() {
         if (this.state.redirect) {
@@ -34,6 +38,7 @@ export default class Profile extends Component<Props, State> {
         }
 
         const {currentUser} = this.state;
+        console.log(currentUser)
 
         return (
             <div className="container">
@@ -46,17 +51,15 @@ export default class Profile extends Component<Props, State> {
                         </header>
                         <p>
                             <strong>Token:</strong>{" "}
-                            {currentUser.accessToken.substring(0, 20)} ...{" "}
-                            {currentUser.accessToken.substr(currentUser.accessToken.length - 20)}
+                            {currentUser.access_token.substring(0, 20)} ...{" "}
+                            {currentUser.access_token.substr(currentUser.access_token.length - 20)}
                         </p>
                         <p>
                             <strong>Id:</strong>{" "}
-                            {currentUser.id}
                         </p>
                         <strong>Authorities:</strong>
                         <ul>
-                            {currentUser.roles &&
-                            currentUser.roles.map((role: boolean | ReactChild | ReactFragment | ReactPortal | null | undefined, index: Key | null | undefined) => <li key={index}>{role}</li>)}
+
                         </ul>
                     </div> : null}
             </div>
