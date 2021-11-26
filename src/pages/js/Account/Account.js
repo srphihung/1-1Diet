@@ -9,10 +9,7 @@ import {
     IonCardContent, IonCol,
     IonContent,
     IonIcon,
-    IonImg,
-    IonItem, IonModal,
-    IonText,
-    useIonModal
+    IonImg, IonModal,
 } from '@ionic/react'
 import DF from '../../../Data/DF.json'
 import { Link } from 'react-router-dom'

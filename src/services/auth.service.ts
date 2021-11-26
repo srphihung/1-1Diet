@@ -15,14 +15,14 @@ class AuthService {
             })
             .then(response => {
                 // if (response.data.access_token) {
-                    localStorage.setItem("user", JSON.stringify(response.data));
+                    sessionStorage.setItem("user", JSON.stringify(response.data));
                 // }
                 return response.data;
             });
     }
 
     logout() {
-        localStorage.removeItem("user");
+        sessionStorage.removeItem("user");
     }
 
     register(username: string,  password: string) {
@@ -33,7 +33,7 @@ class AuthService {
     }
 
     getCurrentUser() {
-        const userStr = localStorage.getItem("user");
+        const userStr = sessionStorage.getItem("user");
         if (userStr) return JSON.parse(userStr);
 
     }
