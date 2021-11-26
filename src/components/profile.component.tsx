@@ -1,4 +1,4 @@
-import { Component, Key, ReactChild, ReactFragment, ReactPortal} from "react";
+import {Component, Key, ReactChild, ReactFragment, ReactPortal, useState} from "react";
 import {Redirect} from "react-router-dom";
 import AuthService from "../services/auth.service";
 import IUser from "../types/user.type";
@@ -18,7 +18,8 @@ export default class Profile extends Component<Props, State> {
         this.state = {
             redirect: null,
             userReady: false,
-            currentUser: {access_token: ""}
+            currentUser: {access_token: ""},
+
         };
     }
 
@@ -46,13 +47,11 @@ export default class Profile extends Component<Props, State> {
                     <div>
                         <header className="jumbotron">
                             <h3>
-                                <strong>{currentUser.username}</strong> Profile
+                                <strong></strong> Profile
                             </h3>
                         </header>
                         <p>
-                            <strong>Token:</strong>{" "}
-                            {currentUser.access_token.substring(0, 20)} ...{" "}
-                            {currentUser.access_token.substr(currentUser.access_token.length - 20)}
+                            <strong>Welkom, {currentUser.access_token}</strong>{" "}
                         </p>
                         <p>
                             <strong>Id:</strong>{" "}
@@ -64,5 +63,5 @@ export default class Profile extends Component<Props, State> {
                     </div> : null}
             </div>
         );
-    }
+    };
 }

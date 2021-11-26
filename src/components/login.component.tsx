@@ -36,8 +36,8 @@ export default class Login extends Component<Props, State> {
 
     validationSchema() {
         return Yup.object().shape({
-            username: Yup.string().required("This field is required!"),
-            password: Yup.string().required("This field is required!"),
+            username: Yup.string().required("Verplicht!"),
+            password: Yup.string().required("Verplicht!"),
         });
     }
 
@@ -92,17 +92,17 @@ export default class Login extends Component<Props, State> {
                     >
                         <Form>
                             <div className="loginContainer">
-                                <h2>Login</h2>
+                                <h2>Inloggen</h2>
                                 <div className="form-group userInput" id="loginUsername">
                                     <IonItem no-lines>
-                                    <Field name="username" type="text" className="form-control" placeholder="username"/>
+                                    <Field name="username" type="text" className="form-control" placeholder="Gebruikersnaam"/>
                                     <ErrorMessage name="username" component="div" className="alert alert-danger"/>
                                     </IonItem>
                                 </div>
 
                                 <div className="form-group userInput" id="loginPassword">
                                     <IonItem no-lines id="itemInput">
-                                        <Field name="password" type="password" className="form-control" placeholder="password"/>
+                                        <Field name="password" type="password" className="form-control" placeholder="Wachtwoord"/>
                                         <ErrorMessage name="password" component="div" className="alert alert-danger"/>
                                     </IonItem>
                                 </div>
@@ -112,9 +112,15 @@ export default class Login extends Component<Props, State> {
                                         {loading && (
                                             <span className="spinner-border spinner-border-sm"></span>
                                         )}
-                                        <span>Login</span>
+                                        <span id="logoText">Inloggen</span>
                                     </IonButton>
 
+                                    <IonButton  className="userInput" id="forgotPass" type="submit" color="none">
+                                        <span id="forgotPassText"> Wachtwoord vergeten?</span>
+                                    </IonButton>
+                                </div>
+                                <div id="informUser">
+                                    <span id="informUserText">Cliënten ontvangen logingegevens via zijn of haar consulent </span>
                                 </div>
 
                                 {message && (

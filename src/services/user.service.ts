@@ -1,5 +1,6 @@
 import axios from 'axios';
 import authHeader from './auth-header';
+import {response} from "express";
 
 const API_URL = 'https://test-api-cwp.vp-company.nl/api/client/accountinformation';
 
@@ -21,6 +22,8 @@ class UserService {
     getAdminBoard() {
         return axios.get(API_URL + 'admin', { headers: authHeader() });
     }
+
 }
+
 
 export default new UserService();

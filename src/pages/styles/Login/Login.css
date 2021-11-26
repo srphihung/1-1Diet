@@ -3,16 +3,17 @@
     display: flex;
     border-color: #DC6099;
     display: inline-block;
-    margin: 50% auto;
+    margin: 30% auto;
     padding-left: 10%;
     width: 80%;
 }
 
+
 #loginUsername, #loginPassword {
     text-align: center;
-    border-radius: 25px;
+    border-radius: 10px;
     border: solid;
-    border-color: #DC6099;
+    border-color: grey;
     margin-top: 15px;
     outline: hidden;
 }
@@ -20,20 +21,52 @@
 .loginContainer>h2{
     color: #DC6099;
     font-size: 34px;
-    font-family: nos;
+    font-family: "londrina solid";
+    margin-bottom: 25%;
 }
+
+#logoText{
+    font-family: "londrina solid";
+    color: white;
+}
+
+
+#forgotPassText {
+    color: #2b2e6b;
+    font-family: "Roboto Slab";
+    background-color: transparent;
+    border-color: transparent;
+
+}
+
+#informUser{
+    margin-top: 25px;
+}
+
+#informUserText  {
+    font-family: "Roboto Slab";
+    color: black;
+    font-weight: bolder;
+    margin-top: 25px;
+}
+
+#forgotPass{
+    margin-top: 25px;
+    --box-shadow:none;
+}
+
 
 #loginSubmit{
     text-align: center;
-    border-radius: 15px;
+    border-radius: 35px;
     background-color: #2b2e6b;
     margin: 15px auto;
-    box-shadow: none;
-    width: 50%;
+    width: 90%;
+    height: 90px;
     color: #DC6099;
     font-family: nos;
     overflow: hidden;
-    font-size: 34px;
+    font-size: 18px;
     max-height: 50px;
 }
 
@@ -52,5 +85,7 @@ Field {
     background-color: transparent;
     border-color: transparent;
     font-family: "Roboto Slab";
-    color: #2b2e6b;
+    font-family: "robo";
+    font-size: 18px;
 }
+
