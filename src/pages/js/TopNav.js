@@ -16,7 +16,7 @@ function TopNav() {
                 <NavLink to="/news" className="navIcon" activeClassName="navIconActive" ><IonIcon icon={newspaperOutline} /></NavLink>
                 <NavLink to="/calendar" className="navIcon" activeClassName="navIconActive" ><IonIcon icon={calendarOutline} /></NavLink>
                 <NavLink to="/recipes" className="navIcon" activeClassName="navIconActive"><IonIcon icon={restaurantOutline}  /></NavLink>
-                <NavLink to="/account" className="navIcon" activeClassName="navIconActive" ><IonIcon icon={personOutline} /></NavLink>
+                <NavLink to="/profile" className="navIcon" activeClassName="navIconActive" ><IonIcon icon={personOutline} /></NavLink>
             </div>
         </div> 
     )

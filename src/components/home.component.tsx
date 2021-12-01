@@ -54,9 +54,6 @@ export default class Home extends Component<Props, State> {
             <div className="Home">
                 <div className="homeContent">
                     <div className="sliderHeader">
-                        <header className="jumbotron">
-                            <h3>{this.state.content}</h3>
-                        </header>
                         <IonLabel className="HomeHeader">Acties</IonLabel>
                     </div>
                     <div className="actionBtns">
