@@ -7,6 +7,7 @@ import TopNav from "../pages/js/TopNav";
 import {IonAvatar, IonButton, IonCol, IonContent, IonIcon, IonImg, IonModal} from "@ionic/react";
 import {alertCircleOutline, chevronForwardOutline, resizeOutline, scaleOutline, settingsOutline} from "ionicons/icons";
 import Logo from "../images/logodiet.svg";
+import {response} from "express";
 
 type Props = {};
 
@@ -27,9 +28,13 @@ export default class Profile extends Component<Props, State> {
     }
 
     componentDidMount() {
-        const userContent = UserService.getPublicContent();
-        if (!userContent) this.setState({redirect: "/home"});
-        this.setState({userContent: userContent, userReady: true});
+ UserService.getPublicContent().then(
+     response => {
+         this.setState( {
+             userContent: response.data
+         })
+     }
+ );
     }
 
 
@@ -40,7 +45,9 @@ export default class Profile extends Component<Props, State> {
 
         // const [showModal, setShowModal] = useState(false);
         const {userContent} = this.state;
-        console.log(userContent)
+        console.log(UserService.getUserBoard())
+
+
 
         return (
         <IonContent>
@@ -53,10 +60,11 @@ export default class Profile extends Component<Props, State> {
                 </button>
 
                 <IonAvatar className="profileImg">
-                    <IonImg src={userContent.urlClientPhoto}/>
+                    <IonImg src={userContent.firstName}/>
                 </IonAvatar>
 
-                <p>Welkom {userContent.firstName} {userContent.lastName} </p>
+                <p>Welkom {userContent.cardName} {userContent.lastName} </p>
+
 
                 <div className="statContainer">
 

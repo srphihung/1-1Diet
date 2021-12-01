@@ -17,29 +17,6 @@ export default class BoardModerator extends Component<Props, State> {
         };
     }
 
-    componentDidMount() {
-        UserService.getModeratorBoard().then(
-            response => {
-                this.setState({
-                    content: response.data
-                });
-            },
-            error => {
-                this.setState({
-                    content:
-                        (error.response &&
-                            error.response.data &&
-                            error.response.data.message) ||
-                        error.message ||
-                        error.toString()
-                });
-
-                if (error.response && error.response.status === 401) {
-                    EventBus.dispatch("logout");
-                }
-            }
-        );
-    }
 
     render() {
         return (

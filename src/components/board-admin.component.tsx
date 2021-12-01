@@ -17,29 +17,6 @@ export default class BoardAdmin extends Component<Props, State> {
         };
     }
 
-    componentDidMount() {
-        UserService.getAdminBoard().then(
-            response => {
-                this.setState({
-                    content: response.data
-                });
-            },
-            error => {
-                this.setState({
-                    content:
-                        (error.response &&
-                            error.response.data &&
-                            error.response.data.message) ||
-                        error.message ||
-                        error.toString()
-                });
-
-                if (error.response && error.response.status === 401) {
-                    EventBus.dispatch("logout");
-                }
-            }
-        );
-    }
 
     render() {
         return (
