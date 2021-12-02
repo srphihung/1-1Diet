@@ -88,8 +88,7 @@ export default class Login extends Component<Props, State> {
                     <Formik
                         initialValues={initialValues}
                         validationSchema={this.validationSchema}
-                        onSubmit={this.handleLogin}
-                    >
+                        onSubmit={this.handleLogin}>
                         <Form>
                             <div className="loginContainer">
                                 <h2>Inloggen</h2>

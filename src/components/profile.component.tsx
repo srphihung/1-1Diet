@@ -6,9 +6,7 @@ import UserService from "../services/user.service"
 import TopNav from "../pages/js/TopNav";
 import {IonAvatar, IonButton, IonCol, IonContent, IonIcon, IonImg, IonModal} from "@ionic/react";
 import {alertCircleOutline, chevronForwardOutline, resizeOutline, scaleOutline, settingsOutline} from "ionicons/icons";
-import {UserModal} from './userModal.component';
-
-
+import {UserModal} from "./userModal.component";
 type Props = {};
 
 type State = {
@@ -47,6 +45,7 @@ export default class Profile extends Component<Props, State> {
             return <Redirect to={this.state.redirect}/>
         }
 
+
         const {userContent} = this.state;
 
         return (
@@ -62,7 +61,7 @@ export default class Profile extends Component<Props, State> {
                 <IonAvatar className="profileImg">
                     <IonImg src={userContent.urlClientPhoto}/>
                 </IonAvatar>
-                <p>Welkom {userContent.firstName} {userContent.lastName} </p>
+                <p>Welkom, {userContent.fullName}</p>
 
                 <div className="statContainer">
                     <div className="heightContainer">
@@ -74,16 +73,17 @@ export default class Profile extends Component<Props, State> {
                     <div className="weightContainer">
                         <div className="blueborder">
                             <IonIcon icon={scaleOutline} className="iconProfile"></IonIcon>
-                        </div>
-                        <IonButton className="WeightModalButton" onClick={UserModal} color="none">Gewicht</IonButton>
+                        </div><p>{userContent.startWeight} kg</p>
+                        <UserModal>
+
+                        </UserModal>
                     </div>
                 </div>
-                <div className="hello There">
-                    <UserModal></UserModal>
 
-                </div>
+
                 <div className="consulentContainer">
                     <h3>Aangesloten bij</h3>
+
                     {(userContent.consultantFullName) ?
                         <div className="consulentShrtct">
                             <div className="consulentContent">
@@ -91,8 +91,6 @@ export default class Profile extends Component<Props, State> {
                             </div>
                             <IonIcon icon={chevronForwardOutline} className="iconConsulent"></IonIcon>
                         </div>
-
-
                         :
                         <div className="noConsulentWarning">
                             <div className="blueWarning">
