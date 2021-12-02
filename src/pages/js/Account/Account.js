@@ -39,19 +39,7 @@ function Account(props) {
         }
     }).then(response => {
         console.log(response.data)
-    }).catch(err => console.log(err.response))
-
-    const instance = axios.create({
-        baseURL: 'https://test-api-cwp.vp-company.nl/api/',
-        method: 'GET',
-        timeout: 1000,
-        headers: {'Authorization': 'Bearer '+"eyJhbGciOiJSUzI1NiIsImtpZCI6Ijg1MTdCRDk3NjZBQ0M5Qzg5OERCRUZFM0Y4MjI2MjA1QTU5RUQ4QjUiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiIxNjg1NCIsInJjd3VpZCI6IjE2ODU0IiwidG9rZW5fdXNhZ2UiOiJhY2Nlc3NfdG9rZW4iLCJqdGkiOiJmODBiODQwNS02NWZhLTQ0NDQtYjg2Zi00YjdiYjkxMDA1MzgiLCJzY29wZSI6WyJwcm9maWxlIiwib2ZmbGluZV9hY2Nlc3MiXSwibmJmIjoxNjM2ODAzNjYwLCJleHAiOjE2MzY4MDcyNjAsImlhdCI6MTYzNjgwMzY2MCwiaXNzIjoiaHR0cHM6Ly90ZXN0LWFwaS1jd3AudnAtY29tcGFueS5ubC8ifQ.cVwB2PEVjJbiscM_AVeK_e0xg3MV5HLzOngS4T-S84Gk8xi2GrJDkcLM2DBp0AgpORfg06ob8mNYKQmPyaQYgGiHDK5YvRbvv8Vf2PO_CHNsf81IR7SVW4L83IGUOGvZMMXd5gJfhddWZcBS7piuQwOMVCnSAW7xLDXnE3IJI_5pbquDewCf_phPdCYSq6XEjrSFJkbGVw2wIPJAGlovX6ix7Ki-axQvZK26UeUo29xqtUJuElayBqHyv5HAHDe586m3HFAxDjFqiMBYpiwRtpAPKUe2yxlShbO0c-jHUEy-Mys1g9qzkd6G2QZbWd_5a32WC_8SqxEOA4X70PHKJnYbyN_6vhDgogtpL5-LrTCEriJCB8pLPj-RoP66KWehX8HYb-T8hRwS57MF4b2zm1yj2BcWvnUPqUau_Qm-7gF2opxXlLinNNtEn7jqdE0dfadWDPrJHhdfQJcEXYS-K1jxApKgvNrKStJZOTyvgNZ7MIKhv9cexwU7eX-rSthXdWtEj71hNPJtrqqgJdS8dCiDgItXJ7ZeLtTXc-It32hcCgjXMcu08hDwCsifoJ2mDNXOeQFHELM-N8AHc7ySBZfsqFqY1rOL5WJyFFkAf9Thp8gpvnbv3Y6XPt_w0WMNm95124CgVvfk4BASgQVEOna6hCgTR_tiXl0uVFA6lDo"}
-    });
-
-    instance.get('/client/accountinformation')
-        .then(response => {
-            return response.data;
-        })
+    }).catch(err => console.log("api Erorr: ", err.response))
 
     return (
         <IonContent>
@@ -67,7 +55,7 @@ function Account(props) {
                         <IonImg src={DF.urlClientPhoto}/>
                     </IonAvatar>
 
-                        <p>Welkom {DF.firstName} {DF.lastName} </p>
+                    <p>Welkom {DF.firstName} {DF.lastName} </p>
 
                     <div className="statContainer">
 
