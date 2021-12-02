@@ -1,3 +1,9 @@
+/* Algemene styles */
+h3 {
+    font-family: nos;
+}
+
+/* Home styles */
 .accountPageContent {
     position: relative;
     top: 110px;
@@ -53,7 +59,7 @@
 .accountPageContent>p:nth-child(3) {
     color: #DC6099;
     font-size: 24px;
-    margin: 20px auto 0 auto;
+    margin: 15px auto 0 auto;
     font-family: nos;
 }
 
@@ -90,6 +96,7 @@
     margin: 5px;
     padding: 5px;
     text-align: center;
+    width: 100%;
 }
 
 h2.modalTitle {
@@ -144,10 +151,8 @@ h2.modalTitle {
     height: 100%;
     width: 100%;
     color: black;
-    border-radius: 10px;
+    border-radius: 0 10px 10px 0;
     box-shadow: none;
-    overflow: hidden;
-    text-align: center;
 }
 
 .blueborder {
@@ -167,12 +172,12 @@ h2.modalTitle {
     flex-direction: column;
 }
 
-.consulentContainer>h3,
-h3 {
-    margin: 40px 0 0 20px;
+.consulentContainer>h3 {
+    margin-top: 30px;
     color: #DC6099;
     font-family: nos;
     font-size: 24px;
+    text-align: center;
 }
 
 .noConsulentWarning {
