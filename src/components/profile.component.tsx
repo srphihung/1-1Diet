@@ -45,7 +45,7 @@ export default class Profile extends Component<Props, State> {
             return <Redirect to={this.state.redirect}/>
         }
 
-
+        // const [showModal, setShowModal] = useState(false);
         const {userContent} = this.state;
 
         return (
@@ -61,7 +61,7 @@ export default class Profile extends Component<Props, State> {
                 <IonAvatar className="profileImg">
                     <IonImg src={userContent.urlClientPhoto}/>
                 </IonAvatar>
-                <p>Welkom, {userContent.fullName}</p>
+                <p>Welkom {userContent.firstName} {userContent.lastName} </p>
 
                 <div className="statContainer">
                     <div className="heightContainer">
@@ -73,7 +73,7 @@ export default class Profile extends Component<Props, State> {
                     <div className="weightContainer">
                         <div className="blueborder">
                             <IonIcon icon={scaleOutline} className="iconProfile"></IonIcon>
-                        </div><p>{userContent.startWeight} kg</p>
+                        </div>
                         {/*<IonModal isOpen={showModal} onDidDismiss={() => setShowModal(false)} swipe-to-close={true}>*/}
                         {/*    <div className="modal-dialog modal-dialog-scrollable WeightModal">*/}
                         {/*        <div className="navigationInfo">*/}
