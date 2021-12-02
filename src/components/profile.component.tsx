@@ -6,7 +6,7 @@ import UserService from "../services/user.service"
 import TopNav from "../pages/js/TopNav";
 import {IonAvatar, IonButton, IonCol, IonContent, IonIcon, IonImg, IonModal} from "@ionic/react";
 import {alertCircleOutline, chevronForwardOutline, resizeOutline, scaleOutline, settingsOutline} from "ionicons/icons";
-import {UserModal} from './userModal.component'
+import {UserModal} from './userModal.component';
 
 
 type Props = {};
@@ -47,7 +47,6 @@ export default class Profile extends Component<Props, State> {
             return <Redirect to={this.state.redirect}/>
         }
 
-        // const [showModal, setShowModal] = useState(false);
         const {userContent} = this.state;
 
         return (
@@ -76,9 +75,10 @@ export default class Profile extends Component<Props, State> {
                         <div className="blueborder">
                             <IonIcon icon={scaleOutline} className="iconProfile"></IonIcon>
                         </div>
+                        <IonButton className="WeightModalButton" onClick={UserModal} color="none">Gewicht</IonButton>
                     </div>
                 </div>
-                <div className="owO">
+                <div className="hello There">
                     <UserModal></UserModal>
 
                 </div>
