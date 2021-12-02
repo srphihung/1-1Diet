@@ -97,8 +97,8 @@ function Account(props) {
                                     </IonCol>
                                     <IonButton className="WeightModalCloseButton" color="none" onClick={() => setShowModal(false)}>Close Modal</IonButton>
                                 </div>
-
                             </IonModal>
+
                             <p>
                                 <IonButton className="WeightModalButton" onClick={() => setShowModal(true)} color="none">Gewicht</IonButton>
                             </p>
