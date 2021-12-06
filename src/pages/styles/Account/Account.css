@@ -10,6 +10,9 @@ h3 {
     display: flex;
     flex-direction: column;
     background-color: #DBE9F0;
+    border-style: solid;
+    overflow: hidden;
+    border-color: #2b2e6b;
     min-height: 100vh;
 }
 
