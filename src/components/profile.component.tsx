@@ -10,7 +10,7 @@ import {alertCircleOutline, chevronForwardOutline, resizeOutline, scaleOutline, 
 import {UserModal} from "./userModal.component";
 import Sidebar from './Sidebar';
 
-type Propss = {};
+type Props = {};
 
 type State = {
     redirect: string | null,
