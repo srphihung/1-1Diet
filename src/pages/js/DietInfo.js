@@ -40,6 +40,7 @@ function DietInfo() {
                             <button onClick={() => setShowPlan(true)}>Volgende</button>
                         </div>
                     </ion-slide>
+
                 </ion-slides>
                 {showPlan ?
                     <div className="stappenPlan">
