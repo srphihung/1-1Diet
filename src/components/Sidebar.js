@@ -6,7 +6,7 @@ import {resizeOutline} from "ionicons/icons";
 
 
 
-export default props => {
+export default propss => {
     return (
         <Menu id="route">
             <IonIcon icon={resizeOutline} className="iconProfile"></IonIcon>
