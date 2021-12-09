@@ -36,8 +36,8 @@ export default class Login extends Component<Props, State> {
 
     validationSchema() {
         return Yup.object().shape({
-            username: Yup.string().required("Verplicht!"),
-            password: Yup.string().required("Verplicht!"),
+            username: Yup.string().required("Dit veld is verplicht"),
+            password: Yup.string().required("Dit veld is verplicht"),
         });
     }
 
@@ -80,7 +80,7 @@ export default class Login extends Component<Props, State> {
 
         return (
             <IonContent className="container">
-                <img className="logo" src={Logo} alt={'1:1 Diet logo'}/>
+                <img className="login-logo" src={Logo} alt={'1:1 Diet logo'}/>
                 <div className="cardContainer">
                     <Formik
                         initialValues={initialValues}
@@ -89,25 +89,37 @@ export default class Login extends Component<Props, State> {
                         <Form>
                             <IonContent className="loginContainer">
                                 <IonGrid>
-                                    <IonRow justify-content-center>
-                                        <IonCol align-self-center size-md="6" size-lg="5" size-xs="12">
-                                            <div text-center>
-                                                <h2>Gebruikersnaam</h2>
+                                    <IonRow className="loginInner">
+
+                                        <IonCol className="loginContent">
+                                            <div className="loginHead">
+                                                <h2>Login</h2>
+                                                <div id="informUser">
+                                                    <span id="informUserText">Cliënten ontvangen inloggegevens via zijn of haar consulent </span>
+                                                </div>
                                             </div>
-                                            <div>
-                                                <IonItem no-lines>
+
+                                            
+                                            
+                                            <div className="loginBody">
+                                                <h3>Gebruikersnaam</h3>
+                                                <div className="loginInput">
                                                     <Field name="username" type="text" className="form-control"
                                                            placeholder="Gebruikersnaam"/>
                                                     <ErrorMessage name="username" component="div"
                                                                   className="alert alert-danger"/>
-                                                </IonItem>
-
-                                                <IonItem no-lines id="itemInput" >
+        	                                    </div>
+                                                <h3>Wachtwoord</h3>
+                                                <div className="loginInput">
                                                     <Field name="password" type="password" className="form-control"
                                                            placeholder="Wachtwoord"/>
                                                     <ErrorMessage name="password" component="div"
                                                                   className="alert alert-danger"/>
-                                                </IonItem>
+                                                </div>
+                                                
+                                            </div>
+
+                                            <div className="loginFooter">
                                                 <div className="form-group userInput">
                                                     <IonButton className="userInput" id="loginSubmit" type="submit" color="none"
                                                                disabled={loading}>
@@ -118,11 +130,8 @@ export default class Login extends Component<Props, State> {
                                                     </IonButton>
 
                                                     <IonButton className="userInput" id="forgotPass" type="submit" color="none">
-                                                        <span id="forgotPassText"> Wachtwoord vergeten?</span>
+                                                        <span id="forgotPassText">Wachtwoord vergeten?</span>
                                                     </IonButton>
-                                                </div>
-                                                <div id="informUser">
-                                                    <span id="informUserText">Cliënten ontvangen logingegevens via zijn of haar consulent </span>
                                                 </div>
 
                                                 {message && (
@@ -132,7 +141,6 @@ export default class Login extends Component<Props, State> {
                                                         </div>
                                                     </div>
                                                 )}
-
                                             </div>
                                         </IonCol>
                                     </IonRow>

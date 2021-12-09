@@ -1,36 +1,88 @@
 .container {
-    position: relative;
-    border-color: #DC6099;
-    display: inline-block;
     --ion-background-color: #6D99CF;
-    box-sizing: border-box;
-    padding: 215px;
 }
+
+.login-logo {
+    width: 160px;
+}
+
 .loginContainer{
-    padding: 215px;
-    box-sizing: border-box;
-    vertical-align: middle!important;
-    height:50vh;
-    --ion-background-color: #DBE9F0;
-    border-radius: 15px;
-    display: table;
+    height: 100%;
+    position: absolute;
+    z-index: 999;
 }
 .loginContainer h2{
+    font-family: nos;
+    font-size: 32px;
     color: #CD5A90;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-.userInputContainer{
-    background-color: #DBE9F0;
-    display: table;
-    margin: 0 auto;
-    border: 1px solid black;
-
+.loginInner {
+    padding: 15px;
 }
+
+.loginHead, .loginBody {
+    margin-bottom: 20px;
+    border-bottom: 2px solid white;
+}
+
+.loginTitle {
+    display: block;
+}
+
+.loginContent {
+    border-radius: 10px;
+    padding: 20px;
+    background: #DBE9F0;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginContent h3 {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.loginContent input {
+    width: 100%;
+    padding: 7px 0;
+    border-radius: 7px;
+    background: #fff;
+}
+
+.loginInput {
+    margin-bottom: 20px;
+    line-height: 20px;
+    text-align: center;
+    outline: none;    
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+#loginSubmit {
+    background: #CD5A90;
+    border-radius: 7px;
+    display: block;
+}
+
+#forgotPass {
+    color: #000;
+    text-align: center;
+    display: block;
+}
+
+#informUser {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .form-control{
     background-color: transparent;
     border-color: transparent;
-}
-.form-group-userInput{
-    background-color: #2b2e6b;
-    margin-bottom: 15px;
 }
