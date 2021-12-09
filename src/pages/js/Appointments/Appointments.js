@@ -25,12 +25,12 @@ function Appointments() {
     const [confirmModal, setConfirmModal] = useState({ isOpen: false })
     const [appointment, setAppointment] = useState([])
 
-    useEffect(async () => {
-        const api_url = 'http://31.14.96.253/appointments'
-        var response = await fetch(api_url)
-        var data = await response.json()
-        setAppointment(data)
-    }, [setAppointment])
+    // useEffect(async () => {
+    //     const api_url = 'http://31.14.96.253/appointments'
+    //     var response = await fetch(api_url)
+    //     var data = await response.json()
+    //     setAppointment(data)
+    // }, [setAppointment])
 
     // Get current month name
     var d = new Date()

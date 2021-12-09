@@ -1,8 +1,8 @@
-import { IonButton, IonInput, IonCard, IonSlide, IonSlides, IonContent, IonButtons, IonItemGroup } from '@ionic/react'
+import { IonButton, IonInput, IonContent } from '@ionic/react'
 import React, { useEffect, useState } from 'react'
-import TopNav from '../js/TopNav'
-import '../styles/Recipes.css'
-import RecipeStyle from '../js/Recipes/Recipestyle'
+import TopNav from '../TopNav'
+import '../../styles/Recipes/Recipes.css'
+import RecipeStyle from './Recipestyle'
 
 function Recipes() {
     const [recipes, setRecipes] = useState([])
@@ -12,12 +12,12 @@ function Recipes() {
         return recipe.title.toLowerCase().includes(searchFilter.toLowerCase())
     })
 
-    useEffect(async () => {
-        const api_url = 'http://31.14.96.253/recipes'
-        var response = await fetch(api_url)
-        var data = await response.json()
-        setRecipes(data)
-    }, [setRecipes])
+    // useEffect(async () => {
+    //     const api_url = 'http://31.14.96.253/recipes'
+    //     var response = await fetch(api_url)
+    //     var data = await response.json()
+    //     setRecipes(data)
+    // }, [setRecipes])
 
     return (
         <IonContent>

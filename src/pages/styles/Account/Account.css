@@ -9,23 +9,9 @@ h3 {
     top: 110px;
     display: flex;
     flex-direction: column;
-    background-color: #DBE9F0;
-    border-style: solid;
+    background-color: #F1F6F9;
     overflow: hidden;
-    border-color: #2b2e6b;
     min-height: 100vh;
-}
-
-.Avatar {
-    font-size: 40px;
-    width: 80px;
-    height: 80px;
-    border-radius: 50px;
-    border: 2px solid #DC6099;
-    margin: 5px auto 0 auto;
-    text-align: center;
-    display: flex;
-    background-color: white;
 }
 
 .profileImg{
@@ -54,26 +40,11 @@ h3 {
     position: absolute;
 }
 
-.avatarIcon {
-    color: lightgray;
-    margin: auto;
-}
-
 .accountPageContent>p:nth-child(3) {
     color: #DC6099;
     font-size: 24px;
     margin: 15px auto 0 auto;
     font-family: nos;
-}
-
-.accountPageContent>p:nth-child(4) {
-    color: #2B2E6B;
-    margin: 10px auto 0 auto;
-}
-
-.accountPageContent>hr {
-    margin: 15px auto 0 auto;
-    width: 300px;
 }
 
 .statContainer {
@@ -82,7 +53,6 @@ h3 {
     flex-wrap: wrap;
 }
 
-.locationContainer,
 .heightContainer,
 .weightContainer {
     width: 150px;
@@ -93,7 +63,6 @@ h3 {
     display: flex;
 }
 
-.locationContainer>p,
 .heightContainer>p,
 .weightContainer>p {
     margin: 5px;
@@ -102,63 +71,6 @@ h3 {
     width: 100%;
     max-height: 100vh;
     overflow-y: auto;
-}
-
-h2.modalTitle {
-    color: #DC6099;
-    position: absolute;
-    top: 10%;
-    transform: translateX(100%);
-    text-align: center;
-}
-
-.weightDetails {
-    border: solid #DC6099;
-    border-radius: 15px;
-    color: black;
-    margin: 5px;
-    position: absolute;
-    max-height: 100vh;
-    overflow-y: auto;
-}
-
-.weightDetails>p {
-    border-bottom: 1px solid #E5E4E4;
-    padding: 10px;
-}
-
-.weightDetails>p:last-child {
-    border-bottom: none;
-}
-
-.WeightModal .modal-wrapper {
-    max-height: 100%;
-    overflow-y: auto;
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-.WeightModalCloseButton {
-    transform: translateX(100%);
-    position: absolute;
-    bottom: 2%;
-    margin: 10px;
-    color: #2b2e6b;
-    background-color: #DC6099;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: none;
-}
-
-.WeightModalButton {
-    border: none;
-    height: 100%;
-    width: 100%;
-    color: black;
-    border-radius: 0 10px 10px 0;
-    box-shadow: none;
 }
 
 .blueborder {
@@ -244,23 +156,6 @@ h2.modalTitle {
     padding: 0 0 0 15px;
 }
 
-.consulentAvatar {
-    border-radius: 10px 0 0 10px;
-    min-height: 80px;
-    background-color: #2B2E6B;
-    min-width: 80px;
-    position: relative;
-}
-
-.consulentProfileImg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 66px;
-    height: 66px;
-}
-
 .iconConsulent {
     font-size: 24px;
     margin: auto 0 auto 10px;
@@ -283,64 +178,4 @@ h2.modalTitle {
     font-size: 14px;
     max-width: 208px;
     word-break: break-all;
-}
-
-
-/* Statcontainer */
-
-.IonCardStats {
-    display: flex;
-    flex-direction: column;
-}
-
-.userStatContainer {
-    width: 90%;
-    height: 40%;
-    background-color: white;
-    margin: 20px auto 40px auto;
-}
-
-.userStatContainerContent {
-    padding: 0px;
-}
-
-.weightMomentCircle {
-    width: 46px;
-    height: 46px;
-    border: 4px solid #2B2E6B;
-    margin: -42px 10px 15px 240px;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 48px;
-    border-radius: 30px;
-    padding: 3px;
-    position: relative;
-    font-weight: bold;
-}
-
-.toProgress {
-    min-width: 140px;
-    width: 50%;
-    height: 30px;
-    border-radius: 70px !important;
-    margin: 0px auto 15px auto;
-    --background: #2B2E6B;
-    color: white;
-    outline: none;
-    border: none;
-    display: flex;
-    box-sizing: content-box;
-    padding: 5px;
-}
-
-.statTitle {
-    color: #2B2E6B;
-    font-weight: bold;
-    margin: 10px 0 0 0;
-    font-size: 16px;
-}
-
-.statDate {
-    margin: 5px 0 0 0;
-    display: flex;
 }

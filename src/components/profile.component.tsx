@@ -2,13 +2,10 @@ import React, {Component} from "react";
 import {Redirect} from "react-router-dom";
 import IUser from "../types/user.type";
 import '../pages/styles/Account/Account.css'
-import '../pages/styles/Sidebar/Sidebar.css'
 import UserService from "../services/user.service"
 import TopNav from "../pages/js/TopNav";
-import {IonAvatar, IonButton, IonCol, IonContent, IonIcon, IonImg, IonModal} from "@ionic/react";
+import {IonAvatar, IonContent, IonIcon, IonImg} from "@ionic/react";
 import {alertCircleOutline, chevronForwardOutline, resizeOutline, scaleOutline, settingsOutline} from "ionicons/icons";
-import {UserModal} from "./userModal.component";
-import Sidebar from './Sidebar';
 
 type Props = {};
 
@@ -48,16 +45,17 @@ export default class Profile extends Component<Props, State> {
             return <Redirect to={this.state.redirect}/>
         }
 
-
         const {userContent} = this.state;
 
         return (
         <IonContent>
             <TopNav/>
-
             <div className="accountPageContent">
 
-                <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
+                <button className="settingsBtn">
+                    <IonIcon icon={settingsOutline} className="iconProfile">
+                    </IonIcon>
+                </button>
 
                 <IonAvatar className="profileImg">
                     <IonImg src={userContent.urlClientPhoto}/>
@@ -71,17 +69,16 @@ export default class Profile extends Component<Props, State> {
                         </div><p>{userContent.lengthInCm} Cm</p>
                     </div>
 
-
-
-
-                        <UserModal>
-
-                        </UserModal>
+                    <div className="weightContainer">
+                        <div className="blueborder">
+                            <IonIcon icon={scaleOutline} className="iconProfile"></IonIcon>
+                        </div><p>{userContent.startWeight} kg</p>
+                    </div>
                 </div>
-
 
                 <div className="consulentContainer">
                     <h3>Aangesloten bij</h3>
+
                     {(userContent.consultantFullName) ?
                         <div className="consulentShrtct">
                             <div className="consulentContent">

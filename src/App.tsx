@@ -1,7 +1,7 @@
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import Recipes from './pages/js/Recipes';
+import Recipes from './pages/js/Recipes/Recipes';
 import BMI from './pages/js/BMI';
 import Experience from './pages//js/Experience';
 import DietInfo from './pages/js/DietInfo';

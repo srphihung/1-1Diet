@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
-import {IonAvatar, IonButton, IonCol, IonContent, IonIcon, IonImg, IonModal} from "@ionic/react";
+import {IonButton, IonCol, IonContent, IonIcon, IonImg, IonModal} from "@ionic/react";
 import '../pages/styles/Modal/userModal.css'
-import UserService from "../services/user.service"
 import IUser from "../types/user.type";
 import {scaleOutline} from "ionicons/icons";
 
