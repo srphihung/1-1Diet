@@ -1,5 +1,10 @@
-.container {
-    --ion-background-color: #6D99CF;
+.loginContainer {
+    background: #F1F6F9;
+}
+
+/* Hide scrollbar */
+ion-content {
+    --overflow: hidden;
 }
 
 .login-logo {
@@ -24,8 +29,12 @@
     padding: 15px;
 }
 
+form {
+    margin-top: 20px;
+}
+
 .loginHead, .loginBody {
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     border-bottom: 2px solid white;
 }
 
@@ -34,9 +43,7 @@
 }
 
 .loginContent {
-    border-radius: 10px;
     padding: 20px;
-    background: #DBE9F0;
     justify-content: center;
     align-items: center;
 }
@@ -50,22 +57,31 @@
 
 .loginContent input {
     width: 100%;
-    padding: 7px 0;
+    padding: 15px;
     border-radius: 7px;
     background: #fff;
+    border: 1px solid #CD5A90;
+    display: block;
+    color: #000;
+    width: calc(100% - 30px);
+}
+
+.loginContent input::placeholder {
+    text-align: left;
+}
+
+.loginBody {
+    width: 100%;
 }
 
 .loginInput {
+    width: 100%;
     margin-bottom: 20px;
     line-height: 20px;
-    text-align: center;
-    outline: none;    
-    -webkit-appearance: none;
-    -moz-appearance: none;
 }
 
 #loginSubmit {
-    background: #CD5A90;
+    background: #2B2E6B;
     border-radius: 7px;
     display: block;
 }
@@ -74,15 +90,12 @@
     color: #000;
     text-align: center;
     display: block;
+    margin-top: 15px;
 }
 
 #informUser {
     display: block;
     text-align: center;
-    margin-bottom: 20px;
-}
-
-.form-control{
-    background-color: transparent;
-    border-color: transparent;
+    margin-top: 20px;
+    font-weight: 900;
 }

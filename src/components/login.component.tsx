@@ -79,44 +79,42 @@ export default class Login extends Component<Props, State> {
         };
 
         return (
-            <IonContent className="container">
+            <IonContent className="loginContainer">
                 <img className="login-logo" src={Logo} alt={'1:1 Diet logo'}/>
-                <div className="cardContainer">
                     <Formik
                         initialValues={initialValues}
                         validationSchema={this.validationSchema}
                         onSubmit={this.handleLogin}>
                         <Form>
-                            <IonContent className="loginContainer">
+                            <IonContent className="loginContainer" scroll-y="false" overflow-y="hidden">
                                 <IonGrid>
                                     <IonRow className="loginInner">
 
                                         <IonCol className="loginContent">
                                             <div className="loginHead">
-                                                <h2>Login</h2>
-                                                <div id="informUser">
-                                                    <span id="informUserText">Cliënten ontvangen inloggegevens via zijn of haar consulent </span>
-                                                </div>
+                                                <h2>Inloggen</h2>
+                                                {message && (
+                                                    <div className="form-group userInput">
+                                                        <div className="alert alert-danger" role="alert">
+                                                            De ingevulde gegevens zijn onjuist
+                                                        </div>
+                                                    </div>
+                                                )}
                                             </div>
 
-                                            
-                                            
                                             <div className="loginBody">
-                                                <h3>Gebruikersnaam</h3>
                                                 <div className="loginInput">
                                                     <Field name="username" type="text" className="form-control"
                                                            placeholder="Gebruikersnaam"/>
-                                                    <ErrorMessage name="username" component="div"
-                                                                  className="alert alert-danger"/>
+                                                    {/* <ErrorMessage name="username" component="div"
+                                                                  className="alert alert-danger"/> */}
         	                                    </div>
-                                                <h3>Wachtwoord</h3>
                                                 <div className="loginInput">
                                                     <Field name="password" type="password" className="form-control"
                                                            placeholder="Wachtwoord"/>
-                                                    <ErrorMessage name="password" component="div"
-                                                                  className="alert alert-danger"/>
+                                                    {/* <ErrorMessage name="password" component="div"
+                                                                  className="alert alert-danger"/> */}
                                                 </div>
-                                                
                                             </div>
 
                                             <div className="loginFooter">
@@ -128,19 +126,12 @@ export default class Login extends Component<Props, State> {
                                                         )}
                                                         <span id="logoText">Inloggen</span>
                                                     </IonButton>
-
-                                                    <IonButton className="userInput" id="forgotPass" type="submit" color="none">
-                                                        <span id="forgotPassText">Wachtwoord vergeten?</span>
-                                                    </IonButton>
+                                                    <span className="userInput" id="forgotPass">Wachtwoord vergeten?</span>
                                                 </div>
 
-                                                {message && (
-                                                    <div className="form-group userInput">
-                                                        <div className="alert alert-danger" role="alert">
-                                                            {message}
-                                                        </div>
-                                                    </div>
-                                                )}
+                                                <div id="informUser">
+                                                    <span id="informUserText">Cliënten ontvangen inloggegevens via zijn of haar consulent </span>
+                                                </div>
                                             </div>
                                         </IonCol>
                                     </IonRow>
@@ -148,7 +139,6 @@ export default class Login extends Component<Props, State> {
                             </IonContent>
                         </Form>
                     </Formik>
-                </div>
             </IonContent>
         );
     }
