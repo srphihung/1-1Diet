@@ -10,7 +10,6 @@ import {alertCircleOutline, chevronForwardOutline, resizeOutline, scaleOutline, 
 import {UserModal} from "./userModal.component";
 import Sidebar from './Sidebar';
 import ScrollNav from "./scrollNavProfile"
-import ChartStatsWeight from "./chartStatsWeight.component";
 
 type Props = {};
 type State = {
