@@ -2,6 +2,10 @@ import React from 'react';
 import { slide as Menu } from 'react-burger-menu';
 import {IonAvatar, IonButton, IonCol, IonContent, IonIcon, IonImg, IonItem, IonModal} from "@ionic/react";
 import {resizeOutline} from "ionicons/icons";
+import IUser from "../types/user.type";
+import {Redirect} from "react-router-dom";
+import UserService from "../services/user.service"
+
 
 
 

@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {IonButton, IonCol, IonContent, IonIcon, IonImg, IonModal} from "@ionic/react";
 import '../pages/styles/Modal/userModal.css'
 import IUser from "../types/user.type";
+import userContent from "./userContentData";
 
 export const UserModal: React.FC = () => {
     const [showModal, setShowModal] = useState(false);

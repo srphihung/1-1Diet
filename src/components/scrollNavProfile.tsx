@@ -3,14 +3,16 @@ import React, {Component} from "react";
 import UserService from "../services/user.service"
 import '../pages/styles/Profile/Styles.css'
 import {Redirect} from "react-router-dom";
-import {IonAvatar, IonContent, IonIcon, IonImg, IonSlides, IonSlide} from "@ionic/react";
+import {IonAvatar, IonContent, IonIcon, IonImg, IonSlides, IonSlide, IonItem} from "@ionic/react";
 import {alertCircleOutline, chevronForwardOutline, resizeOutline} from "ionicons/icons";
 import TopNav from "../pages/js/TopNav";
 import AboutImg1 from "../images/aboutimg.svg";
 import AboutImg2 from "../images/aboutimg2.svg";
-import AboutImg3 from "../images/aboutimg3.svg";
-import Stappenplan from "../images/stappenplan.svg";
-
+import maleLength from "../images/maleLength.png";
+import OrangeFrame from "../images/OrangeFrame.png"
+import Sidebar from './Sidebar';
+import ChartStatsWeightComponent from "./chartStatsWeight.component";
+import ChartStatsBMIComponent from "./chartStatsBMI.component";
 type Props = {};
 
 type State = {
@@ -54,26 +56,53 @@ export default class ScrollNav extends Component<Props, State> {
 
         return (
             <IonContent>
-                    <IonSlides>
+                <IonItem className="userContainer">
+                        <h1 id="userName">{userContent.firstName}'s Home</h1>
+                </IonItem>
+
+                    <IonSlides pager>
                         <IonSlide>
-                            <div className="aboutContent">
-                                <img src={AboutImg1} className="aboutImg"></img>
-                                <h1>People</h1>
-                                <p>Niemand hoeft het alleen te doen. Je eigen consulent is er om jou te helpen en te
-                                    motiveren, zowel tijdens als na het dieet</p>
+                            <div className="aboutContainer">
+                                    <p id="startWeight">
+                                        Je Gewicht
+                                        </p>
+                                    <ChartStatsWeightComponent/>
+                                    <IonItem className="weightTextContainer">
+                                        <p id="weightText">{userContent.startWeight} kg</p>
+                                        <p id="weightText">{userContent.targetWeight} kg</p>
+                                        <p id="weightText"></p>
+                                    </IonItem>
+
+
+
                             </div>
+
                         </IonSlide>
+
                         <IonSlide>
-                            <div className="aboutContent">
-                                <img src={AboutImg2} className="aboutImg"></img>
-                                <h1>Products</h1>
-                                <p>Iedereen heeft recht op smakelijk eten. De maaltijden van The 1 : 1 Diet zijn lekker
-                                    en er is voor ieder wat wils.</p>
+                            <div className="aboutContainer">
+                                <p id="startWeight">
+                                    Je Gewicht
+                                </p>
+                                <ChartStatsBMIComponent/>
+                                <IonItem className="weightTextContainer">
+                                    <p id="weightText">{userContent.startBMI}</p>
+                                    <p id="weightText">{userContent.targetBMI}</p>
+                                    <p id="weightText"></p>
+                                </IonItem>
                             </div>
                         </IonSlide>
 
+                        <IonSlide>
+                            <div className="aboutContainer">
+                                <p id="userHeight">
+                                    <p>Je lengte</p>
+                                    {userContent.lengthInCm} CM</p>
+                            <img src={OrangeFrame} id="frameImg"></img>
+                                <img src={maleLength} id="maleImg"></img>
+                            </div>
+                        </IonSlide>
                     </IonSlides>
-                    <a className="borderBottom"></a>
             </IonContent>
         )
     }

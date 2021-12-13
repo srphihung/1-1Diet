@@ -4,11 +4,68 @@
 }
 
 .dietInfoContent {
-    position: relative;
     top: 130px;
     display: flex;
-    flex-direction: column;
 }
+.weightChart {
+    border-color: #f1f1f1;
+    border-style: solid;
+    overflow: hidden;
+    top: 25%;
+}
+
+span.underline {
+    border-bottom: 3px solid white;
+}
+.aboutContainer {
+    background-color: #D8EAF1;
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    height: 65vh;
+    margin: 20px auto 0 auto;
+    border-radius: 10px;
+}
+#startWeight{
+    font-family: "Roboto Slab";
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+
+
+
+#weightText{
+    width:530px;
+    text-align:center;
+    vertical-align:middle;
+}
+
+#maleImg{
+    position: absolute;
+    top: 35%;
+    height: auto;
+    width: 60%;
+}
+#frameImg{
+    width: 100%;
+    left: 18%;
+    position: relative;
+    display: inline-block;
+}
+#userHeight{
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 25%;
+    right: 0;
+    top: 26%; /* Adjust this value to move the positioned div up and down */
+    text-align: center;
+    width: 60%; /* Set the width of the positioned div */
+    font-size: 32px;
+    color: #DC6099;
+    font-family: "londrina solid";
+}
+
 
 .dietInfoContent>h1 {
     color: #DC6099;
@@ -17,15 +74,13 @@
     font-size: 28px;
 }
 
-.aboutContent {
-    display: flex;
-    flex-direction: column;
-    width: 330px;
-    height: 550px;
-    background-color: white;
-    margin: 20px auto 0 auto;
-    border-radius: 15px;
+#userName {
+    font-family: "londrina solid";
+    font-weight: lighter;
+    color: #DC6099;
+    margin-top: 15px;
 }
+
 
 .aboutContent>p {
     max-width: 80%;

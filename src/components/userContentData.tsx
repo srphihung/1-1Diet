@@ -1,25 +1,20 @@
-import React, {Component} from "react";
-import {Redirect} from "react-router-dom";
 import IUser from "../types/user.type";
-import '../pages/styles/Account/Account.css'
-import '../pages/styles/Sidebar/Sidebar.css'
-import UserService from "../services/user.service"
-import TopNav from "../pages/js/TopNav";
-import {IonAvatar, IonButton, IonCol, IonContent, IonIcon, IonImg, IonModal} from "@ionic/react";
-import {alertCircleOutline, chevronForwardOutline, resizeOutline, scaleOutline, settingsOutline} from "ionicons/icons";
-import {UserModal} from "./userModal.component";
-import Sidebar from './Sidebar';
-import ScrollNav from "./scrollNavProfile"
+import React, {Component} from "react";
+import UserService from "../services/user.service";
+import {Redirect} from "react-router-dom";
+import {IonContent, IonItem, IonSlide, IonSlides} from "@ionic/react";
 import ChartStatsWeight from "./chartStatsWeight.component";
+import AboutImg2 from "../images/aboutimg2.svg";
 
 type Props = {};
+
 type State = {
     redirect: string | null,
     userReady: boolean,
     userContent: IUser & any
 }
 
-export default class User extends Component<Props, State> {
+export default class ScrollNav extends Component<Props, State> {
     constructor(props: Props) {
         super(props);
 
@@ -34,7 +29,7 @@ export default class User extends Component<Props, State> {
         const userContent = UserService.getPublicContent;
         userContent().then(
             response => {
-                this.setState( {
+                this.setState({
                     userContent: response.data
                 })
             }
@@ -51,15 +46,5 @@ export default class User extends Component<Props, State> {
 
 
         const {userContent} = this.state;
-
-        return (
-        <IonContent>
-            <TopNav/>
-            <div className="accountPageContent">
-                <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
-            <ScrollNav/>
-            </div>
-        </IonContent>
-        );
-    };
+    }
 }
