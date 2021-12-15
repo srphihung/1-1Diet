@@ -51,7 +51,6 @@ export default class ChartStatsWeightComponent extends Component<Props, State> {
         return (
             <VictoryStack
                 domainPadding={{x: 15 }}
-
             >
                 <VictoryBar
                     cornerRadius={10}
@@ -60,9 +59,9 @@ export default class ChartStatsWeightComponent extends Component<Props, State> {
 
 
                     data={[
-                        { experiment: "Start gewicht", expected: 6.00, actual: userContent.startWeight, label: 'Start Gewicht' },
+                        { experiment: "Start gewicht", expected: 6.00, actual: userContent.startWeight, label: 'Start Gewicht', text: userContent.startWeight},
                         { experiment: "Huidig Gewicht", expected: 6.00, actual: userContent.targetWeight, label: 'Huidig Gewicht' },
-                        { experiment: "Streef gewicht", expected: 6.00, actual: 70, label: 'Streef Gewicht'}
+                        { experiment: "Streef gewicht", expected: 6.00, actual: userContent.targetWeight, label: 'Streef Gewicht'}
 
                         ]} x="experiment" y={(d) => (d.actual / d.expected) * 6}
                 />

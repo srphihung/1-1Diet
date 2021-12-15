@@ -3,7 +3,18 @@ import React, {Component} from "react";
 import UserService from "../services/user.service"
 import '../pages/styles/Profile/Styles.css'
 import {Redirect} from "react-router-dom";
-import {IonAvatar, IonContent, IonIcon, IonImg, IonSlides, IonSlide, IonItem} from "@ionic/react";
+import {
+    IonAvatar,
+    IonContent,
+    IonIcon,
+    IonImg,
+    IonSlides,
+    IonSlide,
+    IonItem,
+    IonCol,
+    IonRow,
+    IonGrid
+} from "@ionic/react";
 import {alertCircleOutline, chevronForwardOutline, resizeOutline} from "ionicons/icons";
 import TopNav from "../pages/js/TopNav";
 import AboutImg1 from "../images/aboutimg.svg";
@@ -63,40 +74,52 @@ export default class ScrollNav extends Component<Props, State> {
                     <IonSlides pager>
                         <IonSlide>
                             <div className="aboutContainer">
-                                    <p id="startWeight">
+                                    <h2 id="startWeight">
                                         Je Gewicht
-                                        </p>
+                                        </h2>
                                     <ChartStatsWeightComponent/>
-                                    <IonItem className="weightTextContainer">
-                                        <p id="weightText">{userContent.startWeight} kg</p>
-                                        <p id="weightText">{userContent.targetWeight} kg</p>
-                                        <p id="weightText"></p>
-                                    </IonItem>
-
-
-
+                                <IonGrid>
+                                <IonRow className="weightTextContainer" id="weightText">
+                                    <IonCol >
+                                        <p >{userContent.startWeight} kg</p>
+                                    </IonCol>
+                                    <IonCol offset="50">
+                                        <p>{userContent.targetWeight} kg</p>
+                                    </IonCol>
+                                    <IonCol offset="5">
+                                        <p></p>
+                                    </IonCol>
+                                </IonRow>
+                                </IonGrid>
                             </div>
-
                         </IonSlide>
 
                         <IonSlide>
                             <div className="aboutContainer">
-                                <p id="startWeight">
+                                <h2 id="startWeight">
                                     Je Gewicht
-                                </p>
+                                </h2>
                                 <ChartStatsBMIComponent/>
-                                <IonItem className="weightTextContainer">
-                                    <p id="weightText">{userContent.startBMI}</p>
-                                    <p id="weightText">{userContent.targetBMI}</p>
-                                    <p id="weightText"></p>
-                                </IonItem>
+                                <IonGrid>
+                                    <IonRow className="BMITextContainer" id="weightText">
+                                        <IonCol >
+                                            <p>{userContent.startBMI}</p>
+                                        </IonCol>
+                                        <IonCol offset="50">
+                                            <p>{userContent.targetBMI}</p>
+                                        </IonCol>
+                                        <IonCol offset="5">
+                                            <p></p>
+                                        </IonCol>
+                                    </IonRow>
+                                </IonGrid>
                             </div>
                         </IonSlide>
 
                         <IonSlide>
                             <div className="aboutContainer">
                                 <p id="userHeight">
-                                    <p>Je lengte</p>
+                                    <p >Je lengte</p>
                                     {userContent.lengthInCm} CM</p>
                             <img src={OrangeFrame} id="frameImg"></img>
                                 <img src={maleLength} id="maleImg"></img>

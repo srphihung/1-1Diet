@@ -29,15 +29,29 @@ span.underline {
 #startWeight{
     font-family: "Roboto Slab";
     font-weight: bolder;
+    color: #DC6099;
     margin-bottom: 5px;
 }
 
-
+.weightTextContainer{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    z-index: 1;
+}
 
 #weightText{
-    width:530px;
     text-align:center;
+    color: white;
     vertical-align:middle;
+    width: 15%;
+}
+
+.BMITextContainer{
+    position: absolute;
+    top: 55%;
+    left: 10%;
+    z-index: 1;
 }
 
 #maleImg{
