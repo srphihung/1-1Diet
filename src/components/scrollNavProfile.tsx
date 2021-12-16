@@ -105,14 +105,14 @@ export default class ScrollNav extends Component<Props, State> {
                                 </h2>
                                 <ChartStatsBMIComponent/>
                                 <IonGrid>
-                                    <IonRow className="BMITextContainer" id="weightText">
+                                    <IonRow className="weightTextContainer" id="weightText">
                                         <IonCol >
-                                            <p>{userContent.startBMI}</p>
+                                            <p >{userContent.startBMI}</p>
                                             <p>Start BMI</p>
                                         </IonCol>
                                         <IonCol offset="26">
                                             <p>27,8</p>
-                                            <p>Huidige BMI</p>
+                                            <p>Huidig BMI</p>
                                         </IonCol>
                                         <IonCol offset="50">
                                             <p>{userContent.targetBMI}</p>

@@ -60,9 +60,9 @@ export default class ChartStatsBMIComponent extends Component<Props, State> {
 
 
                     data={[
-                        { experiment: "Start BMI", expected: 2.00, actual: userContent.startBMI, label: 'Start BMI' },
-                        { experiment: "Huidig BMI", expected: 2.00, actual: userContent.targetBMI, label: 'Huidig BMI' },
-                        { experiment: "Doel BMI", expected: 2.00, actual: 15, label: 'Doel BMI'}
+                        { experiment: "Start BMI", expected: 2.00, actual: userContent.startBMI},
+                        { experiment: "Huidig BMI", expected: 2.00, actual: 27.8 },
+                        { experiment: "Doel BMI", expected: 2.00, actual: userContent.targetBMI}
 
                         ]} x="experiment" y={(d) => (d.actual / d.expected) * 6}
                 />
