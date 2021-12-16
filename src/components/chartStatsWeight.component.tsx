@@ -59,9 +59,9 @@ export default class ChartStatsWeightComponent extends Component<Props, State> {
 
 
                     data={[
-                        { experiment: "Start gewicht", expected: 6.00, actual: userContent.startWeight, label: 'Start Gewicht', text: userContent.startWeight},
-                        { experiment: "Huidig Gewicht", expected: 6.00, actual: userContent.targetWeight, label: 'Huidig Gewicht' },
-                        { experiment: "Streef gewicht", expected: 6.00, actual: userContent.targetWeight, label: 'Streef Gewicht'}
+                        { experiment: "Start gewicht", expected: 6.00, actual: userContent.startWeight},
+                        { experiment: "Huidig Gewicht", expected: 6.00, actual: userContent.targetWeight},
+                        { experiment: "Streef gewicht", expected: 6.00, actual: userContent.targetWeight}
 
                         ]} x="experiment" y={(d) => (d.actual / d.expected) * 6}
                 />

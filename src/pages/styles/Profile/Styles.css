@@ -43,6 +43,7 @@ span.underline {
 #weightText{
     text-align:center;
     color: white;
+    font-size: 15px;
     vertical-align:middle;
     width: 15%;
 }

@@ -82,13 +82,17 @@ export default class ScrollNav extends Component<Props, State> {
                                 <IonRow className="weightTextContainer" id="weightText">
                                     <IonCol >
                                         <p >{userContent.startWeight} kg</p>
+                                        <p>Start Gewicht</p>
+                                    </IonCol>
+                                    <IonCol offset="26">
+                                        <p>90</p>
+                                        <p>Huidig Gewicht</p>
                                     </IonCol>
                                     <IonCol offset="50">
                                         <p>{userContent.targetWeight} kg</p>
+                                        <p>Streef Gewicht</p>
                                     </IonCol>
-                                    <IonCol offset="5">
-                                        <p></p>
-                                    </IonCol>
+
                                 </IonRow>
                                 </IonGrid>
                             </div>
@@ -104,13 +108,17 @@ export default class ScrollNav extends Component<Props, State> {
                                     <IonRow className="BMITextContainer" id="weightText">
                                         <IonCol >
                                             <p>{userContent.startBMI}</p>
+                                            <p>Start BMI</p>
+                                        </IonCol>
+                                        <IonCol offset="26">
+                                            <p>27,8</p>
+                                            <p>Huidige BMI</p>
                                         </IonCol>
                                         <IonCol offset="50">
                                             <p>{userContent.targetBMI}</p>
+                                            <p>Doel BMI</p>
                                         </IonCol>
-                                        <IonCol offset="5">
-                                            <p></p>
-                                        </IonCol>
+
                                     </IonRow>
                                 </IonGrid>
                             </div>
