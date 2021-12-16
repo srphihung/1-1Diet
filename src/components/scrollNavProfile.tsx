@@ -59,30 +59,28 @@ export default class ScrollNav extends Component<Props, State> {
 
         return (
             <IonContent>
-                <IonItem className="userContainer">
-                        <h1 id="userName">{userContent.firstName}'s Home</h1>
-                </IonItem>
+                        <h1 id="userName">{userContent.firstName}'s home</h1>
 
                     <IonSlides pager>
                         <IonSlide>
                             <div className="aboutContainer">
                                     <h2 id="startWeight">
-                                        Je Gewicht
+                                        Gewicht
                                         </h2>
                                     <ChartStatsWeightComponent/>
                                 <IonGrid>
                                 <IonRow className="weightTextContainer" id="weightText">
-                                    <IonCol >
-                                        <p >{userContent.startWeight} kg</p>
-                                        <p>Start Gewicht</p>
+                                    <IonCol offset="1">
+                                        <p>{userContent.startWeight} kg</p>
+                                        <p>Start gewicht</p>
                                     </IonCol>
                                     <IonCol offset="26">
                                         <p>90 kg</p>
-                                        <p>Huidig Gewicht</p>
+                                        <p>Huidig gewicht</p>
                                     </IonCol>
-                                    <IonCol offset="50">
+                                    <IonCol offset="51">
                                         <p>{userContent.targetWeight} kg</p>
-                                        <p>Streef Gewicht</p>
+                                        <p>Streef gewicht</p>
                                     </IonCol>
                                 </IonRow>
                                 </IonGrid>
@@ -92,12 +90,12 @@ export default class ScrollNav extends Component<Props, State> {
                         <IonSlide>
                             <div className="aboutContainer">
                                 <h2 id="startWeight">
-                                    Je Gewicht
+                                    BMI
                                 </h2>
                                 <ChartStatsBMIComponent/>
                                 <IonGrid>
                                     <IonRow className="weightTextContainer" id="weightText">
-                                        <IonCol >
+                                        <IonCol offset="1">
                                             <p >{userContent.startBMI}</p>
                                             <p>Start BMI</p>
                                         </IonCol>
@@ -105,7 +103,7 @@ export default class ScrollNav extends Component<Props, State> {
                                             <p>27,8</p>
                                             <p>Huidig BMI</p>
                                         </IonCol>
-                                        <IonCol offset="50">
+                                        <IonCol offset="51">
                                             <p>{userContent.targetBMI}</p>
                                             <p>Doel BMI</p>
                                         </IonCol>
