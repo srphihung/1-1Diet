@@ -4,10 +4,7 @@ import UserService from "../services/user.service"
 import '../pages/styles/Profile/Styles.css'
 import {Redirect} from "react-router-dom";
 import {
-    IonAvatar,
     IonContent,
-    IonIcon,
-    IonImg,
     IonSlides,
     IonSlide,
     IonItem,
@@ -15,13 +12,8 @@ import {
     IonRow,
     IonGrid
 } from "@ionic/react";
-import {alertCircleOutline, chevronForwardOutline, resizeOutline} from "ionicons/icons";
-import TopNav from "../pages/js/TopNav";
-import AboutImg1 from "../images/aboutimg.svg";
-import AboutImg2 from "../images/aboutimg2.svg";
 import maleLength from "../images/maleLength.png";
-import OrangeFrame from "../images/OrangeFrame.png"
-import Sidebar from './Sidebar';
+import OrangeFrame from "../images/OrangeFrame.png";
 import ChartStatsWeightComponent from "./chartStatsWeight.component";
 import ChartStatsBMIComponent from "./chartStatsBMI.component";
 type Props = {};
@@ -85,14 +77,13 @@ export default class ScrollNav extends Component<Props, State> {
                                         <p>Start Gewicht</p>
                                     </IonCol>
                                     <IonCol offset="26">
-                                        <p>90</p>
+                                        <p>90 kg</p>
                                         <p>Huidig Gewicht</p>
                                     </IonCol>
                                     <IonCol offset="50">
                                         <p>{userContent.targetWeight} kg</p>
                                         <p>Streef Gewicht</p>
                                     </IonCol>
-
                                 </IonRow>
                                 </IonGrid>
                             </div>
@@ -125,11 +116,12 @@ export default class ScrollNav extends Component<Props, State> {
                         </IonSlide>
 
                         <IonSlide>
-                            <div className="aboutContainer">
-                                <p id="userHeight">
-                                    <p >Je lengte</p>
-                                    {userContent.lengthInCm} CM</p>
-                            <img src={OrangeFrame} id="frameImg"></img>
+                            <div className="aboutContainer" >
+                                <div id="userHeight">
+                                    <p>Je lengte</p>
+                                    <p>{userContent.lengthInCm} CM</p>
+                                </div>
+                                <img src={OrangeFrame} id="frameImg"></img>
                                 <img src={maleLength} id="maleImg"></img>
                             </div>
                         </IonSlide>
