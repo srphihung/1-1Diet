@@ -1,14 +1,7 @@
 import React from 'react';
 import { slide as Menu } from 'react-burger-menu';
-import {IonAvatar, IonButton, IonCol, IonContent, IonIcon, IonImg, IonItem, IonModal} from "@ionic/react";
+import {IonIcon, IonItem} from "@ionic/react";
 import {resizeOutline} from "ionicons/icons";
-import IUser from "../types/user.type";
-import {Redirect} from "react-router-dom";
-import UserService from "../services/user.service"
-
-
-
-
 
 export default props => {
     return (
@@ -23,13 +16,13 @@ export default props => {
             <a className="menu-item" href="/pizzas">
                 Mijn bestellingen
             </a>
-            <a className="menu-item" href="/desserts">
+            <a className="menu-item" href="/calendar">
                 Mijn afspraken
             </a>
-            <a className="menu-item" href="/desserts">
-                Mijn documenten
+            <a className="menu-item" href="/recipes">
+                Mijn Recepten
             </a>
-            <a className="menu-item" href="/desserts">
+            <a className="menu-item" href="/profile">
                 Mijn gegevens
             </a>
             <a className="menu-item" href="/desserts">

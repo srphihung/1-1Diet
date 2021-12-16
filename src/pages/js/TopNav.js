@@ -1,9 +1,9 @@
 import Logo from '../../images/logodiet.svg'
 import { IonIcon } from '@ionic/react';
 import '../styles/TopNav.css'
-import { homeOutline, newspaperOutline, calendarOutline, restaurantOutline, personOutline, calculatorOutline } from 'ionicons/icons'
-import React, { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { homeOutline, newspaperOutline, calendarOutline, restaurantOutline, personOutline } from 'ionicons/icons'
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 function TopNav() {
     return (
