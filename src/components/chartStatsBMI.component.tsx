@@ -49,7 +49,9 @@ export default class ChartStatsBMIComponent extends Component<Props, State> {
 
         return (
             <VictoryStack
-                domainPadding={{x: 15 }}
+
+                domainPadding={{x: 80 }}
+                padding={{ top: 0, bottom: 0, right: 0, left: 0 }}
 
             >
                 <VictoryBar

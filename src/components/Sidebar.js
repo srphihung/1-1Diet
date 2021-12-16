@@ -44,3 +44,23 @@ export default props => {
         </Menu>
     );
 };
+
+
+// <IonRow>
+//     <IonCol>ion-col</IonCol>
+//     <IonCol>ion-col</IonCol>
+//     <IonCol>ion-col</IonCol>
+//     <IonCol>ion-col</IonCol>
+// </IonRow>
+//
+// <IonRow>
+//     <IonCol size="6">ion-col size="6"</IonCol>
+//     <IonCol>ion-col</IonCol>
+//     <IonCol>ion-col</IonCol>
+// </IonRow>
+// //
+// <IonRow>
+//     <IonCol size="3">ion-col size="3"</IonCol>
+//     <IonCol>ion-col</IonCol>
+//     <IonCol size="3">ion-col size="3"</IonCol>
+// </IonRow>
