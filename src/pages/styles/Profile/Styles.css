@@ -7,7 +7,6 @@
     top: 130px;
     display: flex;
 }
-
 .weightChart {
     border-color: #f1f1f1;
     border-style: solid;
@@ -18,7 +17,6 @@
 span.underline {
     border-bottom: 3px solid white;
 }
-
 .aboutContainer {
     background-color: #D8EAF1;
     display: flex;
@@ -28,62 +26,45 @@ span.underline {
     margin: 20px auto 0 auto;
     border-radius: 10px;
 }
-
-#startWeight {
+#startWeight{
     font-family: "Roboto Slab";
     font-weight: bolder;
     color: #DC6099;
     margin-bottom: 5px;
 }
 
+.weightTextContainer{
+    position: absolute;
+    top: 50%;
+    left: 13%;
+}
 
-#weightText {
-    text-align: center;
+#weightText{
+    text-align:center;
     color: white;
-    vertical-align: middle;
-    margin: 140px;
+    font-size: 15px;
+    width: 15%;
 }
 
-.BMITextContainer {
+.BMITextContainer{
+    position: absolute;
+    top: 50%;
     left: 10%;
-    overflow: hidden;
 }
 
-
-.header .col {
-    background-color:lightgrey;
-}
-
-.col {
-    border: solid 1px grey;
-    border-bottom-style: none;
-    border-right-style: none;
-}
-
-.col:last-child {
-    border-right: solid 1px grey;
-}
-
-.row:last-child .col {
-    border-bottom: solid 1px grey;
-}
-
-
-#maleImg {
+#maleImg{
     position: absolute;
     top: 35%;
     height: auto;
     width: 60%;
 }
-
-#frameImg {
+#frameImg{
     width: 100%;
     left: 18%;
     position: relative;
     display: inline-block;
 }
-
-#userHeight {
+#userHeight{
     position: absolute;
     z-index: 999;
     margin: 0 auto;
@@ -98,7 +79,7 @@ span.underline {
 }
 
 
-.dietInfoContent > h1 {
+.dietInfoContent>h1 {
     color: #DC6099;
     margin: 20px auto 0 auto;
     font-weight: bolder;
@@ -113,7 +94,7 @@ span.underline {
 }
 
 
-.aboutContent > p {
+.aboutContent>p {
     max-width: 80%;
 }
 
@@ -123,14 +104,14 @@ span.underline {
     flex-direction: column;
 }
 
-.slide > h2 {
+.slide>h2 {
     font-size: 26px;
     font-weight: bold;
     color: #2B2E6B;
     margin: 60px auto 0 auto;
 }
 
-.slide > p {
+.slide>p {
     font-weight: normal;
     font-size: 20px;
     margin: 30px auto 0 auto;
@@ -142,21 +123,21 @@ span.underline {
     margin: 60px auto 0 auto;
 }
 
-.aboutContent > h1 {
+.aboutContent>h1 {
     font-weight: bold;
     font-size: 22px;
     color: #2B2E6B;
     margin: 30px auto 0 auto;
 }
 
-.aboutContent > p {
+.aboutContent>p {
     font-weight: normal;
     font-size: 16px;
     color: black;
     margin: 20px auto 0 auto;
 }
 
-.aboutContent > button {
+.aboutContent>button {
     width: 100px;
     height: 35px;
     border-radius: 50px;
@@ -186,7 +167,7 @@ span.underline {
     display: flex;
 }
 
-.stappenPlanHeader > h1 {
+.stappenPlanHeader>h1 {
     font-weight: bolder;
     font-size: 28px;
     margin: 20px 0 0 20px;
@@ -204,7 +185,7 @@ span.underline {
     flex-direction: column;
 }
 
-.stappenplanImage > h1 {
+.stappenplanImage>h1 {
     font-weight: bolder;
     font-size: 28px;
     color: #DC6099;
@@ -235,13 +216,13 @@ span.underline {
     padding-left: 3px;
 }
 
-.stappenPlan > p {
+.stappenPlan>p {
     font-size: 14px;
     color: #2B2E6B;
     margin: 15px 0 0 20px;
     width: 325px;
 }
 
-.stappenplanImage > img {
+.stappenplanImage>img {
     margin: 20px auto 0 auto;
 }

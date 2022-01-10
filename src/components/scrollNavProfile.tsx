@@ -76,11 +76,11 @@ export default class ScrollNav extends Component<Props, State> {
                                         <p >{userContent.startWeight} kg</p>
                                         <p>Start Gewicht</p>
                                     </IonCol>
-                                    <IonCol offset="26">
+                                    <IonCol offset="23">
                                         <p>90 kg</p>
                                         <p>Huidig Gewicht</p>
                                     </IonCol>
-                                    <IonCol offset="50">
+                                    <IonCol offset="47">
                                         <p>{userContent.targetWeight} kg</p>
                                         <p>Streef Gewicht</p>
                                     </IonCol>
@@ -101,15 +101,14 @@ export default class ScrollNav extends Component<Props, State> {
                                             <p >{userContent.startBMI}</p>
                                             <p>Start BMI</p>
                                         </IonCol>
-                                        <IonCol offset="26">
+                                        <IonCol offset="23">
                                             <p>27,8</p>
                                             <p>Huidig BMI</p>
                                         </IonCol>
-                                        <IonCol offset="50">
+                                        <IonCol offset="47">
                                             <p>{userContent.targetBMI}</p>
                                             <p>Doel BMI</p>
                                         </IonCol>
-
                                     </IonRow>
                                 </IonGrid>
                             </div>
@@ -123,6 +122,32 @@ export default class ScrollNav extends Component<Props, State> {
                                 </div>
                                 <img src={OrangeFrame} id="frameImg"></img>
                                 <img src={maleLength} id="maleImg"></img>
+                            </div>
+                        </IonSlide>
+
+                        <IonSlide>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <th>Datum</th>
+                                        <th>Gewicht</th>
+                                        <th>Verschil</th>
+                                        <th>Cumulatief</th>
+                                        <th>Taille</th>
+                                        <th>BMI</th>
+                                        <th>Vocht</th>
+                                        <th>Vet</th>
+                                        <th>Vet Vrij</th>
+                                        <th>Spieren</th>
+                                        <th>Botten</th>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
                             </div>
                         </IonSlide>
                     </IonSlides>

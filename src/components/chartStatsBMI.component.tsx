@@ -40,11 +40,6 @@ export default class ChartStatsBMIComponent extends Component<Props, State> {
     }
 
     render() {
-        if (this.state.redirect) {
-            return <Redirect to={this.state.redirect}/>
-        }
-
-
         const {userContent} = this.state;
 
         return (

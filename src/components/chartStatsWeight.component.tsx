@@ -1,12 +1,8 @@
 import React, {Component} from 'react';
 import '../pages/styles/Charts/ChartsWeight/Styles.css'
-import {IonAvatar, IonContent, IonIcon, IonImg, IonSlides, IonSlide, IonItem} from "@ionic/react";
-import ReactDOM from 'react-dom';
 import {VictoryAxis, VictoryBar, VictoryChart, VictoryStack} from 'victory';
 import IUser from "../types/user.type";
 import UserService from "../services/user.service";
-import {Redirect} from "react-router-dom";
-import AboutImg2 from "../images/aboutimg2.svg";
 type Props = {};
 
 type State = {
@@ -41,11 +37,6 @@ export default class ChartStatsWeightComponent extends Component<Props, State> {
     }
 
     render() {
-        if (this.state.redirect) {
-            return <Redirect to={this.state.redirect}/>
-        }
-
-
         const {userContent} = this.state;
 
         return (
@@ -61,9 +52,9 @@ export default class ChartStatsWeightComponent extends Component<Props, State> {
 
 
                     data={[
-                        { experiment: "Start gewicht", expected: 6.00, actual: userContent.startWeight, label: 'Start Gewicht', text: userContent.startWeight},
-                        { experiment: "Huidig Gewicht", expected: 6.00, actual: userContent.targetWeight, label: 'Huidig Gewicht' },
-                        { experiment: "Streef gewicht", expected: 6.00, actual: userContent.targetWeight, label: 'Streef Gewicht'}
+                        { experiment: "Start gewicht", expected: 6.00, actual: userContent.startWeight},
+                        { experiment: "Huidig Gewicht", expected: 6.00, actual: 90},
+                        { experiment: "Streef gewicht", expected: 6.00, actual: userContent.targetWeight}
 
                     ]} x="experiment" y={(d) => (d.actual / d.expected) * 6}
                 />
