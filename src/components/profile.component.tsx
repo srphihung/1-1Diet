@@ -48,7 +48,6 @@ export default class User extends Component<Props, State> {
             return <Redirect to={this.state.redirect}/>
         }
 
-
         const {userContent} = this.state;
 
         return (
