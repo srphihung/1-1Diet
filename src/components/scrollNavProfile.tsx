@@ -16,6 +16,7 @@ import maleLength from "../images/maleLength.png";
 import OrangeFrame from "../images/OrangeFrame.png";
 import ChartStatsWeightComponent from "./chartStatsWeight.component";
 import ChartStatsBMIComponent from "./chartStatsBMI.component";
+import DynTableComponent from "./dynTable.component";
 type Props = {};
 
 type State = {
@@ -126,28 +127,12 @@ export default class ScrollNav extends Component<Props, State> {
                         </IonSlide>
 
                         <IonSlide>
-                            <div>
-                                <table>
-                                    <tr>
-                                        <th>Datum</th>
-                                        <th>Gewicht</th>
-                                        <th>Verschil</th>
-                                        <th>Cumulatief</th>
-                                        <th>Taille</th>
-                                        <th>BMI</th>
-                                        <th>Vocht</th>
-                                        <th>Vet</th>
-                                        <th>Vet Vrij</th>
-                                        <th>Spieren</th>
-                                        <th>Botten</th>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                </table>
+                            <div className="aboutContainer">
+                                <h2>Je Weegmomenten</h2>
+                                <DynTableComponent/>
+                                <div>
+
+                                </div>
                             </div>
                         </IonSlide>
                     </IonSlides>

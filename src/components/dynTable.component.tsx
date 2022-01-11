@@ -1,9 +1,5 @@
-//Build Dynamic Table - From any WebApi or Local Json File Using AXIOS Methods
-
-
 import * as React from 'react';
 import {Component} from 'react';
-import axios from 'axios';
 import _ from 'lodash';
 import UserService from "../services/user.service";
 import IUser from "../types/user.type";
@@ -18,7 +14,7 @@ type State = {
     userContent: IUser & any
 }
 
-class BuildDynamicTable extends Component<Props, State> {
+export default class DynTableComponent extends Component<Props, State> {
     constructor(props: Props) {
         super(props);
         this.state = {
@@ -67,7 +63,7 @@ class BuildDynamicTable extends Component<Props, State> {
     }
 
     private displayRecordName(colname:string, key:number){
-        const record = this.state.datarecords[key];
+        const record = this.state.userContent[key];
         return <th>{record[colname]}</th>
     }
 
@@ -78,7 +74,7 @@ class BuildDynamicTable extends Component<Props, State> {
 
     public render() {
         const {userContent} = this.state;
-        const datarecords = this.state.datarecords;
+        const datarecords = this.state.userContent;
         const each_datarecord_keys = this.state.datacolumns;
         return (
             <div>
@@ -93,7 +89,7 @@ class BuildDynamicTable extends Component<Props, State> {
                             <thead className="thead-light">
                             <tr>
                                 {each_datarecord_keys && each_datarecord_keys.map(each_datarecord_key =>
-                                    <th scope="col">{BuildDynamicTable.Capitalize(each_datarecord_key)}</th>
+                                    <th scope="col">{DynTableComponent.Capitalize(each_datarecord_key)}</th>
                                 )}
                                 <th scope="col">Actions</th>
                             </tr>
@@ -112,5 +108,3 @@ class BuildDynamicTable extends Component<Props, State> {
         )
     }
 }
-
-export default BuildDynamicTable;

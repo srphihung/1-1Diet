@@ -1,11 +1,7 @@
 import React, {Component} from 'react';
-import {IonAvatar, IonContent, IonIcon, IonImg, IonSlides, IonSlide, IonItem} from "@ionic/react";
-import ReactDOM from 'react-dom';
-import {VictoryAxis, VictoryBar, VictoryChart, VictoryStack} from 'victory';
+import {VictoryBar, VictoryStack} from 'victory';
 import IUser from "../types/user.type";
 import UserService from "../services/user.service";
-import {Redirect} from "react-router-dom";
-import AboutImg2 from "../images/aboutimg2.svg";
 type Props = {};
 
 type State = {

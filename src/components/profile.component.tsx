@@ -5,9 +5,7 @@ import '../pages/styles/Account/Account.css'
 import '../pages/styles/Sidebar/Sidebar.css'
 import UserService from "../services/user.service"
 import TopNav from "../pages/js/TopNav";
-import {IonAvatar, IonButton, IonCol, IonContent, IonIcon, IonImg, IonModal} from "@ionic/react";
-import {alertCircleOutline, chevronForwardOutline, resizeOutline, scaleOutline, settingsOutline} from "ionicons/icons";
-import {UserModal} from "./userModal.component";
+import {IonContent} from "@ionic/react";
 import Sidebar from './Sidebar';
 import ScrollNav from "./scrollNavProfile"
 
