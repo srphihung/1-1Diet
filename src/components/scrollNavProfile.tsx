@@ -122,11 +122,12 @@ export default class ScrollNav extends Component<Props, State> {
                         <div className="aboutContainer">
                             <p id="Spline">
                                 <p>Laatste weegmomenten</p>
-                                {userContent.lengthInCm} CM
                             </p>
                             <VariableWeightMomentsComponent/>
+
+
                             <p> Sinds {userContent.firstWeightmomentDate} t/m {userContent.lastWeightmomentDate} ben je
-                                in totaal 28kg afgevallen</p>
+                                in totaal <strong>{userContent.startWeight + userContent.targetWeight}kg</strong> afgevallen</p>
                         </div>
                     </IonSlide>
 
