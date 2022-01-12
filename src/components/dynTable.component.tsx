@@ -7,7 +7,6 @@ import IUser from "../types/user.type";
 type Props = {};
 
 type State = {
-    datarecords: any[],
     datacolumns: any[],
     redirect: string | null,
     userReady: boolean,
@@ -18,7 +17,6 @@ export default class DynTableComponent extends Component<Props, State> {
     constructor(props: Props) {
         super(props);
         this.state = {
-            datarecords: [],
             datacolumns: [],
             redirect: null,
             userReady: false,
@@ -55,7 +53,7 @@ export default class DynTableComponent extends Component<Props, State> {
     }
 
     private displayRecords(key: number) {
-        const datacolumns= this.state.datacolumns;
+        const datacolumns = this.state.datacolumns;
 
         return datacolumns.map((each_col) =>
             this.displayRecordName(each_col,key)
@@ -67,13 +65,12 @@ export default class DynTableComponent extends Component<Props, State> {
         return <th>{record[colname]}</th>
     }
 
-    private static Capitalize(str: string){
+    private Capitalize(str: string){
         const str_t = str.toUpperCase();
         return str_t.replaceAll("_", " ");
     }
 
     public render() {
-        const {userContent} = this.state;
         const datarecords = this.state.userContent;
         const each_datarecord_keys = this.state.datacolumns;
         return (
@@ -89,7 +86,7 @@ export default class DynTableComponent extends Component<Props, State> {
                             <thead className="thead-light">
                             <tr>
                                 {each_datarecord_keys && each_datarecord_keys.map(each_datarecord_key =>
-                                    <th scope="col">{DynTableComponent.Capitalize(each_datarecord_key)}</th>
+                                    <th scope="col">{this.Capitalize(each_datarecord_key)}</th>
                                 )}
                                 <th scope="col">Actions</th>
                             </tr>
