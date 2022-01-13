@@ -17,6 +17,8 @@ import OrangeFrame from "../images/OrangeFrame.png";
 import ChartStatsWeightComponent from "./chartStatsWeight.component";
 import ChartStatsBMIComponent from "./chartStatsBMI.component";
 import DynTableComponent from "./dynTable.component";
+import VariableWeightMomentsComponent from "./variableWeightMoments.component"
+import DynamicTableComponent from "./dynTable.component";
 type Props = {};
 
 type State = {
@@ -129,10 +131,26 @@ export default class ScrollNav extends Component<Props, State> {
                         <IonSlide>
                             <div className="aboutContainer">
                                 <h2>Je Weegmomenten</h2>
-                                <DynTableComponent/>
                                 <div>
-
                                 </div>
+                            </div>
+                        </IonSlide>
+
+                        <IonSlide>
+                            <div className="aboutContainer">
+                                <p id="Spline">
+                                    <p>Laatste weegmomenten</p>
+                                </p>
+                                <VariableWeightMomentsComponent/>
+
+                                <p> Sinds {userContent.firstWeightmomentDate} t/m {userContent.lastWeightmomentDate} ben je
+                                    in totaal <strong>{userContent.startWeight + userContent.targetWeight}kg</strong> afgevallen</p>
+                            </div>
+                        </IonSlide>
+
+                        <IonSlide>
+                            <div className="aboutContainer">
+                                <DynamicTableComponent/>
                             </div>
                         </IonSlide>
                     </IonSlides>
