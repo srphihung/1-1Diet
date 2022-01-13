@@ -2,6 +2,8 @@ import IUser from "../types/user.type";
 import React, {Component} from "react";
 import UserService from "../services/user.service"
 import '../pages/styles/Profile/Styles.css'
+import SortableTable from "./sortableTable.component";
+import WM from "../Data/WM.json";
 import {Redirect} from "react-router-dom";
 import {
     IonContent,
@@ -130,14 +132,6 @@ export default class ScrollNav extends Component<Props, State> {
 
                         <IonSlide>
                             <div className="aboutContainer">
-                                <h2>Je Weegmomenten</h2>
-                                <div>
-                                </div>
-                            </div>
-                        </IonSlide>
-
-                        <IonSlide>
-                            <div className="aboutContainer">
                                 <p id="Spline">
                                     <p>Laatste weegmomenten</p>
                                 </p>
@@ -150,7 +144,7 @@ export default class ScrollNav extends Component<Props, State> {
 
                         <IonSlide>
                             <div className="aboutContainer">
-                                <DynamicTableComponent/>
+                                <SortableTable WM={WM} />
                             </div>
                         </IonSlide>
                     </IonSlides>
