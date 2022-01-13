@@ -84,20 +84,20 @@ export default class DynTableComponent extends Component<Props, State> {
                     <div className="row">
                         <table className="table table-bordered">
                             <thead className="thead-light">
-                            <tr>
-                                {each_datarecord_keys && each_datarecord_keys.map(each_datarecord_key =>
-                                    <th scope="col">{this.Capitalize(each_datarecord_key)}</th>
-                                )}
-                                <th scope="col">Actions</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            {datarecords && datarecords.map((each_datarecord, recordindex) =>
-                                <tr key={each_datarecord.id}>
-                                    {this.displayRecords(recordindex)}
+                                <tr>
+                                    {each_datarecord_keys && each_datarecord_keys.map(each_datarecord_key =>
+                                        <th scope="col">{this.Capitalize(each_datarecord_key)}</th>
+                                    )}
+                                    <th scope="col">Actions</th>
                                 </tr>
-                            )}
-                            </tbody>
+                            </thead>
+                            {/*<tbody>*/}
+                            {/*    {datarecords && datarecords.map((each_datarecord, recordindex) =>*/}
+                            {/*        <tr key={each_datarecord.id}>*/}
+                            {/*            {this.displayRecords(recordindex)}*/}
+                            {/*        </tr>*/}
+                            {/*    )}*/}
+                            {/*</tbody>*/}
                         </table>
                     </div>
                 </div>

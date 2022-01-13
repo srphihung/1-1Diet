@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "date": "21-10-2014",
+    "weight": 70.0,
+    "difference": 0.0,
+    "cumulative": 0.0,
+    "waist": 0,
+    "BMI": 21.6,
+    "moist": 60,
+    "fat": 0,
+    "fatFree": 0,
+    "muscularMass": 0,
+    "bones": 0
+  },
+  {
+    "id": 2,
+    "date": "24-08-2021",
+    "weight": 90.0,
+    "difference": 20.0,
+    "cumulative": 20.0,
+    "waist": 0,
+    "BMI": 27.8,
+    "moist": 0,
+    "fat": 0,
+    "fatFree": 0,
+    "muscularMass": 0,
+    "bones": 0
+  },
+  {
+    "id": 3,
+    "date": "09-11-2021",
+    "weight": 90.0,
+    "difference": 0.0,
+    "cumulative": 20.0,
+    "waist": 0,
+    "BMI": 27.8,
+    "moist": 60,
+    "fat": 0,
+    "fatFree": 0,
+    "muscularMass": 0,
+    "bones": 0
+  }
+]
