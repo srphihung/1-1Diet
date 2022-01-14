@@ -10,7 +10,8 @@ import {
     IonItem,
     IonCol,
     IonRow,
-    IonGrid
+    IonGrid,
+    IonProgressBar
 } from "@ionic/react";
 import maleLength from "../images/maleLength.png";
 import OrangeFrame from "../images/OrangeFrame.png";
@@ -19,6 +20,7 @@ import ChartStatsBMIComponent from "./chartStatsBMI.component";
 import DynTableComponent from "./dynTable.component";
 import VariableWeightMomentsComponent from "./variableWeightMoments.component"
 import DynamicTableComponent from "./dynTable.component";
+import ProgressBarBMI from "./progressBar.component";
 type Props = {};
 
 type State = {
@@ -132,6 +134,7 @@ export default class ScrollNav extends Component<Props, State> {
                             <div className="aboutContainer">
                                 <h2>Je Weegmomenten</h2>
                                 <div>
+                                    <ProgressBarBMI/>
                                 </div>
                             </div>
                         </IonSlide>

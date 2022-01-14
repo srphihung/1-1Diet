@@ -1,0 +1,24 @@
+
+
+
+.textValue{
+    font-family: "Roboto Slab";
+    color: #2b2e6b;
+    font-weight: bold;
+    margin: 10px;
+}
+
+/* Revert filling */
+
+.barContainer2 {
+    flex: 1;
+    height: 12px;
+    background: linear-gradient(90deg, #75c275 25%, #e0a800 50%, #c8233380 75%);
+}
+
+.contentFill {
+    height: 100%;
+    margin-left: auto;
+    border-radius: inherit;
+    background: #dfdfe7;
+}
