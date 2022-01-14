@@ -12,12 +12,12 @@ function Recipes() {
         return recipe.title.toLowerCase().includes(searchFilter.toLowerCase())
     })
 
-    // useEffect(async () => {
-    //     const api_url = 'http://31.14.96.253/recipes'
-    //     var response = await fetch(api_url)
-    //     var data = await response.json()
-    //     setRecipes(data)
-    // }, [setRecipes])
+    useEffect(async () => {
+        const api_url = 'http://31.14.96.253/recipes'
+        var response = await fetch(api_url)
+        var data = await response.json()
+        setRecipes(data)
+    }, [setRecipes])
 
     return (
         <IonContent>
