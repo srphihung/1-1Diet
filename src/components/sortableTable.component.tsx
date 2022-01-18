@@ -85,47 +85,50 @@ function SortableTable({ WM }: { WM: WM }) {
     }
 
     return (
-        <table className="sortTable">
-            <thead>
-            <tr>
-                {headers.map((row) => {
+        <div className="sortTable">
+            <table>
+                <thead>
+                <tr>
+                    {headers.map((row) => {
+                        return (
+                            <th key={row.key}>
+                                {row.label}{" "}
+                                <SortButton
+                                    columnKey={row.key}
+                                    onClick={() => changeSort(row.key)}
+                                    {...{
+                                        sortOrder,
+                                        sortKey,
+                                    }}
+                                />
+                            </th>
+                        );
+                    })}
+                </tr>
+                </thead>
+
+                <tbody>
+                {sortedWM().map((person) => {
                     return (
-                        <td key={row.key}>
-                            {row.label}{" "}
-                            <SortButton
-                                columnKey={row.key}
-                                onClick={() => changeSort(row.key)}
-                                {...{
-                                    sortOrder,
-                                    sortKey,
-                                }}
-                            />
-                        </td>
+                        <tr key={person.id}>
+                            <td>{person.date}</td>
+                            <td>{person.weight}kg</td>
+                            <td>{person.difference}kg</td>
+                            <td>{person.cumulative}</td>
+                            <td>{person.waist}</td>
+                            <td>{person.BMI}</td>
+                            <td>{person.moist}%</td>
+                            <td>{person.fat}%</td>
+                            <td>{person.fatFree}%</td>
+                            <td>{person.muscularMass}%</td>
+                            <td>{person.bones}%</td>
+                        </tr>
                     );
                 })}
-            </tr>
-            </thead>
+                </tbody>
+            </table>
+        </div>
 
-            <tbody>
-            {sortedWM().map((person) => {
-                return (
-                    <tr key={person.id}>
-                        <td>{person.date}</td>
-                        <td>{person.weight}</td>
-                        <td>{person.difference}</td>
-                        <td>{person.cumulative}</td>
-                        <td>{person.waist}</td>
-                        <td>{person.BMI}</td>
-                        <td>{person.moist}</td>
-                        <td>{person.fat}</td>
-                        <td>{person.fatFree}</td>
-                        <td>{person.muscularMass}</td>
-                        <td>{person.bones}</td>
-                    </tr>
-                );
-            })}
-            </tbody>
-        </table>
     );
 }
 

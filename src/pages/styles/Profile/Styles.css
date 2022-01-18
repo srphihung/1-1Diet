@@ -233,7 +233,23 @@ ion-progress-bar {
 
 /*sortableTable */
 .sortTable {
-    width: 330px;
-    overflow: hidden;
+    height: 200px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+    background-color: #2b2e6b;
+    font-family: "Roboto Slab";
+    color: white;
+    border: transparent;
+}
 
+.sortTable td, .sortTable th{
+    text-align: left;
+    padding: 8px;
+}
+.sortTable th{
+    background-color: #DC6099;
 }
