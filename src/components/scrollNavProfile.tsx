@@ -2,8 +2,6 @@ import IUser from "../types/user.type";
 import React, {Component} from "react";
 import UserService from "../services/user.service"
 import '../pages/styles/Profile/Styles.css'
-import SortableTable from "./sortableTable.component";
-import WM from "../Data/WM.json";
 import {Redirect} from "react-router-dom";
 import {
     IonContent,
@@ -12,13 +10,17 @@ import {
     IonItem,
     IonCol,
     IonRow,
-    IonGrid
+    IonGrid,
+    IonProgressBar
 } from "@ionic/react";
 import maleLength from "../images/maleLength.png";
 import OrangeFrame from "../images/OrangeFrame.png";
 import ChartStatsWeightComponent from "./chartStatsWeight.component";
 import ChartStatsBMIComponent from "./chartStatsBMI.component";
+import DynTableComponent from "./dynTable.component";
 import VariableWeightMomentsComponent from "./variableWeightMoments.component"
+import DynamicTableComponent from "./dynTable.component";
+import ProgressBarBMI from "./progressBar.component";
 type Props = {};
 
 type State = {
@@ -130,6 +132,15 @@ export default class ScrollNav extends Component<Props, State> {
 
                         <IonSlide>
                             <div className="aboutContainer">
+                                <h2>Je Weegmomenten</h2>
+                                <div>
+                                    <ProgressBarBMI/>
+                                </div>
+                            </div>
+                        </IonSlide>
+
+                        <IonSlide>
+                            <div className="aboutContainer">
                                 <p id="Spline">
                                     <p>Laatste weegmomenten</p>
                                 </p>
@@ -142,7 +153,7 @@ export default class ScrollNav extends Component<Props, State> {
 
                         <IonSlide>
                             <div className="aboutContainer">
-                                <SortableTable WM={WM} />
+                                <DynamicTableComponent/>
                             </div>
                         </IonSlide>
                     </IonSlides>

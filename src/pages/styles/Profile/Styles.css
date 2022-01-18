@@ -25,6 +25,7 @@ span.underline {
     height: 65vh;
     margin: 20px auto 0 auto;
     border-radius: 10px;
+
 }
 #startWeight{
     font-family: "Roboto Slab";
@@ -77,7 +78,10 @@ span.underline {
     color: #DC6099;
     font-family: "londrina solid";
 }
-
+ion-progress-bar {
+    --progress-background: #2B2E6B;
+    height: 25px;
+}
 
 .dietInfoContent>h1 {
     color: #DC6099;

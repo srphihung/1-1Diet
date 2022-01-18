@@ -8,6 +8,7 @@ import TopNav from "../pages/js/TopNav";
 import {IonContent} from "@ionic/react";
 import Sidebar from './Sidebar';
 import ScrollNav from "./scrollNavProfile"
+import {render} from "react-dom";
 
 type Props = {};
 type State = {
@@ -15,6 +16,7 @@ type State = {
     userReady: boolean,
     userContent: IUser & any
 }
+
 
 export default class User extends Component<Props, State> {
     constructor(props: Props) {
@@ -40,6 +42,7 @@ export default class User extends Component<Props, State> {
         if (!userContent) this.setState({redirect: "/home"});
         if (!getToken) this.setState({redirect: "/login"});
     }
+
 
     render() {
         if (this.state.redirect) {
