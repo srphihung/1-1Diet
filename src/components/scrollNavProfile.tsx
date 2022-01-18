@@ -17,10 +17,10 @@ import maleLength from "../images/maleLength.png";
 import OrangeFrame from "../images/OrangeFrame.png";
 import ChartStatsWeightComponent from "./chartStatsWeight.component";
 import ChartStatsBMIComponent from "./chartStatsBMI.component";
-import DynTableComponent from "./dynTable.component";
 import VariableWeightMomentsComponent from "./variableWeightMoments.component"
-import DynamicTableComponent from "./dynTable.component";
 import ProgressBarBMI from "./progressBar.component";
+import SortableTable from "./sortableTable.component";
+import WM from "../Data/WM.json";
 type Props = {};
 
 type State = {
@@ -153,7 +153,7 @@ export default class ScrollNav extends Component<Props, State> {
 
                         <IonSlide>
                             <div className="aboutContainer">
-                                <DynamicTableComponent/>
+                                <SortableTable WM={WM}/>
                             </div>
                         </IonSlide>
                     </IonSlides>
