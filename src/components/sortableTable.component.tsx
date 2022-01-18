@@ -1,5 +1,6 @@
 import { MouseEventHandler, useCallback, useState } from "react";
 import WM from "../Data/WM.json";
+import '../pages/styles/Profile/Styles.css'
 
 type WM = typeof WM;
 
@@ -59,7 +60,6 @@ function SortableTable({ WM }: { WM: WM }) {
     const [sortOrder, setSortOrder] = useState<SortOrder>("ascn");
 
     const headers: { key: SortKeys; label: string }[] = [
-        { key: "id", label: "ID" },
         { key: "date", label: "Datum" },
         { key: "weight", label: "Gewicht" },
         { key: "difference", label: "Verschil" },
@@ -85,7 +85,7 @@ function SortableTable({ WM }: { WM: WM }) {
     }
 
     return (
-        <table>
+        <table className="sortTable">
             <thead>
             <tr>
                 {headers.map((row) => {
@@ -110,7 +110,6 @@ function SortableTable({ WM }: { WM: WM }) {
             {sortedWM().map((person) => {
                 return (
                     <tr key={person.id}>
-                        <td>{person.id}</td>
                         <td>{person.date}</td>
                         <td>{person.weight}</td>
                         <td>{person.difference}</td>

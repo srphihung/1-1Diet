@@ -18,9 +18,7 @@ import maleLength from "../images/maleLength.png";
 import OrangeFrame from "../images/OrangeFrame.png";
 import ChartStatsWeightComponent from "./chartStatsWeight.component";
 import ChartStatsBMIComponent from "./chartStatsBMI.component";
-import DynTableComponent from "./dynTable.component";
 import VariableWeightMomentsComponent from "./variableWeightMoments.component"
-import DynamicTableComponent from "./dynTable.component";
 type Props = {};
 
 type State = {

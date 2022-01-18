@@ -226,3 +226,10 @@ span.underline {
 .stappenplanImage>img {
     margin: 20px auto 0 auto;
 }
+
+/*sortableTable */
+.sortTable {
+    width: 330px;
+    overflow: hidden;
+
+}
