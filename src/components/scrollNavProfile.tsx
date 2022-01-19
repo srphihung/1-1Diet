@@ -10,8 +10,7 @@ import {
     IonItem,
     IonCol,
     IonRow,
-    IonGrid,
-    IonProgressBar
+    IonGrid
 } from "@ionic/react";
 import maleLength from "../images/maleLength.png";
 import OrangeFrame from "../images/OrangeFrame.png";
@@ -40,6 +39,7 @@ export default class ScrollNav extends Component<Props, State> {
         };
     }
 
+    // de response data uit de storage word gehaald en in de parameter 'userContent' wordt gezet.
     componentDidMount() {
         const userContent = UserService.getPublicContent;
         userContent().then(
@@ -49,6 +49,8 @@ export default class ScrollNav extends Component<Props, State> {
                 })
             }
         );
+
+        // redirect voor als er in de sessionStorage geen data staat.
         const getToken = sessionStorage.getItem("user");
         if (!userContent) this.setState({redirect: "/home"});
         if (!getToken) this.setState({redirect: "/login"});
@@ -58,7 +60,6 @@ export default class ScrollNav extends Component<Props, State> {
         if (this.state.redirect) {
             return <Redirect to={this.state.redirect}/>
         }
-
 
         const {userContent} = this.state;
 
