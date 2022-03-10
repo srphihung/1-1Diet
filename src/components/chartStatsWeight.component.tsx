@@ -49,8 +49,6 @@ export default class ChartStatsWeightComponent extends Component<Props, State> {
                     colorScale={['#2E2B6C']}
                     barWidth={120}
 
-
-
                     data={[
                         { experiment: "Start gewicht", expected: 6.00, actual: userContent.startWeight},
                         { experiment: "Huidig Gewicht", expected: 6.00, actual: 90},

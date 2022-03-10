@@ -90,14 +90,6 @@ ion-progress-bar {
     font-size: 28px;
 }
 
-#userName {
-    font-family: "londrina solid";
-    font-weight: lighter;
-    color: #DC6099;
-    margin-top: 15px;
-}
-
-
 .aboutContent>p {
     max-width: 80%;
 }
@@ -252,4 +244,105 @@ ion-progress-bar {
 }
 .sortTable th{
     background-color: #DC6099;
+}
+
+
+/* Profile */
+.userContainer {
+    margin: 20px 15px 0 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nameContainer {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.userAvatar {
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    border: 2px solid #DC6099;
+}
+#userName {
+    font-family: "londrina solid";
+    font-weight: 900;
+    color: #DC6099;
+    margin: 0 auto;
+    font-size: 32px;
+}
+
+.settingsBtn {
+    font-size: 24px;
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    color: white;
+    background-color: #a7a7a7;
+    border: none;
+    outline: none;
+    right: 20px;
+    position: absolute;
+    padding: 5px
+}
+
+.iconProfile {
+    margin: auto;
+}
+
+/* Consulent card */
+.consulentShrtct {
+    max-width: 350px;
+    height: 80px;
+    /* background-color: #2B2E6B; */
+    border-radius: 10px;
+    margin: 20px 15px 0 15px;
+    display: flex;
+    box-shadow: rgb(0 0 0 / 12%) 0px 4px 16px;
+}
+
+.consulentAvatar {
+    border-radius: 10px 0 0 10px;
+    min-height: 80px;
+    background-color: #2B2E6B;
+    min-width: 80px;
+    position: relative;
+}
+
+/* .consulentProfileImg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 66px;
+    height: 66px;
+} */
+
+.iconConsulent {
+    font-size: 24px;
+    margin: auto 10px auto 10px;
+}
+
+.consulentContent {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: center;
+}
+
+.consulentContent p {
+    padding-left: 15px;
+}
+
+.consulentContent>P:nth-child(1) {
+    /* margin: 16px 0 0 10px; */
+    font-size: 14px;
+}
+
+.consulentContent>p:nth-child(2) {
+    margin: 5px 0 auto 10px;
+    font-size: 14px;
+    max-width: 208px;
+    word-break: break-all;
 }

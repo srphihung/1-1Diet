@@ -10,8 +10,7 @@ h3 {
     display: flex;
     flex-direction: column;
     background-color: #DBE9F0;
-    overflow: hidden;
-    min-height: 100vh;
+    height: 100%;
 }
 
 .Avatar {
@@ -35,21 +34,6 @@ h3 {
     text-align: center;
     display: flex;
     background-color: white;
-}
-
-.settingsBtn {
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
-    color: white;
-    background-color: #a7a7a7;
-    font-size: 24px;
-    display: flex;
-    border: none;
-    outline: none;
-    top: 20px;
-    right: 15px;
-    position: absolute;
 }
 
 .avatarIcon {
@@ -172,12 +156,12 @@ h2.modalTitle {
 }
 
 .consulentContainer {
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
 }
 
 .consulentContainer>h3 {
-    margin-top: 30px;
     color: #DC6099;
     font-family: nos;
     font-size: 24px;
@@ -205,10 +189,6 @@ h2.modalTitle {
     text-align: center;
 }
 
-.iconProfile {
-    margin: auto;
-}
-
 .noConsulentWarningContent {
     display: flex;
     flex-direction: column;
@@ -231,58 +211,6 @@ h2.modalTitle {
     border: none;
     outline: none;
 }
-
-.consulentShrtct {
-    max-width: 350px;
-    height: 80px;
-    background-color: white;
-    border-radius: 10px;
-    margin: 20px 15px 0 15px;
-    display: flex;
-    padding: 0 0 0 15px;
-}
-
-.consulentAvatar {
-    border-radius: 10px 0 0 10px;
-    min-height: 80px;
-    background-color: #2B2E6B;
-    min-width: 80px;
-    position: relative;
-}
-
-.consulentProfileImg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 66px;
-    height: 66px;
-}
-
-.iconConsulent {
-    font-size: 24px;
-    margin: auto 0 auto 10px;
-}
-
-.consulentContent {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    justify-content: center;
-}
-
-.consulentContent>P:nth-child(1) {
-    /* margin: 16px 0 0 10px; */
-    font-size: 14px;
-}
-
-.consulentContent>p:nth-child(2) {
-    margin: 5px 0 auto 10px;
-    font-size: 14px;
-    max-width: 208px;
-    word-break: break-all;
-}
-
 
 /* Statcontainer */
 

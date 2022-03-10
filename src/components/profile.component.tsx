@@ -1,13 +1,11 @@
 import React, {Component} from "react";
 import {Redirect} from "react-router-dom";
 import IUser from "../types/user.type";
-import '../pages/styles/Account/Account.css'
-import '../pages/styles/Sidebar/Sidebar.css'
-import UserService from "../services/user.service"
+import '../pages/styles/Account/Account.css';
+import UserService from "../services/user.service";
 import TopNav from "../pages/js/TopNav";
 import {IonContent} from "@ionic/react";
-import Sidebar from './Sidebar';
-import ScrollNav from "./scrollNavProfile"
+import ScrollNav from "./scrollNavProfile";
 import {render} from "react-dom";
 
 type Props = {};
@@ -55,7 +53,6 @@ export default class User extends Component<Props, State> {
         <IonContent>
             <TopNav/>
             <div className="accountPageContent">
-                <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
             <ScrollNav/>
             </div>
         </IonContent>

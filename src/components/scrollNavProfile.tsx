@@ -1,7 +1,7 @@
 import IUser from "../types/user.type";
 import React, {Component} from "react";
-import UserService from "../services/user.service"
-import '../pages/styles/Profile/Styles.css'
+import UserService from "../services/user.service";
+import '../pages/styles/Profile/Styles.css';
 import {Redirect} from "react-router-dom";
 import {
     IonContent,
@@ -10,8 +10,12 @@ import {
     IonItem,
     IonCol,
     IonRow,
-    IonGrid
+    IonGrid,
+    IonButton,
+    IonAvatar,
+    IonIcon
 } from "@ionic/react";
+import { scaleOutline, resizeOutline, alertCircleOutline, settingsOutline, chevronForwardOutline, person } from 'ionicons/icons'
 import maleLength from "../images/maleLength.png";
 import OrangeFrame from "../images/OrangeFrame.png";
 import ChartStatsWeightComponent from "./chartStatsWeight.component";
@@ -49,7 +53,7 @@ export default class ScrollNav extends Component<Props, State> {
                 })
             }
         );
-
+            
         // redirect voor als er in de sessionStorage geen data staat.
         const getToken = sessionStorage.getItem("user");
         if (!userContent) this.setState({redirect: "/home"});
@@ -65,16 +69,64 @@ export default class ScrollNav extends Component<Props, State> {
 
         return (
             <IonContent>
-                <IonItem className="userContainer">
-                        <h1 id="userName">{userContent.firstName}'s Home</h1>
-                </IonItem>
+                <div className="userContainer">
+                <IonAvatar className="userAvatar ion-text-center">
+                        <img src={userContent.urlClientPhoto}/>
+                        <button className="settingsBtn"><IonIcon icon={settingsOutline} className="iconProfile"></IonIcon></button>
+                </IonAvatar>
+                </div>
+                <div className="nameContainer">
+                    <h1 id="userName" className="ion-text-center">{userContent.firstName}'s home</h1>
+                </div>
 
-                    <IonSlides pager>
+                <div className="consulentContainer">
+                    <h3>Aangesloten bij</h3>
+                    {/* {currentUser.consulent.length === 1 ? ( */}
+                        <div className="consulentShrtct">
+                            <IonAvatar className="consulentAvatar">
+                            <img src={userContent.urlClientPhoto} />
+                                {/* <img src={currentUser.consulent[0].consulent_image} className="consulentProfileImg"></img> */}
+                            </IonAvatar>
+                            <div className="consulentContent">
+                                <p>{userContent.cardName}</p>
+                                {/* <p>{currentUser.consulent[0].consulent_adres}</p> */}
+                            </div>
+                            <IonIcon icon={chevronForwardOutline} className="iconConsulent"></IonIcon>
+                        </div>
+                    {/* ) : ( */}
+                        {/* <div className="noConsulentWarning">
+                            <div className="blueWarning">
+                                <IonIcon icon={alertCircleOutline} className="iconProfile"></IonIcon>
+                            </div>
+                            <div className="noConsulentWarningContent">
+                                <p>Het lijkt er op dat u nog niet bent aangesloten bij een van onze consulenten. Een 1:1 diet consulent kan je helpen bij het behouden van een gezond dieet</p>
+                                <button className="searchConsulent">Consulent zoeken</button>
+                            </div>
+                        </div> */}
+                    {/* )} */}
+                </div>
+
+
+
+
+
+                        
+                {/* <IonItem lines="none" className="userContainer">
+                    <IonAvatar className="userAvatar ion-text-center">
+                        <img src="https://via.placeholder.com/150"/>
+                        <IonButton className="settingsBtn"><IonIcon icon={settingsOutline} className="iconProfile"></IonIcon></IonButton>
+                    </IonAvatar>
+                </IonItem> */}
+
+                {/* <IonItem lines="none" className="nameContainer">
+                    <h1 id="userName" className="ion-text-center">{userContent.firstName}'s home</h1>
+                    
+                </IonItem> */}
+
+                    {/* <IonSlides pager>
                         <IonSlide>
                             <div className="aboutContainer">
-                                    <h2 id="startWeight">
-                                        Je Gewicht
-                                        </h2>
+                                    <h2 id="startWeight">Je Gewicht</h2>
                                     <ChartStatsWeightComponent/>
                                 <IonGrid>
                                 <IonRow className="weightTextContainer" id="weightText">
@@ -157,8 +209,10 @@ export default class ScrollNav extends Component<Props, State> {
                                 <SortableTable WM={WM}/>
                             </div>
                         </IonSlide>
-                    </IonSlides>
+                    </IonSlides> */}
+
             </IonContent>
+            
         )
     }
 }
