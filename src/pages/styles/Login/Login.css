@@ -2,11 +2,6 @@
     background: #F1F6F9;
 }
 
-/* Hide scrollbar */
-ion-content {
-    --overflow: hidden;
-}
-
 .login-logo {
     width: 160px;
 }
