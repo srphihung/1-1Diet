@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { IonContent, IonRange } from '@ionic/react';
-import TopNav from '../js/TopNav'
-import '../styles/BMI.css'
+import TopNav from '../js/TopNav';
+import '../styles/BMI.css';
 
 function BMI() {
     const [height, setHeight] = useState(140)

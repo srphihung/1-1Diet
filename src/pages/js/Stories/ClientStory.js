@@ -9,11 +9,11 @@ import StoryImg from '../../../images/storyimg2.svg'
 
 function ClientStory() {
     return (
-        <IonContent>
+        <IonContent overflow-scroll="true">
             <div className="ClientStory">
-                <div className="storyHeader">
+                <div className="navigationInfo">
                     <Link to="/experience"><IonIcon icon={chevronBackOutline} className="chevronBack"></IonIcon></Link>
-                    <img src={Logo} className="dietLogo"></img>
+                    <img src={Logo} className="logo"></img>
                 </div>
                 <div className="storyContent">
                     <img src={StoryTitle}></img>
