@@ -89,11 +89,13 @@
 .stappenPlan {
     position: absolute;
     top: 110px;
-    height: 80%;
+    width: 330px;
+    height: 550px;
     background-color: #F1F6F9;
     z-index: 80;
     display: flex;
     flex-direction: column;
+    margin: 20px auto 0 auto;
 }
 
 .stappenPlanHeader {

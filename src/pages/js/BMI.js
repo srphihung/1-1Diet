@@ -36,7 +36,7 @@ function BMI() {
       };
 
     return (
-        <IonContent>
+        <IonContent class='BMI-Content'>
             <div className="bmiTab" >
                 <TopNav />
                 <h1>BMI</h1>
@@ -46,12 +46,13 @@ function BMI() {
                         <p>Lengte in centimeter</p>
                         <p>{height}</p>
                     </div>
-                    <IonRange type="number" min={140} max={220} step={1} value={height} onIonChange={e => setHeight(e.target.value)} onClick={handleBmi}></IonRange>
+                    <IonRange type="number" min={140} max={220} step={1} value={height} onIonChange={e => setHeight(e.target.value)} onTouchMove={handleBmi} onClick={handleBmi}>
+                    </IonRange>
                     <div className="weightInput">
                         <p>Gewicht in kilogram</p>
                         <p>{weight}</p>
                     </div>
-                    <IonRange type="number" min={50} max={200} step={1} value={weight} onIonChange={e => setWeight(e.target.value)} onClick={handleBmi} >
+                    <IonRange type="number" min={50} max={200} step={1} value={weight} onIonChange={e => setWeight(e.target.value)} onTouchMove={handleBmi} onClick={handleBmi}>
                     </IonRange>
                 </div>
                 <div className="resultContainer" key="resultContainer" style={{background:color}}>
