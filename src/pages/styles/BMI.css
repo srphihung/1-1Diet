@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+.BMI-Content {
+    --overflow: scroll;
+}
+
 
 /* BMI calculator */
 
