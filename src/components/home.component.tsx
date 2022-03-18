@@ -5,7 +5,7 @@ import {IonButton, IonCard, IonContent, IonIcon, IonLabel} from "@ionic/react";
 import {Link} from "react-router-dom";
 import '../pages/Home.css';
 import '../pages/styles/Global.css';
-import '../pages/styles/Buttons.css';
+import '../pages/styles/Cards.css';
 import {
     appsOutline,
     bookOutline, informationOutline,
