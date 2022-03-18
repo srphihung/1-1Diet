@@ -1,0 +1,21 @@
+.home {
+    height: 100%;
+    background-color: #F1F6F9;
+    /* -webkit-overflow-scrolling: touch; */
+    scroll-behavior: smooth;
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+.homeContent {
+    position: relative;
+    top: 110px;
+}
+
+.homeHeader {
+    color: #DC6099;
+    font-size: 24px;
+    margin: 20px auto auto 15px;
+    font-family: nos;
+}

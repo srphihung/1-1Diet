@@ -3,7 +3,9 @@ import UserService from "../services/user.service";
 import TopNav from "../pages/js/TopNav";
 import {IonButton, IonCard, IonContent, IonIcon, IonLabel} from "@ionic/react";
 import {Link} from "react-router-dom";
+import '../pages/Home.css';
 import '../pages/styles/Global.css';
+import '../pages/styles/Buttons.css';
 import {
     appsOutline,
     bookOutline, informationOutline,
@@ -51,11 +53,9 @@ export default class Home extends Component<Props, State> {
         return (
         <IonContent>
             <TopNav />
-            <div className="Home">
+            <div className="home">
                 <div className="homeContent">
-                    <div className="sliderHeader">
-                        <IonLabel className="HomeHeader">Acties</IonLabel>
-                    </div>
+                    <h2>Acties</h2>
                     <div className="actionBtns">
                         <Link to="/bmi"><IonCard className="actionSlideBtn"><IonIcon icon={scaleOutline} className="icon"></IonIcon><div className="actionBottom"><p>Mijn BMI</p></div></IonCard></Link>
                         <Link to="/searchConsulents"><IonCard className="actionSlideBtn"><IonIcon icon={peopleOutline} className="icon"></IonIcon><div className="actionBottom"><p>Consulent zoeken</p></div></IonCard></Link>
