@@ -6,6 +6,7 @@ import { close } from 'ionicons/icons'
 import Logo from '../../../images/logodiet.svg'
 import { chevronForwardOutline } from 'ionicons/icons'
 import '../../styles/Appointments/AppointmentDetails.css'
+import DF from '../../../Data/AppointmentsData.json'
 
 function AppointmentInfo() {
     const { datum_tijd } = useParams();

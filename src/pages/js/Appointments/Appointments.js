@@ -10,7 +10,10 @@ import axios from 'axios'
 import CurrentUser from '../../../Data/CurrentUser.json'
 import SeeAppointment from './SeeAppointment'
 
+
+
 function Appointments() {
+    // const jsonData= require('../../../Data/AppointmentsData.json'); 
     const [currentUser, setCurrentUser] = useState(CurrentUser[0])
     const [showCalendar, setShowCalendar] = useState(false)
     const [value, onChange] = useState(new Date())
@@ -24,6 +27,36 @@ function Appointments() {
     const [comment, setComment] = useState("")
     const [confirmModal, setConfirmModal] = useState({ isOpen: false })
     const [appointment, setAppointment] = useState([])
+    
+
+    var json = `[
+        {
+          "id": 1,
+          "date": "17-03-2022",
+          "name": "Test 1",
+          "consulent": "Cunt 1",
+          "time": "13:00",
+          "email": "Test1@mail.com",
+          "number": "0611111111",
+          "comment": "Dit is een testafspraak om de pagina te testen, dit is nog dummy data.",
+          "location": "Teststraat 1"
+        },
+        {
+            "id": 2,
+            "date": "20-03-2022",
+            "name": "Test 2",
+            "consulent": "Cunt 2",
+            "time": "23:00",
+            "email": "Test2@mail.com",
+            "number": "0622222222",
+            "comment": "Dit is een testafspraak om de pagina te testen, dit is nog dummy data.",
+            "location": "Testlaan 2"
+          }
+      ]`;
+
+      const obj = JSON.parse(json);   
+    
+      console.log(obj);
 
     // useEffect(async () => {
     //     const api_url = 'http://31.14.96.253/appointments'
@@ -73,8 +106,8 @@ function Appointments() {
                         </div>
                         <div className="appointmentContainer">
                         <IonTitle className="Title">Mijn afspraken</IonTitle>
-                            {appointment.map((appointment) => {
-                                return <SeeAppointment key={appointment.consulent} consulent={appointment.consulent} date={appointment.datum_tijd} time={appointment.time} name={appointment.name} email={appointment.email} number={appointment.number} comment={appointment.comment} />
+                            {obj.map((obj) => {
+                                return <SeeAppointment key={obj.consulent} consulent={obj.consulent} date={obj.date} time={obj.time} name={obj.name} email={obj.email} number={obj.number} comment={obj.comment} location={obj.location}/>
                             })}
                         </div>
                     </div>

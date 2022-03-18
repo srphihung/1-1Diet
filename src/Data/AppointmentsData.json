@@ -1,0 +1,22 @@
+[
+    {
+      "id": 1,
+      "date": "17-03-2022",
+      "name": "Test 1",
+      "consulent": "Cunt 1",
+      "time": "13:00",
+      "email": "Test1@mail.com",
+      "number": "0611111111",
+      "comment": "Dit is een testafspraak om de pagina te testen, dit is nog dummy data."
+    },
+    {
+        "id": 2,
+        "date": "20-03-2022",
+        "name": "Test 2",
+        "consulent": "Cunt 2",
+        "time": "23:00",
+        "email": "Test2@mail.com",
+        "number": "0622222222",
+        "comment": "Dit is een testafspraak om de pagina te testen, dit is nog dummy data."
+      }
+  ]
