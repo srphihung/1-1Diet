@@ -3,7 +3,7 @@ import UserService from "../services/user.service";
 import TopNav from "../pages/js/TopNav";
 import {IonButton, IonCard, IonContent, IonIcon, IonLabel} from "@ionic/react";
 import {Link} from "react-router-dom";
-import '../pages/Home.css';
+import '../pages/styles/Global.css';
 import {
     appsOutline,
     bookOutline, informationOutline,
