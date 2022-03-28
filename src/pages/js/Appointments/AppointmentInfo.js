@@ -8,20 +8,19 @@ import { chevronForwardOutline } from 'ionicons/icons'
 import '../../styles/Appointments/AppointmentDetails.css'
 import DF from '../../../Data/AppointmentsData.json'
 
-function AppointmentInfo() {
-    const { datum_tijd } = useParams();
+function AppointmentInfo({ name, date, consulent, time, email, number, comment, location, type}) {
     const [appointments, setAppointments] = useState([])
-
+    
     const appointmentDetails = appointments.filter((appointment) => {
-        return appointment.datum_tijd === datum_tijd
+        return appointment.date === date
     })
 
-    useEffect(async () => {
-        const api_url = 'http://31.14.96.253/appointments'
-        var response = await fetch(api_url)
-        var data = await response.json()
-        setAppointments(data)
-    }, [setAppointments])
+    // useEffect(async () => {
+    //     const api_url = 'http://31.14.96.253/appointments'
+    //     var response = await fetch(api_url)
+    //     var data = await response.json()
+    //     setAppointments(data)
+    // }, [setAppointments])
 
     return (
         <IonContent>
@@ -32,13 +31,13 @@ function AppointmentInfo() {
                 </div>
                 <IonTitle className="AppointmentDetailTitle" onClick={() => console.log(appointments)}>Afspraak gegevens</IonTitle>
                 {appointments.map((appointment) => {
-                    return <div className="appointmentContent" key={appointment.datum_tijd}>
-                        <IonCard className="consulentCard" key={appointment.datum_tijd} >
+                    return <div className="appointmentContent" key={appointment.date}>
+                        <IonCard className="consulentCard" key={appointment.date} >
                             <IonCardContent className="consulentAppointmentContent">
                                 <IonAvatar className="consulentAvatar"></IonAvatar>
                                 <div className="consulentContent">
                                     <IonText className="consulentAppointmentText"><strong>Consulent: </strong>{appointment.consulent}</IonText>
-                                    <IonText className="consulentAppointmentText"><strong>Datum: </strong>{appointment.datum_tijd}</IonText>
+                                    <IonText className="consulentAppointmentText"><strong>Datum: </strong>{appointment.date}</IonText>
                                 </div> 
                                 {/* <IonIcon icon={chevronForwardOutline} className="AppointmentChevronIcon"></IonIcon> */}
                             </IonCardContent>

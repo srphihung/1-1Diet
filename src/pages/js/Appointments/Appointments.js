@@ -31,32 +31,67 @@ function Appointments() {
 
     var json = `[
         {
-          "id": 1,
-          "date": "17-03-2022",
-          "name": "Test 1",
-          "consulent": "Cunt 1",
-          "time": "13:00",
-          "email": "Test1@mail.com",
-          "number": "0611111111",
-          "comment": "Dit is een testafspraak om de pagina te testen, dit is nog dummy data.",
-          "location": "Teststraat 1"
+            "id": 1,
+            "date": "27-03-2022",
+            "name": "Test 1",
+            "consulent": "Coent 1",
+            "time": "13:00",
+            "email": "Test1@mail.com",
+            "number": "0611111111",
+            "comment": "Dit is een testafspraak om de pagina te testen, dit is nog dummy data.",
+            "location": "Teststraat 1",
+            "type": "Call"
         },
         {
             "id": 2,
-            "date": "20-03-2022",
+            "date": "30-03-2022",
             "name": "Test 2",
-            "consulent": "Cunt 2",
+            "consulent": "Coent 2",
             "time": "23:00",
             "email": "Test2@mail.com",
             "number": "0622222222",
             "comment": "Dit is een testafspraak om de pagina te testen, dit is nog dummy data.",
-            "location": "Testlaan 2"
-          }
+            "location": "Testlaan 2",
+            "type": "Online"
+        },
+        {
+            "id": 3,
+            "date": "29-03-2022",
+            "name": "Test 3",
+            "consulent": "Coent 3",
+            "time": "3:00",
+            "email": "Test3@mail.com",
+            "number": "0633333333",
+            "comment": "Dit is een testafspraak om de pagina te testen, dit is nog dummy data.",
+            "location": "Testavenue 3",
+            "type": "Weighing"
+        },
+        {
+            "id": 4,
+            "date": "18-03-2022",
+            "name": "Test 4",
+            "consulent": "Coent 4",
+            "time": "6:00",
+            "email": "Test4@mail.com",
+            "number": "0644444444",
+            "comment": "Dit is een testafspraak om de pagina te testen, dit is nog dummy data.",
+            "location": "Testgracht 4",
+            "type": "Pickup"
+        }
       ]`;
 
-      const obj = JSON.parse(json);   
-    
-      console.log(obj);
+        const obj = JSON.parse(json);   
+
+        function sortByKey(obj, date) {
+            return obj.sort(function(a, b) {
+            var x = a[date]; var y = b[date];
+            return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+        });
+        }
+        
+        json = sortByKey(obj, 'date');
+        
+        console.log(json);  
 
     // useEffect(async () => {
     //     const api_url = 'http://31.14.96.253/appointments'
@@ -97,17 +132,19 @@ function Appointments() {
                 {currentUser ? (
                     <div className="calendarContainer">
                         <div className="datePicker">
-                            <button className={showCalendar ? "currentWeek" : "currentWeekActive"} onClick={() => setShowCalendar(false)}>Week {result}</button>
-                            <button className={showCalendar ? "openCalendarActive" : "openCalendar"} onClick={() => setShowCalendar(current => !current)}>{month}</button>
-                            <IonIcon icon={calendar} className="toCurrentDate"></IonIcon>
+                            <button className={showCalendar ? "currentWeek" : "currentWeekActive"} onClick={() => setShowCalendar(false)}><h3>Week {result}</h3></button>
+                            <button className={showCalendar ? "openCalendarActive" : "openCalendar"} onClick={() => setShowCalendar(current => !current)}><h3>{month}</h3></button>
+                            {/* <IonIcon icon={calendar} className="toCurrentDate"></IonIcon> */}
                         </div>
-                        <div className="events">
+                        {/* <div className="events">
                             <button className="makeAppointment" onClick={() => setModalController(current => !current)}>Afspraak inplannen</button>
-                        </div>
+                        </div> */}
                         <div className="appointmentContainer">
-                        <IonTitle className="Title">Mijn afspraken</IonTitle>
+                        <IonTitle className="Title"><h2>Mijn afspraken</h2></IonTitle>
                             {obj.map((obj) => {
-                                return <SeeAppointment key={obj.consulent} consulent={obj.consulent} date={obj.date} time={obj.time} name={obj.name} email={obj.email} number={obj.number} comment={obj.comment} location={obj.location}/>
+                                const type = obj.type
+                                const date = obj.date
+                                return <SeeAppointment type={type} key={obj.consulent} consulent={obj.consulent} date={date} time={obj.time} name={obj.name} email={obj.email} number={obj.number} comment={obj.comment} location={obj.location}/>
                             })}
                         </div>
                     </div>
@@ -118,7 +155,7 @@ function Appointments() {
                     </div>
                 )}
             </div>
-            { modalController ? (
+            {/* { modalController ? (
                 <div className="Modal">
                     <div className="navigationInfo">
                         <IonIcon icon={chevronBackOutline} className="goBack" onClick={() => setModalController(false)}></IonIcon>
@@ -134,7 +171,7 @@ function Appointments() {
                                 <IonDatetime onIonChange={(e) => setDate(e.detail.value)} className="selectDate" min="2021-05-27" max="2023-12-31" displayTimezone="utc" placeholder="Kies Datum" displayFormat="DD/MM/YYYY"></IonDatetime>
                                 <IonDatetime onIonChange={(e) => setTime(e.detail.value)} className="selectDate" displayTimezone="utc" placeholder="Kies Tijd" displayFormat="HH:mm"></IonDatetime>
                             </IonItem>
-                            <IonItem className="item" lines="none">
+                            <IonItem className="obj" lines="none">
                                 <IonInput className="inputIon" onIonChange={(e) => setName(e.target.value)} inputMode="name" name="naam" type="name" placeholder="Naam" required="true"></IonInput>
                             </IonItem>
                             <IonItem className="item" lines="none">
@@ -172,7 +209,7 @@ function Appointments() {
             ) : (
                 null
             )
-            }
+            } */}
         </IonContent >
     )
 }
