@@ -80,7 +80,7 @@ export default class Login extends Component<Props, State> {
 
         return (
             <IonContent className="loginContainer">
-                <img className="login-logo" src={Logo} alt={'1:1 Diet logo'}/>
+                <img className="loginLogo" src={Logo} alt={'1:1 Diet logo'}/>
                     <Formik
                         initialValues={initialValues}
                         validationSchema={this.validationSchema}
