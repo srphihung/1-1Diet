@@ -255,7 +255,7 @@ ion-progress-bar {
 }
 
 .nameContainer {
-    margin-top: 10px;
+    margin: 10px 15px 0 15px;
     text-align: center;
 }
 
@@ -289,6 +289,10 @@ ion-progress-bar {
 
 .iconProfile {
     margin: auto;
+}
+
+.chartContainer {
+    margin: 20px 15px 0 15px;
 }
 
 /* Consulent card */
@@ -345,4 +349,10 @@ ion-progress-bar {
     font-size: 14px;
     max-width: 208px;
     word-break: break-all;
+}
+
+/* New css */
+
+.accountPageContent .consulentContainer > h2{
+    text-align: center;
 }
